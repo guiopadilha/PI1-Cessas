@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cesas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Estilo para a imagem com a classe "imagem-25" ocupar 25% da largura do site */
+
+        body {
+    background-color: rgb(120, 128, 238);
+}
+
+
+        .retangulo {
+            position: absolute;
+            top: 55%;
+            left: 55%;
+            height: 550px;
+            width: 450px;
+            transform: translate(-50%, -50%);
+            border: hidden;
+            border-radius: 13px;
+            background: linear-gradient(to top, rgba(231, 226, 255, 0.505), rgb(211, 201, 255));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .navbar {
+
+            background-color: #ffffff;
+            font-family: Poppins, sans-serif;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10%;
+        }
+
+
+
+
+
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: rgb(17, 119, 209);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+
+        }
+
+        .dropdown,
+        .dropdown2 {
+            float: left;
+            overflow: hidden;
+            align-items: center;
+
+
+        }
+
+        .dropdown .dropbtn,
+        .dropdown2 .dropbtn2 {
+            cursor: pointer;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: rgb(17, 119, 209);
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .dropdown:hover .dropbtn,
+        .link:hover,
+        .dropbtn:focus,
+        .dropdown2:hover .dropbtn2,
+        .dropbtn2:focus {
+            color: black;
+        }
+
+        .dropdown-content,
+        .dropdown-content2 {
+
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a,
+        .dropdown-content2 a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover,
+        .dropdown-content2 a:hover {
+            background-color: #f2f2f2;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .ultra {
+            display: flex;
+        }
+
+        /* Estilo específico para a imagem "cesas-informacoes" */
+        .cesas-informacoes {
+            width: 100%;
+        }
+
+        .documento {
+            margin-left: 0%;
+        }
+
+        /* Estilo específico para o título "Matrícula" */
+        .retangulo h2 {
+            margin: 0;
+            /* Removendo margem padrão do título */
+            text-align: center;
+        }
+
+        /* Estilo específico para o parágrafo "Envie uma foto do seu documento" */
+        .retangulo p {
+            margin-top: 20px;
+            /* Adicionando margem apenas na parte superior do parágrafo */
+            text-align: left;
+            font-size: 15px;
+        }
+
+        /* Estilo para o botão de upload de arquivo */
+        .upload-btn {
+            display: inline-block;
+            /* Torna o botão de upload de arquivo um bloco em linha */
+            vertical-align: middle;
+            /* Alinha verticalmente ao centro */
+            margin-left: 10px;
+            /* Adiciona um espaço à esquerda do botão */
+            margin-top: -13%;
+        }
+
+        /* Estilo para a seta de avançar */
+        .arrow-img {
+            display: block;
+            /* Torna a imagem um bloco */
+            margin: 20px auto;
+            /* Centraliza a imagem horizontalmente */
+            cursor: pointer;
+            /* Muda o cursor para indicar que é clicável */
+        }
+
+        #cameraContainer {
+            display: flex;
+            flex-direction: row; /* Alterado de 'column' para 'row' */
+            justify-content: flex-start;
+            
+            margin-left: 20px; /* Espaçamento à esquerda para separar do retângulo */
+        }
+
+        #video {
+            transform: scaleX(1); /* Inverte a imagem horizontalmente */
+            margin-right: auto; /* Move a imagem para a esquerda */
+        }
+
+        .turno-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            opacity: 1;
+            animation-name: fadeInOpacity;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in;
+            animation-duration: 2s;
+        }
+
+        @keyframes fadeInOpacity {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .turno-label {
+            margin-right: 10px;
+        }
+
+        .turno-imagem {
+            margin-left: auto;
+            max-width: 100px;
+            /* Ajuste o tamanho máximo da imagem conforme necessário */
+            height: auto;
+        }
+
+        .arrow-img {
+            margin-right: 10px;
+            /* Ajuste conforme necessário */
+
+        }
+
+        #autorizacao {
+            display: none; /* Oculta o checkbox padrão */
+        }
+
+        /* Estilo para o rótulo (label) */
+        #autorizacao + label:before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: green; /* Cor de fundo do checkbox */
+            border-radius: 3px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        /* Estilo para o rótulo (label) quando o checkbox está marcado */
+        #autorizacao:checked + label:before {
+            content: "\2713"; /* Símbolo de marca de seleção */
+            font-size: 16px;
+            color: white; /* Cor do símbolo de marca de seleção */
+            text-align: center;
+            line-height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="https://cesas.se.df.gov.br/ead/"><img style="width: auto;height: auto;"
+                src="../proj integrador/cesas-logo.png" alt="CESAS" class="cesas-logo"></a>
+
+        <a class="link" href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=54">Equipe</a>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="myFunction()">Área do Aluno
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="myDropdown">
+                <a href="https://cesas.se.df.gov.br/ead/login/index.php">Meu Perfil</a>
+                <a href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=749&forceview=1">Calendário</a>
+                <a href="https://cesas.se.df.gov.br/ead/login/index.php">Plantão das Disciplinas</a>
+            </div>
+        </div>
+        <a class="link" href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=70">Perguntas e Respostas</a>
+        <a class="link" href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=751&forceview=1">Cursos</a>
+    </div>
+
+    <div id="Retangulo" class="retangulo" style="text-align: center">
+        <br>
+        <h2 style="color: rgb(10, 10, 10);">Matrícula</h2>
+        <br>
+        <audio controls>
+            <source src="seu_audio.mp3" type="audio/mpeg">
+        </audio>
+        <p>Envie uma foto do seu documento:</p>
+        <div id="container" style="position: relative;">
+            <div id="cameraContainer" style="position: relative;">
+                <video id="video" width="400" height="300" autoplay style="background-color: black;"></video>
+                <div id="overlay" style="position: absolute; bottom: 0; width: 100%; background-color: black; text-align: center;">
+                    <button id="snapBtn" style="font-size: 24px; border: none; color: black; background-color: black;">⚪</button>
+                </div>
+            </div>
+        </div>
+        
+        <canvas id="canvas" width="400" height="300" style="display:none;"></canvas>
+    
+        <a href="" class="arrow-img" style="font-size: 20px; text-decoration: none; color: white;">➡️</a>
+    </div>
+    
+    
+
+
+</body>
+<footer>
+</footer>
+
+</html>
+<script>
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+    const snapBtn = document.getElementById('snapBtn');
+
+    // Acesso à câmera
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function(stream) {
+            video.srcObject = stream;
+            video.play();
+        })
+        .catch(function(err) {
+            console.log("Erro ao acessar a câmera: " + err);
+        });
+
+    // Função para tirar a foto
+    snapBtn.addEventListener('click', function() {
+        const context = canvas.getContext('2d');
+        context.drawImage(video, 0, 0, 400, 300);
+        // Converter a imagem para um arquivo e fazer o download
+        const imageData = canvas.toDataURL('image/jpeg');
+        const link = document.createElement('a');
+        link.download = 'foto.jpg'; // Nome do arquivo
+        link.href = imageData.replace(/^data:image\/[^;]/, 'data:application/octet-stream'); // Converter a imagem para um blob
+        link.click(); // Simular o clique no link para fazer o download
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Captura a seta
+        var arrowLink = document.querySelector(".arrow-img");
+
+        // Adiciona um evento de clique à seta
+        arrowLink.addEventListener("click", function (event) {
+            event.preventDefault(); // Evita o comportamento padrão do link
+
+            // Seleciona o elemento pai da seta (o div com a classe "retangulo")
+            var retangulo = document.querySelector("#Retangulo");
+
+            // Remove todos os elementos dentro do div "retangulo"
+            retangulo.innerHTML = "";
+
+            // Adiciona os novos elementos ao div "retangulo"
+            retangulo.innerHTML = `
+      <style>
+
+      </style>
+      <br>
+      <h2>Matrícula</h2>
+      <br>
+      <audio controls>
+          <source src="seu_audio.mp3" type="audio/mpeg">
+      </audio>
+
+      <p>Selecione o turno desejado:</p>
+                  
+      <div class="turno-container">
+          <input type="radio" id="manha" name="turno" value="manha">
+          <label for="manha" class="turno-label">Manhã</label>
+          <img src="../proj integrador/manha.png" alt="" class="turno-imagem">
+      </div>
+      
+      <div class="turno-container">
+          <input type="radio" id="tarde" name="turno" value="tarde">
+          <label for="tarde" class="turno-label">Tarde</label>
+          <img src="../proj integrador/tarde.png" alt="" class="turno-imagem">
+      </div>
+      
+      <div class="turno-container">
+          <input type="radio" id="noite" name="turno" value="noite">
+          <label for="noite" class="turno-label">Noite</label>
+          <img src="../proj integrador/noite.png" alt="" class="turno-imagem">
+      </div>
+                  
+      
+      `;
+
+            // Adiciona um botão para limpar o retângulo
+            retangulo.innerHTML += `
+      <button id="limparRetangulo" style="font-size: 20px; padding: 10px; border: none; background: none; float: right;">➡️</button>
+
+
+
+
+      
+      `;
+
+            // Adiciona um evento de clique para limpar o conteúdo do retângulo quando o botão é clicado
+            document.getElementById("limparRetangulo").addEventListener("click", function () {
+                retangulo.innerHTML = ""; // Limpa o conteúdo do retângulo
+
+                retangulo.innerHTML = `
+      <style>
+
+      </style>
+      <br>
+      <h2>Matrícula</h2>
+<br>
+<audio controls>
+    <source src="seu_audio.mp3" type="audio/mpeg">
+</audio>
+<br>
+<br><br>
+<input type="checkbox" id="autorizacao" name="autorizacao">
+    <!-- Rótulo -->
+    <label for="autorizacao">Termo de autorização do uso de áudio e imagem</label>
+
+
+
+<br><br><br><br><br><br><br>
+<button style="background-color:rgb(72, 160, 236); ; color: white; padding: 10px 20px; border: none; border-radius: 5px;">Enviar</button>
+
+</div>
+      `;
+            });
+        });
+    });
+
+
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+    window.onclick = function (e) {
+        if (!e.target.matches('.dropbtn')) {
+            var myDropdown = document.getElementById("myDropdown");
+            if (myDropdown.classList.contains('show')) {
+                myDropdown.classList.remove('show');
+            }
+        }
+    }
+
+</script>
