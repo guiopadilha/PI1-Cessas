@@ -10,7 +10,8 @@
 
         body {
             margin: 0px;
-            background: linear-gradient(to bottom, #00b4d8, #ade8f4);min-height: 100vh;
+            background: linear-gradient(to bottom, #00b4d8, #ade8f4);
+            min-height: 100vh;
             width: 100%;
         }
 
@@ -26,18 +27,19 @@
         }
 
         .form-box {
-            margin-top: 50px;
+            margin-top: 60px;
+            padding-top: 0;
             background-color: transparent;
             border: 2px solid rgba(255, 255, 255, 0.5);
             border-radius: 20px;
             background-color: #9bb1ff;
             backdrop-filter: blur(5px);
             position: relative;
-            width: 500px;
-            height: 600px;
+            width: 550px;
+            height: 680px;
             display: flex;
             justify-content: center;
-            align-items: center;
+            /* align-items: center; */
 
         }
 
@@ -52,6 +54,7 @@
             border: hidden;
             border-radius: 13px;
             background: linear-gradient(to top, rgba(231, 226, 255, 0.505), rgb(211, 201, 255)); */
+            padding-top: 0px;
             margin-top: 0px;
             padding-top: 0px;
             display: flex;
@@ -172,6 +175,7 @@
         /* Estilo específico para o título "Matrícula" */
         .retangulo h1 {
             margin: 0;
+            padding-top: 0px;
             /* Removendo margem padrão do título */
             text-align: center;
         }
@@ -247,7 +251,7 @@
 
         .turno-label {
             margin-right: 10px;
-            
+
         }
 
         .turno-imagem {
@@ -309,7 +313,9 @@
         .tab {
             text-align: center;
             font-family: adobe arabic;
-            margin-top: 10px;
+            margin-top: 0px;
+            /* background-color: pink; */
+            padding-top: 0px;
         }
 
         .tab-heading {
@@ -343,20 +349,19 @@
         .tab-heading span~span {
             opacity: 0.3;
         }
-        .tab-content{
+
+        .tab-content {
             /* background-color: red; */
-            height: 524px;
-            width: 400px;
+            height: 611px;
+            width: 550px;
         }
+
         .tab-content nav~nav {
             display: none;
 
         }
 
-        .content {
-            margin-top: 0px;
-            /* background-color: green; */
-        }
+
 
         .turnoCenter {
             display: flex;
@@ -364,7 +369,56 @@
             align-items: center;
             width: 100%;
         }
+
+        /* Adicionar btn  */
+        p {
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+            font-weight: normal;
+        }
+
+        p,
+        a,
+        h1,
+        h2,
+        h3 {
+            cursor: pointer;
+        }
+
+        section {
+            position: absolute;
+            top: 30%;
+            left: 5%;
+            /* background-color: pink; */
+        }
+
+        /* estilo da caixa */
+        button.left {
+            font-family: "adobe arabic";
+            font-size: 30px;
+            padding: 10px 20px;
+            width: 300px;
+            margin: 20px;
+            border: none;
+            background-color: #ffb630;
+            cursor: pointer;
+            font-weight: bold;
+            color: #682b2b;
+        }
+
+        button.left {
+            -webkit-transition: all 0.6s;
+            -o-transition: all 0.6s;
+            transition: all 0.6s;
+        }
+
+        button.left:hover {
+            background-color: #fff;
+            border: 1px solid orange;
+            box-shadow: 0 0 1px 5px #ffa5007a, 0 0 1px 15px #ffa50067, 0 0 1px 25px #ffa50033;
+        }
     </style>
+    <!-- Script dos next btn -->
     <script src="js/jquery.js"></script>
     <script>
         $(document).ready(function () {
@@ -376,6 +430,52 @@
             })
         })
     </script>
+    <!-- Script para btn + - bol trocar font  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btUp").click(function () {
+                var currentFontSize = parseInt($("p").css("font-size"));
+                if (currentFontSize < 25) {
+                    $("p, h1, label").animate({
+                        fontSize: '+=5px'
+                    });
+                }
+            });
+
+
+            $("#btDown").click(function () {
+                var currentFontSize = parseInt($("p").css("font-size"));
+                if (currentFontSize > 10) {
+                    $("p, h1, label").animate({
+                        fontSize: '-=5px'
+                    });
+                }
+            });
+
+
+            $("#btFont").click(function () {
+                var fonts = ['Arial, sans-serif', 'Times New Roman, serif', 'Verdana, sans-serif'];
+                var currentFont = $("p, h1, label").css("font-family");
+                var currentIndex = fonts.indexOf(currentFont);
+                var nextIndex = (currentIndex + 1) % fonts.length;
+                $("p, h1, label").css("font-family", fonts[nextIndex]);
+            });
+
+
+            $("#btBold").click(function () {
+                var currentWeight = $("p").css("font-weight");
+                if (currentWeight === '400' || currentWeight === 'normal') {
+                    $("p, h1, label").css("font-weight", "bold");
+                } else {
+                    $("p, h1, label").css("font-weight", "normal");
+                }
+            });
+
+
+        });
+    </script>
+
 </head>
 
 <body>
@@ -383,8 +483,9 @@
     <div class="header">
         <div class="navbar">
             <a href="https://cesas.se.df.gov.br/ead/"><img style="width: 200px"
-                    src="https://cesas.se.df.gov.br/ead/pluginfile.php/1/core_admin/logo/0x200/1709835412/logo%20menor.jpg" alt="CESAS" class="cesas-logo" ></a>
-    
+                    src="https://cesas.se.df.gov.br/ead/pluginfile.php/1/core_admin/logo/0x200/1709835412/logo%20menor.jpg"
+                    alt="CESAS" class="cesas-logo"></a>
+
             <a class="link" href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=54">Equipe</a>
             <div class="dropdown">
                 <button class="dropbtn" onclick="myFunction()">Área do Aluno
@@ -400,112 +501,140 @@
             <a class="link" href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=751&forceview=1">Cursos</a>
         </div>
     </div>
-    
 
+    <section>
+
+
+        <button class="left" id="btFont">Trocar A Fonte</button>
+        <br>
+
+        <button class="left" id="btBold">&nbsp;Fonte Negrito&nbsp;</button>
+        <br>
+        <button class="left" id="btUp">Aumentar &nbsp;A Fonte</button>
+        <br>
+        <button class="left" id="btDown">&nbsp;Diminuir &nbsp;A Fonte&nbsp;</button>
+    </section>
 
     <main>
+        <div id="content">
+            <div class="form-box">
 
-        <div class="form-box">
-            <div id="content">
-                <div class="tab">
+                <div id="content">
+                    <div class="tab">
 
-                    <div class="tab-content">
-                        <br>
-                                <h1 style="color: rgb(10, 10, 10);">Matrícula</h1>
-                                
-                        <nav>
+                        <div class="tab-content">
                             <br>
-                            <div id="Retangulo" class="retangulo" style="text-align: center">
-                                
-                                <audio controls autoplay>
-                                    <source src="seu_audio.mp3" type="audio/mpeg" >
+                            <h1 style="color: rgb(10, 10, 10);">Matrícula</h1>
+
+                            <nav>
+                                <br>
+                                <div id="Retangulo" class="retangulo" style="text-align: center">
+
+                                    <audio controls autoplay>
+                                        <source src="seu_audio.mp3" type="audio/mpeg">
+                                    </audio>
+                                    <p>Envie uma foto do seu documento:</p>
+                                    <div id="container" style="position: relative;">
+                                        <div id="cameraContainer" style="position: relative;">
+                                            <video id="video" width="400" height="300" autoplay
+                                                style="background-color: black;"></video>
+                                            <div id="overlay"
+                                                style="position: absolute; bottom: 0; width: 100%; background-color: black; text-align: center;">
+                                                <button id="snapBtn"
+                                                    style="font-size: 24px; border: none; color: black; background-color: black;">⚪</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </nav>
+                            <!-- Segundo  -->
+                            <nav>
+                                <br>
+                                <audio controls>
+                                    <source src="seu_audio.mp3" type="audio/mpeg">
                                 </audio>
-                                <p>Envie uma foto do seu documento:</p>
-                                <div id="container" style="position: relative;">
-                                    <div id="cameraContainer" style="position: relative;">
-                                        <video id="video" width="400" height="300" autoplay
-                                            style="background-color: black;"></video>
-                                        <div id="overlay"
-                                            style="position: absolute; bottom: 0; width: 100%; background-color: black; text-align: center;">
-                                            <button id="snapBtn"
-                                                style="font-size: 24px; border: none; color: black; background-color: black;">⚪</button>
+
+                                <p>Selecione o turno desejado:</p>
+                                <div class="turnoCenter">
+                                    <div>
+                                        <div class="turno-container">
+                                            <input type="radio" id="manha" name="turno" value="manha">
+                                            <label for="manha" class="turno-label">Manhã</label>
+                                            <img src="images/manha.png" alt="" class="turno-imagem">
+                                        </div>
+
+                                        <div class="turno-container">
+                                            <input type="radio" id="tarde" name="turno" value="tarde">
+                                            <label for="tarde" class="turno-label">Tarde</label>
+                                            <img src="images/tarde.png" alt="" class="turno-imagem">
+                                        </div>
+
+                                        <div class="turno-container">
+                                            <input type="radio" id="noite" name="turno" value="noite">
+                                            <label for="noite" class="turno-label">Noite</label>
+                                            <img src="images/noite.png" alt="" class="turno-imagem">
                                         </div>
                                     </div>
                                 </div>
+
+                            </nav>
+                            <!-- terceiro                         -->
+                            <nav>
+                                <br>
+                                <audio controls>
+                                    <source src="seu_audio.mp3" type="audio/mpeg">
+                                </audio>
+                                <br>
+                                <br><br><br><br><br><br>
+                                <input type="checkbox" id="autorizacao" name="autorizacao">
+                                <!-- Rótulo -->
+                                <label for="autorizacao">Termo de autorização do uso de áudio e imagem</label>
+
+
+
+                                <br><br><br><br><br>
+                                <!-- <input type="submit" value="Enviar"
+                                    style="background-color:rgb(72, 160, 236); ; color: white; padding: 10px 20px; border: none; border-radius: 5px;""> -->
+                                <button style=" 
+                                background-color:rgb(72, 160, 236);
+                                  color: white; 
+                                  padding: 10px
+                                    20px; border: none; 
+                                    border-radius: 5px;
+                                    
+                                    font-size: 30px;
+                                    padding: 10px 20px;
+                                    width: 200px;
+                                    margin: 20px;
+                                    border: none;
+                                    cursor: pointer;
+                                    font-weight: bold;">Enviar</button>
+
+                        </div>
                         </nav>
-<!-- Segundo  -->
-                        <nav>
-                            <br>
-                            <audio controls>
-                                <source src="seu_audio.mp3" type="audio/mpeg">
-                            </audio>
-
-                            <p>Selecione o turno desejado:</p>
-                            <div class="turnoCenter">
-                                <div>
-                                    <div class="turno-container">
-                                        <input type="radio" id="manha" name="turno" value="manha">
-                                        <label for="manha" class="turno-label">Manhã</label>
-                                        <img src="images/manha.png" alt="" class="turno-imagem">
-                                    </div>
-        
-                                    <div class="turno-container">
-                                        <input type="radio" id="tarde" name="turno" value="tarde">
-                                        <label for="tarde" class="turno-label">Tarde</label>
-                                        <img src="images/tarde.png" alt="" class="turno-imagem">
-                                    </div>
-        
-                                    <div class="turno-container">
-                                        <input type="radio" id="noite" name="turno" value="noite">
-                                        <label for="noite" class="turno-label">Noite</label>
-                                        <img src="images/noite.png" alt="" class="turno-imagem">
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </nav>
-<!-- terceiro                         -->
-                        <nav>
-                            <br>
-                            <audio controls>
-                                <source src="seu_audio.mp3" type="audio/mpeg">
-                            </audio>
-                            <br>
-                            <br><br><br><br><br><br>
-                            <input type="checkbox" id="autorizacao" name="autorizacao">
-                            <!-- Rótulo -->
-                            <label for="autorizacao">Termo de autorização do uso de áudio e imagem</label>
-
-
-
-                            <br><br><br><br><br>
-                            <input type="submit" value="Enviar" style="background-color:rgb(72, 160, 236); ; color: white; padding: 10px 20px; border: none; border-radius: 5px;"">
-                            <!-- <button style="background-color:rgb(72, 160, 236); ; color: white; padding: 10px 20px; border: none; border-radius: 5px;">Enviar</button> -->
-
                     </div>
-                    </nav>
+                    <div class="tab-heading">
+                        <center>
+                            <span class="active">1</span>
+                            <span>2</span>
+                            <span>3</span>
+                        </center>
+                    </div>
                 </div>
-                <div class="tab-heading">
-                    <center>
-                        <span class="active">1</span>
-                        <span>2</span>
-                        <span>3</span>
-                    </center>
-                </div>
+
+
+
+                <!-- <canvas id="canvas" width="400" height="300" style="display:none;"></canvas> -->
+
+                <!-- <a href="" class="arrow-img" style="font-size: 20px; text-decoration: none; color: white;">➡️</a> -->
+
             </div>
-
-
-
-            <!-- <canvas id="canvas" width="400" height="300" style="display:none;"></canvas> -->
-
-            <!-- <a href="" class="arrow-img" style="font-size: 20px; text-decoration: none; color: white;">➡️</a> -->
-
-        </div>
         </div>
 
 
 
         </div>
+        </div>
+
 
 
     </main>
@@ -516,8 +645,6 @@
 </body>
 <footer>
 </footer>
-
-</html>
 <script>
     const video = document.getElementById('video');
     const canvas = document.getElementById('canvas');
@@ -545,62 +672,38 @@
         link.click(); // Simular o clique no link para fazer o download
     });
 </script>
+<!-- Script para leitura do site  -->
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Captura a seta
-        var arrowLink = document.querySelector(".arrow-img");
-
-        // Adiciona um evento de clique à seta
-        arrowLink.addEventListener("click", function (event) {
-            event.preventDefault(); // Evita o comportamento padrão do link
-
-            // Seleciona o elemento pai da seta (o div com a classe "retangulo")
-            var retangulo = document.querySelector("#Retangulo");
-
-            // Remove todos os elementos dentro do div "retangulo"
-            retangulo.innerHTML = "";
-
-            // Adiciona os novos elementos ao div "retangulo"
-            retangulo.innerHTML = `
-      
-      
-                  
-      
-      `;
-
-            // Adiciona um botão para limpar o retângulo
-            retangulo.innerHTML += `
-      <button id="limparRetangulo" style="font-size: 20px; padding: 10px; border: none; background: none; float: right;">➡️</button>
+    let msg = new SpeechSynthesisUtterance();
+    let voices = speechSynthesis.getVoices();
+    // Find the voice that corresponds to Portuguese (Portugal)
+    let portugueseVoice = voices.find(voice => voice.lang === 'pt-BR');
+    // Setar a Voz em pt Brasil one if found, otherwise use the default
+    msg.voice = portugueseVoice || voices[0]; //5 kkk //2,3,4 good
+    // Setar a lingua em pt Brasil
+    msg.lang = 'pt-BR';
 
 
+    let tags = document.querySelectorAll('p,a,h1,h2,label,button,span'); // add more tags for your project
+    tags.forEach((tag) => {
+        tag.addEventListener('click', (e) => {
+            msg.text = e.target.innerText;
+            tag.style.backgroundColor = "yellow";
+            speechSynthesis.speak(msg);
 
 
-      
-      `;
+            let interval = setInterval(() => {
+                if (!speechSynthesis.speaking) {
+                    tag.style.removeProperty('background-color');
+                    clearInterval(interval);
+                }
+            }, 100);
 
-            // Adiciona um evento de clique para limpar o conteúdo do retângulo quando o botão é clicado
-            document.getElementById("limparRetangulo").addEventListener("click", function () {
-                retangulo.innerHTML = ""; // Limpa o conteúdo do retângulo
 
-                retangulo.innerHTML = `
-      
-      
-      `;
-            });
         });
     });
 
 
-    function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-    }
-    window.onclick = function (e) {
-        if (!e.target.matches('.dropbtn')) {
-            var myDropdown = document.getElementById("myDropdown");
-            if (myDropdown.classList.contains('show')) {
-                myDropdown.classList.remove('show');
-            }
-        }
-    }
-
 </script>
+
+</html>
