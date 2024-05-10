@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <meta charset="UTF-8">
     <title>Cesas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -388,7 +389,7 @@
         section {
             position: absolute;
             top: 30%;
-            left: 5%;
+            left: 8%;
             /* background-color: pink; */
         }
 
@@ -499,20 +500,22 @@
             </div>
             <a class="link" href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=70">Perguntas e Respostas</a>
             <a class="link" href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=751&forceview=1">Cursos</a>
+            <a class="link" href="template.html">Pagina template</a>
         </div>
     </div>
 
     <section>
 
-
+        <button class="left" id="btUp">Aumentar &nbsp;A Fonte</button>
+        <br>
+        <button class="left" id="btDown">&nbsp;Diminuir &nbsp;A Fonte&nbsp;</button>
+        <br>
         <button class="left" id="btFont">Trocar A Fonte</button>
         <br>
 
         <button class="left" id="btBold">&nbsp;Fonte Negrito&nbsp;</button>
         <br>
-        <button class="left" id="btUp">Aumentar &nbsp;A Fonte</button>
-        <br>
-        <button class="left" id="btDown">&nbsp;Diminuir &nbsp;A Fonte&nbsp;</button>
+        
     </section>
 
     <main>
@@ -545,6 +548,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <canvas id="canvas" width="400" height="300" style="display:none;"></canvas>
                             </nav>
                             <!-- Segundo  -->
                             <nav>
@@ -558,19 +562,19 @@
                                     <div>
                                         <div class="turno-container">
                                             <input type="radio" id="manha" name="turno" value="manha">
-                                            <label for="manha" class="turno-label">Manhã</label>
+                                            <label for="manha" class="turno-label">De Manhã(Matutino) </label>
                                             <img src="images/manha.png" alt="" class="turno-imagem">
                                         </div>
 
                                         <div class="turno-container">
                                             <input type="radio" id="tarde" name="turno" value="tarde">
-                                            <label for="tarde" class="turno-label">Tarde</label>
+                                            <label for="tarde" class="turno-label">De Tarde(Vespertino)</label>
                                             <img src="images/tarde.png" alt="" class="turno-imagem">
                                         </div>
 
                                         <div class="turno-container">
                                             <input type="radio" id="noite" name="turno" value="noite">
-                                            <label for="noite" class="turno-label">Noite</label>
+                                            <label for="noite" class="turno-label">De Noite(Noturno)</label>
                                             <img src="images/noite.png" alt="" class="turno-imagem">
                                         </div>
                                     </div>
@@ -641,7 +645,7 @@
 
 
 
-
+   
 </body>
 <footer>
 </footer>
@@ -652,16 +656,16 @@
 
     // Acesso à câmera
     navigator.mediaDevices.getUserMedia({ video: true })
-        .then(function (stream) {
+        .then(function(stream) {
             video.srcObject = stream;
             video.play();
         })
-        .catch(function (err) {
+        .catch(function(err) {
             console.log("Erro ao acessar a câmera: " + err);
         });
 
     // Função para tirar a foto
-    snapBtn.addEventListener('click', function () {
+    snapBtn.addEventListener('click', function() {
         const context = canvas.getContext('2d');
         context.drawImage(video, 0, 0, 400, 300);
         // Converter a imagem para um arquivo e fazer o download
