@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta charset="UTF-8">
+    <title>Cesas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        /* Estilo para a imagem com a classe "imagem-25" ocupar 25% da largura do site */
+
+        body {
+            margin: 0px;
+            background: linear-gradient(to bottom, #00b4d8, #ade8f4);
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        #container {
+            /* width : 960px; */
+            width: 100%;
+            margin: 0 auto 0;
+            /*ficar no meio*/
+        }
+
+        #header {
+            /* width : 100%; */
+            height: 50px;
+
+        }
+
+        #left {
+            width: 30%;
+            min-height: 80vh;
+            float: left;
+            background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #content {
+            width: 40%;
+            /* height:500px; */
+            float: left;
+            min-height: 80vh;
+            background-color: pink;
+        }
+
+        #right {
+            width: 30%;
+            /* height:500px; */
+            float: left;
+            /* background-color : red; */
+        }
+
+        #footer {
+            /* width : 100%;
+                   height : 100px;
+                   background-color : navy;
+                   clear : both; */
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 100%;
+            /* background: url(../image/background.png);
+     background-position: center;
+     background-size: cover; */
+        }
+
+        .form-box {
+            margin-top: 10px;
+            padding-top: 0;
+            background-color: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            background-color: #9bb1ff;
+            backdrop-filter: blur(5px);
+            position: relative;
+            width: 550px;
+            height: 680px;
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+
+        }
+
+
+
+
+        .retangulo {
+
+            /* position: absolute;
+            top: 55%;
+            left: 55%;
+            height: 550px;
+            width: 450px;
+            transform: translate(-50%, -50%);
+            border: hidden;
+            border-radius: 13px;
+            background: linear-gradient(to top, rgba(231, 226, 255, 0.505), rgb(211, 201, 255)); */
+            padding-top: 0px;
+            margin-top: 0px;
+            padding-top: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            flex-wrap: wrap;
+            text-align: center;
+            /* background-color: red; */
+
+        }
+
+        .navbar {
+
+            background-color: #ffffff;
+            font-family: Poppins, sans-serif;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8%;
+        }
+
+
+
+
+
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: rgb(17, 119, 209);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+
+        }
+
+        .dropdown,
+        .dropdown2 {
+            float: left;
+            overflow: hidden;
+            align-items: center;
+
+
+        }
+
+        .dropdown .dropbtn,
+        .dropdown2 .dropbtn2 {
+            cursor: pointer;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: rgb(17, 119, 209);
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .dropdown:hover .dropbtn,
+        .link:hover,
+        .dropbtn:focus,
+        .dropdown2:hover .dropbtn2,
+        .dropbtn2:focus {
+            color: black;
+        }
+
+        .dropdown-content,
+        .dropdown-content2 {
+
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a,
+        .dropdown-content2 a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover,
+        .dropdown-content2 a:hover {
+            background-color: #f2f2f2;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .ultra {
+            display: flex;
+        }
+
+        /* Estilo específico para a imagem "cesas-informacoes" */
+        .cesas-informacoes {
+            width: 100%;
+        }
+
+        .documento {
+            margin-left: 0%;
+        }
+
+        /* Estilo específico para o título "Matrícula" */
+        .retangulo h1 {
+            margin: 0;
+            padding-top: 0px;
+            /* Removendo margem padrão do título */
+            text-align: center;
+        }
+
+        /* Estilo específico para o parágrafo "Envie uma foto do seu documento" */
+        .retangulo p {
+            margin-top: 20px;
+            /* Adicionando margem apenas na parte superior do parágrafo */
+            text-align: left;
+            font-size: 15px;
+        }
+
+        /* Estilo para o botão de upload de arquivo */
+        .upload-btn {
+            display: inline-block;
+            /* Torna o botão de upload de arquivo um bloco em linha */
+            vertical-align: middle;
+            /* Alinha verticalmente ao centro */
+            margin-left: 10px;
+            /* Adiciona um espaço à esquerda do botão */
+            margin-top: -13%;
+        }
+
+        /* Estilo para a seta de avançar */
+        .arrow-img {
+            display: block;
+            /* Torna a imagem um bloco */
+            margin: 20px auto;
+            /* Centraliza a imagem horizontalmente */
+            cursor: pointer;
+            /* Muda o cursor para indicar que é clicável */
+        }
+
+        #cameraContainer {
+            display: flex;
+            flex-direction: row;
+            /* Alterado de 'column' para 'row' */
+            justify-content: flex-start;
+
+            margin-left: 20px;
+            /* Espaçamento à esquerda para separar do retângulo */
+        }
+
+        #video {
+            transform: scaleX(1);
+            /* Inverte a imagem horizontalmente */
+            margin-right: auto;
+            /* Move a imagem para a esquerda */
+        }
+
+        .turno-container {
+            /* background-color: green; */
+            width: 200px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            opacity: 1;
+            animation-name: fadeInOpacity;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in;
+            animation-duration: 2s;
+        }
+
+        @keyframes fadeInOpacity {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .turno-label {
+            margin-right: 10px;
+
+        }
+
+        .turno-imagem {
+            margin-left: auto;
+            max-width: 100px;
+            /* Ajuste o tamanho máximo da imagem conforme necessário */
+            height: auto;
+        }
+
+        .arrow-img {
+            margin-right: 10px;
+            /* Ajuste conforme necessário */
+
+        }
+
+        #autorizacao {
+            display: none;
+            /* Oculta o checkbox padrão */
+        }
+
+        /* Estilo para o rótulo (label) */
+        #autorizacao+label:before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: green;
+            /* Cor de fundo do checkbox */
+            border-radius: 3px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        /* Estilo para o rótulo (label) quando o checkbox está marcado */
+        #autorizacao:checked+label:before {
+            content: "\2713";
+            /* Símbolo de marca de seleção */
+            font-size: 16px;
+            color: white;
+            /* Cor do símbolo de marca de seleção */
+            text-align: center;
+            line-height: 20px;
+        }
+
+        .tab {
+            text-align: center;
+            font-family: adobe arabic;
+            margin-top: 100px;
+        }
+
+        .tab-heading {
+            border-bottom: 5px solid aqua;
+            /* padding-bottom: 11px; */
+            padding: 20px;
+            margin: 0px 50px;
+            text-align: right;
+        }
+
+        .tab {
+            text-align: center;
+            font-family: adobe arabic;
+            margin-top: 0px;
+            /* background-color: pink; */
+            padding-top: 0px;
+        }
+
+        .tab-heading {
+            border-bottom: 5px solid aqua;
+            padding-bottom: 11px;
+            text-align: right;
+        }
+
+        /* Fez a parte de ida e vola */
+        /* span {
+            padding: 10px 2%;
+            border: 1px solid aqua;
+            font-size: 30px;
+            border-radius: 10px 10px 0 0;
+            cursor: pointer;
+            margin: 0px 10px;
+        } */
+        span {
+            padding: 12px 5%;
+            border: 1px solid aqua;
+            font-size: 30px;
+            border-radius: 10px 10px 0 0;
+            cursor: pointer;
+            margin: 0px 10px;
+        }
+
+        .active {
+            background-color: aqua;
+        }
+
+        .tab-heading span~span {
+            opacity: 0.3;
+        }
+
+        .tab-content {
+            /* background-color: red; */
+            height: 611px;
+            width: 550px;
+        }
+
+        .tab-content nav~nav {
+            display: none;
+
+        }
+
+
+
+        .turnoCenter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* Adicionar btn  */
+        p {
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+            font-weight: normal;
+        }
+
+        p,
+        a,
+        h1,
+        h2,
+        h3 {
+            cursor: pointer;
+        }
+
+        section {
+            /* position: absolute;
+            top: 30%;
+            left: 5%; */
+            /* background-color: pink; */
+            margin-top: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        /* estilo da caixa */
+        button.left {
+            font-family: "adobe arabic";
+            font-size: 30px;
+            padding: 10px 20px;
+            width: 300px;
+            margin: 20px;
+            border: none;
+            background-color: #ffb630;
+            cursor: pointer;
+            font-weight: bold;
+            color: #682b2b;
+        }
+
+        button.left {
+            -webkit-transition: all 0.6s;
+            -o-transition: all 0.6s;
+            transition: all 0.6s;
+        }
+
+        button.left:hover {
+            background-color: #fff;
+            border: 1px solid orange;
+            box-shadow: 0 0 1px 5px #ffa5007a, 0 0 1px 15px #ffa50067, 0 0 1px 25px #ffa50033;
+        }
+    </style>
+    <!-- Script dos next btn -->
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".tab-heading span").click(function () {
+                $(this).addClass("active").css({ opacity: 1 }).siblings().removeClass("active").css({ opacity: 0.3 })
+                var index = $(this).index();
+                $(".tab-content nav").slideUp().eq(index).slideDown()
+
+            })
+        })
+    </script>
+    <!-- Script para btn + - bol trocar font  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btUp").click(function () {
+                var currentFontSize = parseInt($("p").css("font-size"));
+                if (currentFontSize < 25) {
+                    $("p, h1, label").animate({
+                        fontSize: '+=5px'
+                    });
+                }
+            });
+
+
+            $("#btDown").click(function () {
+                var currentFontSize = parseInt($("p").css("font-size"));
+                if (currentFontSize > 10) {
+                    $("p, h1, label").animate({
+                        fontSize: '-=5px'
+                    });
+                }
+            });
+
+
+            $("#btFont").click(function () {
+                var fonts = ['Arial, sans-serif', 'Times New Roman, serif', 'Verdana, sans-serif'];
+                var currentFont = $("p, h1, label").css("font-family");
+                var currentIndex = fonts.indexOf(currentFont);
+                var nextIndex = (currentIndex + 1) % fonts.length;
+                $("p, h1, label").css("font-family", fonts[nextIndex]);
+            });
+
+
+            $("#btBold").click(function () {
+                var currentWeight = $("p").css("font-weight");
+                if (currentWeight === '400' || currentWeight === 'normal') {
+                    $("p, h1, label").css("font-weight", "bold");
+                } else {
+                    $("p, h1, label").css("font-weight", "normal");
+                }
+            });
+
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+
+
+    <div id="container">
+        <div id="header">
+            <div class="header">
+                <div class="navbar">
+                    <a href="https://cesas.se.df.gov.br/ead/"><img style="width: 200px"
+                            src="https://cesas.se.df.gov.br/ead/pluginfile.php/1/core_admin/logo/0x200/1709835412/logo%20menor.jpg"
+                            alt="CESAS" class="cesas-logo"></a>
+
+                    <a class="link" href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=54">Equipe</a>
+                    <div class="dropdown">
+                        <button class="dropbtn" onclick="myFunction()">Área do Aluno
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content" id="myDropdown">
+                            <a href="https://cesas.se.df.gov.br/ead/login/index.php">Meu Perfil</a>
+                            <a href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=749&forceview=1">Calendário</a>
+                            <a href="https://cesas.se.df.gov.br/ead/login/index.php">Plantão das Disciplinas</a>
+                        </div>
+                    </div>
+                    <a class="link" href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=70">Perguntas e
+                        Respostas</a>
+                    <a class="link"
+                        href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=751&forceview=1">Cursos</a>
+                    <a class="link" href="index.html">Pagina Home</a>
+                </div>
+            </div>
+        </div>
+        <div id="middle">
+
+
+            <div id="left">
+
+
+                <section>
+
+                    <div>
+                        <button class="left" id="btUp">Aumentar &nbsp;A Fonte</button>
+                        <br>
+                        <button class="left" id="btDown">&nbsp;Diminuir &nbsp;A Fonte&nbsp;</button>
+                        <br>
+                        <button class="left" id="btFont">Trocar A Fonte</button>
+                        <br>
+
+                        <button class="left" id="btBold">&nbsp;Fonte Negrito&nbsp;</button>
+                        <br>
+                    </div>
+
+                </section>
+
+            </div>
+            <div id="content">
+                <main>
+                    <div>
+                        <div class="form-box">
+
+                            <div>
+                                <div class="tab">
+
+                                    <div class="tab-content">
+                                        <br>
+                                        <h1 style="color: rgb(10, 10, 10);">Matrícula</h1>
+
+                                        <nav>
+                                            <br>
+                                            <div id="Retangulo" class="retangulo" style="text-align: center">
+
+                                                <audio controls autoplay>
+                                                    <source src="seu_audio.mp3" type="audio/mpeg">
+                                                </audio>
+                                                <p>Envie uma foto do seu documento:</p>
+                                                <div id="container" style="position: relative;justify-content: center;
+                                                align-items: center;">
+                                                    <div id="cameraContainer" style="position: relative;">
+                                                        <video id="video" style="margin: 0 auto;" width="400px"
+                                                            height="300" autoplay
+                                                            style="background-color: black;"></video>
+                                                        <div id="overlay"
+                                                            style="position: absolute; bottom: 0; width: 400px; background-color: black; margin: 0 65px;">
+                                                            <button id="snapBtn"
+                                                                style="font-size: 24px; border: none; color: black; background-color: black;">⚪</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <canvas id="canvas" width="400" height="300"
+                                                    style="display:none;"></canvas>
+                                        </nav>
+                                        <!-- Segundo  -->
+                                        <nav>
+                                            <br>
+                                            <audio controls>
+                                                <source src="seu_audio.mp3" type="audio/mpeg">
+                                            </audio>
+
+                                            <p>Selecione o turno desejado:</p>
+                                            <div class="turnoCenter">
+                                                <div>
+                                                    <div>
+                                                        <div class="turno-container">
+                                                            <input type="radio" id="manha" name="turno" value="manha">
+                                                            <label for="manha" class="turno-label">De Manhã(Matutino)
+                                                            </label>
+                                                            <img src="images/manha.png" alt="" class="turno-imagem">
+                                                        </div>
+
+                                                        <div class="turno-container">
+                                                            <input type="radio" id="tarde" name="turno" value="tarde">
+                                                            <label for="tarde" class="turno-label">De
+                                                                Tarde(Vespertino)</label>
+                                                            <img src="images/tarde.png" alt="" class="turno-imagem">
+                                                        </div>
+
+                                                        <div class="turno-container">
+                                                            <input type="radio" id="noite" name="turno" value="noite">
+                                                            <label for="noite" class="turno-label">De
+                                                                Noite(Noturno)</label>
+                                                            <img src="images/noite.png" alt="" class="turno-imagem">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </nav>
+                                        <!-- terceiro                         -->
+                                        <nav>
+                                            <br>
+                                            <audio controls>
+                                                <source src="seu_audio.mp3" type="audio/mpeg">
+                                            </audio>
+                                            <br>
+                                            <br><br><br><br><br><br>
+                                            <input type="checkbox" id="autorizacao" name="autorizacao">
+                                            <!-- Rótulo -->
+                                            <label for="autorizacao">Termo de autorização do uso de áudio e
+                                                imagem</label>
+
+
+
+                                            <br><br><br><br><br>
+                                            <!-- <input type="submit" value="Enviar"
+                                                style="background-color:rgb(72, 160, 236); ; color: white; padding: 10px 20px; border: none; border-radius: 5px;""> -->
+                                            <button style=" 
+                                            background-color:rgb(72, 160, 236);
+                                              color: white; 
+                                              padding: 10px
+                                                20px; border: none; 
+                                                border-radius: 5px;
+                                                
+                                                font-size: 30px;
+                                                padding: 10px 20px;
+                                                width: 200px;
+                                                margin: 20px;
+                                                border: none;
+                                                cursor: pointer;
+                                                font-weight: bold;">Enviar</button>
+
+                                    </div>
+                                    </nav>
+                                </div>
+                                <div class="tab-heading">
+                                    <center>
+                                        <span class="active">1</span>
+                                        <span>2</span>
+                                        <span>3</span>
+                                    </center>
+                                </div>
+                            </div>
+
+
+
+                            <!-- <canvas id="canvas" width="400" height="300" style="display:none;"></canvas> -->
+
+                            <!-- <a href="" class="arrow-img" style="font-size: 20px; text-decoration: none; color: white;">➡️</a> -->
+
+                        </div>
+                    </div>
+
+
+
+            </div>
+        </div>
+
+
+
+        </main>
+    </div>
+    <div id="right">
+    </div>
+    </div>
+    <div id="footer">
+    </div>
+    </div>
+
+
+
+</body>
+
+<script>
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+    const snapBtn = document.getElementById('snapBtn');
+
+    // Acesso à câmera
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function (stream) {
+            video.srcObject = stream;
+            video.play();
+        })
+        .catch(function (err) {
+            console.log("Erro ao acessar a câmera: " + err);
+        });
+
+    // Função para tirar a foto
+    snapBtn.addEventListener('click', function () {
+        const context = canvas.getContext('2d');
+        context.drawImage(video, 0, 0, 400, 300);
+        // Converter a imagem para um arquivo e fazer o download
+        const imageData = canvas.toDataURL('image/jpeg');
+        const link = document.createElement('a');
+        link.download = 'foto.jpg'; // Nome do arquivo
+        link.href = imageData.replace(/^data:image\/[^;]/, 'data:application/octet-stream'); // Converter a imagem para um blob
+        link.click(); // Simular o clique no link para fazer o download
+    });
+</script>
+<!-- Script para leitura do site  -->
+<script>
+    let msg = new SpeechSynthesisUtterance();
+    let voices = speechSynthesis.getVoices();
+    // Find the voice that corresponds to Portuguese (Portugal)
+    let portugueseVoice = voices.find(voice => voice.lang === 'pt-BR');
+    // Setar a Voz em pt Brasil one if found, otherwise use the default
+    msg.voice = portugueseVoice || voices[0]; //5 kkk //2,3,4 good
+    // Setar a lingua em pt Brasil
+    msg.lang = 'pt-BR';
+
+
+    let tags = document.querySelectorAll('p,a,h1,h2,label,button,span'); // add more tags for your project
+    tags.forEach((tag) => {
+        tag.addEventListener('click', (e) => {
+            msg.text = e.target.innerText;
+            tag.style.backgroundColor = "yellow";
+            speechSynthesis.speak(msg);
+
+
+            let interval = setInterval(() => {
+                if (!speechSynthesis.speaking) {
+                    tag.style.removeProperty('background-color');
+                    clearInterval(interval);
+                }
+            }, 100);
+
+
+        });
+    });
+
+
+</script>
+
+
+</html>
