@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta charset="UTF-8">
+    <title>Cesas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <style>
+        /* Estilo para a imagem com a classe "imagem-25" ocupar 25% da largura do site */
+
+        body {
+            margin: 0px;
+            background: linear-gradient(to bottom, #00b4d8, #ade8f4);
+            background-image: url("images/backGround1.svg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            /* Center the background image */
+            /* min-height: 100vh; */
+            width: 100%;
+        }
+
+
+
+        .retangulo {
+
+            /* position: absolute;
+            top: 55%;
+            left: 55%;
+            height: 550px;
+            width: 450px;
+            transform: translate(-50%, -50%);
+            border: hidden;
+            border-radius: 13px;
+            background: linear-gradient(to top, rgba(231, 226, 255, 0.505), rgb(211, 201, 255)); */
+            padding-top: 0px;
+            margin-top: 0px;
+            padding-top: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            flex-wrap: wrap;
+            text-align: center;
+            /* background-color: red; */
+
+        }
+
+        .navbar {
+
+            background-color: #ffffff;
+            font-family: Poppins, sans-serif;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8%;
+        }
+
+
+
+
+
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: rgb(17, 119, 209);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+
+        }
+
+        .dropdown,
+        .dropdown2 {
+            float: left;
+            overflow: hidden;
+            align-items: center;
+
+
+        }
+
+        .dropdown .dropbtn,
+        .dropdown2 .dropbtn2 {
+            cursor: pointer;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: rgb(17, 119, 209);
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .dropdown:hover .dropbtn,
+        .link:hover,
+        .dropbtn:focus,
+        .dropdown2:hover .dropbtn2,
+        .dropbtn2:focus {
+            color: black;
+        }
+
+        .dropdown-content,
+        .dropdown-content2 {
+
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a,
+        .dropdown-content2 a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover,
+        .dropdown-content2 a:hover {
+            background-color: #f2f2f2;
+        }
+
+
+        /* Adicionar btn  */
+        p {
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+            font-weight: normal;
+        }
+
+        p,
+        a,
+        h1,
+        h2,
+        h3 {
+            cursor: pointer;
+        }
+
+        /* Fazendo o Layout */
+        .menu {
+            grid-area: menu;
+            
+        }
+
+        .conteudo {
+            grid-area: conteudo;
+        }
+
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+
+                'menu conteudo';
+            /* background-color: darkkhaki; */
+            padding: 10px;
+            font-family: "Poetsen One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: #006298;
+        }
+
+        .grid-container>div {
+            margin-top: 100px;
+            height: 80vh;
+            /* background-color: rgba(255, 255, 255, 0.8); */
+            /* border: 1px solid rgba(0, 0, 0, 0.8); */
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        #videoh4 {
+            /* background-color: green; */
+            position: absolute;
+            top: 200px;
+            left: 300px;
+        }
+
+        #audioh4 {
+            /* background-color: green; */
+            position: absolute;
+            top: 600px;
+            left: 300px;
+        }
+
+        #audioMenu {
+            position: absolute;
+            top: 700px;
+            left: 260px;
+            width: 350px;
+        }
+       
+
+    
+
+        audio::-webkit-media-controls-panel {
+            background-color: cornflowerblue;
+        }
+
+        audio::-webkit-media-controls-play-button {
+            background-color: lightblue;
+            border-radius: 50%;
+        }
+
+        audio::-webkit-media-controls-current-time-display {
+            color: #333;
+        }
+
+        audio::-webkit-media-controls-time-remaining-display {
+            color: #333;
+        }
+
+        audio::-webkit-media-controls-timeline {
+            border-radius: 40px;
+            background-color: lightblue;
+        }
+
+        audio::-webkit-media-controls-volume-slider {
+            background-color: lightblue;
+            border-radius: 50px;
+            padding-left: 30px;
+            padding-right: 10px;
+        }
+
+        audio::-webkit-media-controls-mute-button {
+            background-color: lightblue;
+            border-radius: 50%;
+        }
+        /* para ir para proxima pagina */
+
+        .next {
+            position: absolute;
+            background: url(images/next.png);
+            width: 70px;
+            height: 70px;
+            top: 300px;
+            right: 600px;
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        .next{
+            -webkit-transition: all 0.6s;
+            -o-transition: all 0.6s;
+            transition: all 0.6s;
+        }
+
+        .next:hover {
+            opacity: 0.5;
+            right: 580px;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="navbar">
+            <a href="https://cesas.se.df.gov.br/ead/"><img style="width: 200px"
+                    src="https://cesas.se.df.gov.br/ead/pluginfile.php/1/core_admin/logo/0x200/1709835412/logo%20menor.jpg"
+                    alt="CESAS" class="cesas-logo"></a>
+
+            <a class="link" href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=54">Equipe</a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myFunction()">Área do Aluno
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a href="https://cesas.se.df.gov.br/ead/login/index.php">Meu Perfil</a>
+                    <a href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=749&forceview=1">Calendário</a>
+                    <a href="https://cesas.se.df.gov.br/ead/login/index.php">Plantão das Disciplinas</a>
+                </div>
+            </div>
+            <a class="link" href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=70">Perguntas e Respostas</a>
+            <a class="link" href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=751&forceview=1">Cursos</a>
+            <a class="link" href="template.html">Pagina template</a>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="menu">
+            <h4 id="videoh4">Vídeo de instrução:</h4>
+            <h4 id="audioh4">Áudio de instrução:</h4>
+            <audio id="audioMenu" controls>
+                <source src="audio_file.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="conteudo">
+            <h4 id="SeEscrever">
+                Bora se Escrever ?
+            </h4>
+            <a href="page2.html" class="next"></a>
+        </div>
+    </div>
+
+</body>
+<script>
+    let msg = new SpeechSynthesisUtterance();
+    let voices = speechSynthesis.getVoices();
+    // Find the voice that corresponds to Portuguese (Portugal)
+    let portugueseVoice = voices.find(voice => voice.lang === 'pt-BR');
+    // Setar a Voz em pt Brasil one if found, otherwise use the default
+    msg.voice = portugueseVoice || voices[0]; //5 kkk //2,3,4 good
+    // Setar a lingua em pt Brasil
+    msg.lang = 'pt-BR';
+
+
+    let tags = document.querySelectorAll('p,h1,h2,h4,label,button,span'); // add more tags for your project
+    tags.forEach((tag) => {
+        tag.addEventListener('click', (e) => {
+            msg.text = e.target.innerText;
+            tag.style.backgroundColor = "yellow";
+            speechSynthesis.speak(msg);
+
+
+            let interval = setInterval(() => {
+                if (!speechSynthesis.speaking) {
+                    tag.style.removeProperty('background-color');
+                    clearInterval(interval);
+                }
+            }, 100);
+
+
+        });
+    });
+
+
+</script>
+
+</html>

@@ -6,20 +6,60 @@
     <meta charset="UTF-8">
     <title>Cesas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <img src="" alt="">
+
     <style>
         /* Estilo para a imagem com a classe "imagem-25" ocupar 25% da largura do site */
 
         body {
             margin: 0px;
             background: linear-gradient(to bottom, #00b4d8, #ade8f4);
-            /* background-image: url("images/pagina2.svg"); */
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            /* Center the background image */
-            /* min-height: 100vh; */
+            min-height: 100vh;
             width: 100%;
+        }
+
+        #container {
+            /* width : 960px; */
+            width: 100%;
+            margin: 0 auto 0;
+            /*ficar no meio*/
+        }
+
+        #header {
+            /* width : 100%; */
+            height: 50px;
+
+        }
+
+        #left {
+            width: 30%;
+            min-height: 80vh;
+            float: left;
+            /* background-color: green; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #content {
+            width: 40%;
+            /* height:500px; */
+            float: left;
+            min-height: 80vh;
+            /* background-color: pink; */
+        }
+
+        #right {
+            width: 30%;
+            /* height:500px; */
+            float: left;
+            /* background-color : red; */
+        }
+
+        #footer {
+            /* width : 100%;
+                   height : 100px;
+                   background-color : navy;
+                   clear : both; */
         }
 
         main {
@@ -34,7 +74,7 @@
         }
 
         .form-box {
-            margin-top: 60px;
+            margin-top: 10px;
             padding-top: 0;
             background-color: transparent;
             border: 2px solid rgba(255, 255, 255, 0.5);
@@ -49,6 +89,9 @@
             /* align-items: center; */
 
         }
+
+
+
 
         .retangulo {
 
@@ -235,7 +278,7 @@
 
         .turno-container {
             /* background-color: green; */
-            width: 400px;
+            width: 200px;
             display: flex;
             align-items: center;
             margin-bottom: 10px;
@@ -393,10 +436,15 @@
         }
 
         section {
-            position: absolute;
+            /* position: absolute;
             top: 30%;
-            left: 8%;
+            left: 5%; */
             /* background-color: pink; */
+            margin-top: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
         }
 
         /* estilo da caixa */
@@ -487,174 +535,204 @@
 
 <body>
 
-    <div class="header">
-        <div class="navbar">
-            <a href="https://cesas.se.df.gov.br/ead/"><img style="width: 200px"
-                    src="https://cesas.se.df.gov.br/ead/pluginfile.php/1/core_admin/logo/0x200/1709835412/logo%20menor.jpg"
-                    alt="CESAS" class="cesas-logo"></a>
 
-            <a class="link" href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=54">Equipe</a>
-            <div class="dropdown">
-                <button class="dropbtn" onclick="myFunction()">Área do Aluno
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content" id="myDropdown">
-                    <a href="https://cesas.se.df.gov.br/ead/login/index.php">Meu Perfil</a>
-                    <a href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=749&forceview=1">Calendário</a>
-                    <a href="https://cesas.se.df.gov.br/ead/login/index.php">Plantão das Disciplinas</a>
+
+    <div id="container">
+        <div id="header">
+            <div class="header">
+                <div class="navbar">
+                    <a href="https://cesas.se.df.gov.br/ead/"><img style="width: 200px"
+                            src="https://cesas.se.df.gov.br/ead/pluginfile.php/1/core_admin/logo/0x200/1709835412/logo%20menor.jpg"
+                            alt="CESAS" class="cesas-logo"></a>
+
+                    <a class="link" href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=54">Equipe</a>
+                    <div class="dropdown">
+                        <button class="dropbtn" onclick="myFunction()">Área do Aluno
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content" id="myDropdown">
+                            <a href="https://cesas.se.df.gov.br/ead/login/index.php">Meu Perfil</a>
+                            <a href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=749&forceview=1">Calendário</a>
+                            <a href="https://cesas.se.df.gov.br/ead/login/index.php">Plantão das Disciplinas</a>
+                        </div>
+                    </div>
+                    <a class="link" href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=70">Perguntas e
+                        Respostas</a>
+                    <a class="link"
+                        href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=751&forceview=1">Cursos</a>
+                    <a class="link" href="index.html">Pagina Home</a>
                 </div>
             </div>
-            <a class="link" href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=70">Perguntas e Respostas</a>
-            <a class="link" href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=751&forceview=1">Cursos</a>
-            <a class="link" href="page1.html">Pagina 1</a>
         </div>
-    </div>
+        <div id="middle">
 
-    <section>
 
-        <button class="left" id="btUp">Aumentar &nbsp;A Fonte</button>
-        <br>
-        <button class="left" id="btDown">&nbsp;Diminuir &nbsp;A Fonte&nbsp;</button>
-        <br>
-        <button class="left" id="btFont">Trocar A Fonte</button>
-        <br>
+            <div id="left">
 
-        <button class="left" id="btBold">&nbsp;Fonte Negrito&nbsp;</button>
-        <br>
 
-    </section>
+                <section>
 
-    <main>
-        <div id="content">
-            <div class="form-box">
+                    <div>
+                        <button class="left" id="btUp">Aumentar &nbsp;A Fonte</button>
+                        <br>
+                        <button class="left" id="btDown">&nbsp;Diminuir &nbsp;A Fonte&nbsp;</button>
+                        <br>
+                        <button class="left" id="btFont">Trocar A Fonte</button>
+                        <br>
 
-                <div id="content">
-                    <div class="tab">
+                        <button class="left" id="btBold">&nbsp;Fonte Negrito&nbsp;</button>
+                        <br>
+                    </div>
 
-                        <div class="tab-content">
-                            <br>
-                            <h1 style="color: rgb(10, 10, 10);">Matrícula</h1>
+                </section>
 
-                            <nav>
-                                <br>
-                                <div id="Retangulo" class="retangulo" style="text-align: center">
+            </div>
+            <div id="content">
+                <main>
+                    <div>
+                        <div class="form-box">
 
-                                    <audio controls autoplay>
-                                        <source src="seu_audio.mp3" type="audio/mpeg">
-                                    </audio>
-                                    <p>Envie uma foto do seu documento:</p>
-                                    <div id="container" style="position: relative;">
-                                        <div id="cameraContainer" style="position: relative;">
-                                            <video id="video" width="400" height="300" autoplay
-                                                style="background-color: black;"></video>
-                                            <div id="overlay"
-                                                style="position: absolute; bottom: 0; width: 100%; background-color: black; text-align: center;">
-                                                <button id="snapBtn"
-                                                    style="font-size: 24px; border: none; color: black; background-color: black;">⚪</button>
+                            <div>
+                                <div class="tab">
+
+                                    <div class="tab-content">
+                                        <br>
+                                        <h1 style="color: rgb(10, 10, 10);">Matrícula</h1>
+
+                                        <nav>
+                                            <br>
+                                            <div id="Retangulo" class="retangulo" style="text-align: center">
+
+                                                <audio controls autoplay>
+                                                    <source src="seu_audio.mp3" type="audio/mpeg">
+                                                </audio>
+                                                <p>Envie uma foto do seu documento:</p>
+                                                <div id="container" style="position: relative;justify-content: center;
+                                                align-items: center;">
+                                                    <div id="cameraContainer" style="position: relative;">
+                                                        <video id="video" style="margin: 0 auto;" width="400px"
+                                                            height="300" autoplay
+                                                            style="background-color: black;"></video>
+                                                        <div id="overlay"
+                                                            style="position: absolute; bottom: 0; width: 400px; background-color: black; margin: 0 65px;">
+                                                            <button id="snapBtn"
+                                                                style="font-size: 24px; border: none; color: black; background-color: black;">⚪</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <canvas id="canvas" width="400" height="300"
+                                                    style="display:none;"></canvas>
+                                        </nav>
+                                        <!-- Segundo  -->
+                                        <nav>
+                                            <br>
+                                            <audio controls>
+                                                <source src="seu_audio.mp3" type="audio/mpeg">
+                                            </audio>
+
+                                            <p>Selecione o turno desejado:</p>
+                                            <div class="turnoCenter">
+                                                <div>
+                                                    <div>
+                                                        <div class="turno-container">
+                                                            <input type="radio" id="manha" name="turno" value="manha">
+                                                            <label for="manha" class="turno-label">De Manhã(Matutino)
+                                                            </label>
+                                                            <img src="images/manha.png" alt="" class="turno-imagem">
+                                                        </div>
+
+                                                        <div class="turno-container">
+                                                            <input type="radio" id="tarde" name="turno" value="tarde">
+                                                            <label for="tarde" class="turno-label">De
+                                                                Tarde(Vespertino)</label>
+                                                            <img src="images/tarde.png" alt="" class="turno-imagem">
+                                                        </div>
+
+                                                        <div class="turno-container">
+                                                            <input type="radio" id="noite" name="turno" value="noite">
+                                                            <label for="noite" class="turno-label">De
+                                                                Noite(Noturno)</label>
+                                                            <img src="images/noite.png" alt="" class="turno-imagem">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
+
+                                        </nav>
+                                        <!-- terceiro                         -->
+                                        <nav>
+                                            <br>
+                                            <audio controls>
+                                                <source src="seu_audio.mp3" type="audio/mpeg">
+                                            </audio>
+                                            <br>
+                                            <br><br><br><br><br><br>
+                                            <input type="checkbox" id="autorizacao" name="autorizacao">
+                                            <!-- Rótulo -->
+                                            <label for="autorizacao">Termo de autorização do uso de áudio e
+                                                imagem</label>
+
+
+
+                                            <br><br><br><br><br>
+                                            <!-- <input type="submit" value="Enviar"
+                                                style="background-color:rgb(72, 160, 236); ; color: white; padding: 10px 20px; border: none; border-radius: 5px;""> -->
+                                            <button style=" 
+                                            background-color:rgb(72, 160, 236);
+                                              color: white; 
+                                              padding: 10px
+                                                20px; border: none; 
+                                                border-radius: 5px;
+                                                
+                                                font-size: 30px;
+                                                padding: 10px 20px;
+                                                width: 200px;
+                                                margin: 20px;
+                                                border: none;
+                                                cursor: pointer;
+                                                font-weight: bold;">Enviar</button>
+
                                     </div>
-                                    <canvas id="canvas" width="400" height="300" style="display:none;"></canvas>
-                            </nav>
-                            <!-- Segundo  -->
-                            <nav>
-                                <br>
-                                <audio controls>
-                                    <source src="seu_audio.mp3" type="audio/mpeg">
-                                </audio>
-
-                                <p>Selecione o turno desejado:</p>
-                                <div class="turnoCenter">
-                                    <div>
-                                        <div class="turno-container">
-                                            <input type="radio" id="manha" name="turno" value="manha">
-                                            <label for="manha" class="turno-label">De Manhã(Matutino) </label>
-                                            <img src="images/manha.png" alt="" class="turno-imagem">
-                                        </div>
-
-                                        <div class="turno-container">
-                                            <input type="radio" id="tarde" name="turno" value="tarde">
-                                            <label for="tarde" class="turno-label">De Tarde(Vespertino)</label>
-                                            <img src="images/tarde.png" alt="" class="turno-imagem">
-                                        </div>
-
-                                        <div class="turno-container">
-                                            <input type="radio" id="noite" name="turno" value="noite">
-                                            <label for="noite" class="turno-label">De Noite(Noturno)</label>
-                                            <img src="images/noite.png" alt="" class="turno-imagem">
-                                        </div>
-                                    </div>
+                                    </nav>
                                 </div>
-
-                            </nav>
-                            <!-- terceiro                         -->
-                            <nav>
-                                <br>
-                                <audio controls>
-                                    <source src="seu_audio.mp3" type="audio/mpeg">
-                                </audio>
-                                <br>
-                                <br><br><br><br><br><br>
-                                <input type="checkbox" id="autorizacao" name="autorizacao">
-                                <!-- Rótulo -->
-                                <label for="autorizacao">Termo de autorização do uso de áudio e imagem</label>
+                                <div class="tab-heading">
+                                    <center>
+                                        <span class="active">1</span>
+                                        <span>2</span>
+                                        <span>3</span>
+                                    </center>
+                                </div>
+                            </div>
 
 
 
-                                <br><br><br><br><br>
-                                <!-- <input type="submit" value="Enviar"
-                                    style="background-color:rgb(72, 160, 236); ; color: white; padding: 10px 20px; border: none; border-radius: 5px;""> -->
-                                <button style=" 
-                                background-color:rgb(72, 160, 236);
-                                  color: white; 
-                                  padding: 10px
-                                    20px; border: none; 
-                                    border-radius: 5px;
-                                    
-                                    font-size: 30px;
-                                    padding: 10px 20px;
-                                    width: 200px;
-                                    margin: 20px;
-                                    border: none;
-                                    cursor: pointer;
-                                    font-weight: bold;">Enviar</button>
+                            <!-- <canvas id="canvas" width="400" height="300" style="display:none;"></canvas> -->
+
+                            <!-- <a href="" class="arrow-img" style="font-size: 20px; text-decoration: none; color: white;">➡️</a> -->
 
                         </div>
-                        </nav>
                     </div>
-                    <div class="tab-heading">
-                        <center>
-                            <span class="active">1</span>
-                            <span>2</span>
-                            <span>3</span>
-                        </center>
-                    </div>
-                </div>
 
 
-
-                <!-- <canvas id="canvas" width="400" height="300" style="display:none;"></canvas> -->
-
-                <!-- <a href="" class="arrow-img" style="font-size: 20px; text-decoration: none; color: white;">➡️</a> -->
 
             </div>
         </div>
 
 
 
-        </div>
-        </div>
-
-
-
-    </main>
-
+        </main>
+    </div>
+    <div id="right">
+    </div>
+    </div>
+    <div id="footer">
+    </div>
+    </div>
 
 
 
 </body>
-<footer>
-</footer>
+
 <script>
     const video = document.getElementById('video');
     const canvas = document.getElementById('canvas');
@@ -715,5 +793,6 @@
 
 
 </script>
+
 
 </html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <style>
+        
+         p {
+              font-size: 20px;
+              font-family: Arial, sans-serif;
+              font-weight: normal;
+         }
+         p,
+         a,
+         h1,
+         h2,
+         h3 {
+              cursor: pointer;
+         }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+         $(document).ready(function () {
+              $("#btUp").click(function () {
+                   var currentFontSize = parseInt($("p").css("font-size"));
+                   if (currentFontSize < 300) {
+                        $("p").animate({
+                             fontSize: '+=10px'
+                        });
+                   }
+              });
+
+
+              $("#btDown").click(function () {
+                   var currentFontSize = parseInt($("p").css("font-size"));
+                   if (currentFontSize > 10) {
+                        $("p").animate({
+                             fontSize: '-=10px'
+                        });
+                   }
+              });
+
+
+              $("#btFont").click(function () {
+                   var fonts = ['Arial, sans-serif', 'Times New Roman, serif', 'Verdana, sans-serif'];
+                   var currentFont = $("p").css("font-family");
+                   var currentIndex = fonts.indexOf(currentFont);
+                   var nextIndex = (currentIndex + 1) % fonts.length;
+                   $("p").css("font-family", fonts[nextIndex]);
+              });
+
+
+              $("#btBold").click(function () {
+                   var currentWeight = $("p").css("font-weight");
+                   if (currentWeight === '400' || currentWeight === 'normal') {
+                        $("p").css("font-weight", "bold");
+                   } else {
+                        $("p").css("font-weight", "normal");
+                   }
+              });
+
+
+         });
+    </script>
+</head>
+
+
+<body>
+
+
+    <button id="btUp">+A</button>
+    <button id="btDown">-A</button>
+    <button id="btFont">Change Font</button>
+    <button id="btBold">Toggle Bold</button>
+
+
+    <p>
+         Por padrão, todos os elementos HTML têm uma posição estática e não podem ser movidos.
+         Para manipular a posição, lembre-se de primeiro definir a propriedade de posição CSS
+         do elemento como relativa, fixa ou absoluta!
+    </p>
+</body>
+<script>
+    let msg = new SpeechSynthesisUtterance();
+    let voices = speechSynthesis.getVoices();
+    // Find the voice that corresponds to Portuguese (Portugal)
+    let portugueseVoice = voices.find(voice => voice.lang === 'pt-BR');
+    // Setar a Voz em pt Brasil one if found, otherwise use the default
+    msg.voice = portugueseVoice || voices[0]; //5 kkk //2,3,4 good
+    // Setar a lingua em pt Brasil
+    msg.lang = 'pt-BR';
+
+
+    let tags = document.querySelectorAll('p,a,h1,h2,h3'); // add more tags for your project
+    tags.forEach((tag) => {
+         tag.addEventListener('click', (e) => {
+              msg.text = e.target.innerText;
+              tag.style.backgroundColor = "yellow";
+              speechSynthesis.speak(msg);
+
+
+              let interval = setInterval(() => {
+                   if (!speechSynthesis.speaking) {
+                        tag.style.removeProperty('background-color');
+                        clearInterval(interval);
+                   }
+              }, 100);
+
+
+         });
+    });
+
+
+</script>
+
+
+</html>
+

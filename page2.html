@@ -6,14 +6,20 @@
     <meta charset="UTF-8">
     <title>Cesas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <img src="" alt="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
     <style>
         /* Estilo para a imagem com a classe "imagem-25" ocupar 25% da largura do site */
 
         body {
+            font-family: "Poetsen One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: #006298;
             margin: 0px;
             background: linear-gradient(to bottom, #00b4d8, #ade8f4);
-            /* background-image: url("images/pagina2.svg"); */
+            background-image: url("images/pagina2.svg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -21,12 +27,18 @@
             /* min-height: 100vh; */
             width: 100%;
         }
+        body, h1, p, button, span, label,a,button.dropbtn {
+            margin: 0;
+            padding: 0;
+            font-family: "Poetsen One", sans-serif;
+            color: #006298;
+        }
 
         main {
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            /* min-height: 100vh; */
             width: 100%;
             /* background: url(../image/background.png);
      background-position: center;
@@ -34,12 +46,12 @@
         }
 
         .form-box {
-            margin-top: 60px;
+            /* margin-top: 60px; */
             padding-top: 0;
             background-color: transparent;
-            border: 2px solid rgba(255, 255, 255, 0.5);
+            /* border: 2px solid rgba(255, 255, 255, 0.5); */
             border-radius: 20px;
-            background-color: #9bb1ff;
+            /* background-color: #9bb1ff; */
             backdrop-filter: blur(5px);
             position: relative;
             width: 550px;
@@ -75,8 +87,10 @@
         }
 
         .navbar {
+            /* position: fixed; */
 
             background-color: #ffffff;
+            border-bottom: 3px solid #0077b6;
             font-family: Poppins, sans-serif;
             display: flex;
             justify-content: flex-start;
@@ -86,6 +100,7 @@
             left: 0;
             width: 100%;
             height: 8%;
+            
         }
 
 
@@ -99,6 +114,7 @@
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
+            
 
         }
 
@@ -120,7 +136,7 @@
             color: rgb(17, 119, 209);
             padding: 14px 16px;
             background-color: inherit;
-            font-family: inherit;
+            /* font-family: inherit; */
             margin: 0;
         }
 
@@ -192,7 +208,7 @@
             margin-top: 20px;
             /* Adicionando margem apenas na parte superior do parágrafo */
             text-align: left;
-            font-size: 15px;
+            font-size: 20px;
         }
 
         /* Estilo para o botão de upload de arquivo */
@@ -235,7 +251,7 @@
 
         .turno-container {
             /* background-color: green; */
-            width: 400px;
+            width: 570px;
             display: flex;
             align-items: center;
             margin-bottom: 10px;
@@ -267,6 +283,7 @@
             /* Ajuste o tamanho máximo da imagem conforme necessário */
             height: auto;
         }
+        
 
         .arrow-img {
             margin-right: 10px;
@@ -309,11 +326,14 @@
             margin-top: 100px;
         }
 
+        /* e para desenhar uma linha em baixo  */
         .tab-heading {
-            border-bottom: 5px solid aqua;
+            /* border-bottom: 5px solid aqua; */
             /* padding-bottom: 11px; */
-            padding: 20px;
-            margin: 0px 50px;
+            /* padding: 20px; */
+            /* margin: 0px 50px; */
+            /* margin-top: 60px; */
+            padding-bottom: 11px;
             text-align: right;
         }
 
@@ -325,11 +345,7 @@
             padding-top: 0px;
         }
 
-        .tab-heading {
-            border-bottom: 5px solid aqua;
-            padding-bottom: 11px;
-            text-align: right;
-        }
+
 
         /* Fez a parte de ida e vola */
         /* span {
@@ -344,7 +360,8 @@
             padding: 12px 5%;
             border: 1px solid aqua;
             font-size: 30px;
-            border-radius: 10px 10px 0 0;
+            /* border-radius: 10px 10px 0 0; */
+            border-radius: 10px;
             cursor: pointer;
             margin: 0px 10px;
         }
@@ -379,9 +396,9 @@
 
         /* Adicionar btn  */
         p {
-            font-size: 20px;
+            /* font-size: 20px;
             font-family: Arial, sans-serif;
-            font-weight: normal;
+            font-weight: normal; */
         }
 
         p,
@@ -393,18 +410,18 @@
         }
 
         section {
-            position: absolute;
+            /* position: absolute;
             top: 30%;
-            left: 8%;
+            left: 8%; */
             /* background-color: pink; */
         }
 
         /* estilo da caixa */
         button.left {
             font-family: "adobe arabic";
-            font-size: 30px;
-            padding: 10px 20px;
-            width: 300px;
+            font-size: 20px;
+            padding: 8px 10px;
+            width: 200px;
             margin: 20px;
             border: none;
             background-color: #ffb630;
@@ -423,6 +440,87 @@
             background-color: #fff;
             border: 1px solid orange;
             box-shadow: 0 0 1px 5px #ffa5007a, 0 0 1px 15px #ffa50067, 0 0 1px 25px #ffa50033;
+        }
+
+        /* para fazer o lay out do site  */
+        .menu {
+            grid-area: menu;
+        }
+
+        .conteudo {
+            grid-area: conteudo;
+            background-color: white;
+            /* border-left: 3px solid #0077b6; */
+            height: auto;
+            height: 100vh;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+
+                'menu menu conteudo';
+            /* background-color: darkkhaki; */
+            padding: 0px;
+            font-family: "Poetsen One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: #006298;
+            height: 100vh;
+
+        }
+
+        .grid-container>div {
+            margin-top: 0px;
+            margin-left: 0px;
+            height: 80vh;
+            /* background-color: rgba(255, 255, 255, 0.8); */
+            /* border: 1px solid rgba(0, 0, 0, 0.8); */
+            padding: 12%;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        /* para audio */
+        audio {
+            width: 400px;
+            margin-bottom: 10px;
+        }
+
+        audio::-webkit-media-controls-panel {
+            background-color: #68D3EC;
+        }
+
+        audio::-webkit-media-controls-play-button {
+            background-color: lightblue;
+            border-radius: 50%;
+        }
+
+        audio::-webkit-media-controls-current-time-display {
+            color: #333;
+        }
+
+        audio::-webkit-media-controls-time-remaining-display {
+            color: #333;
+        }
+
+        audio::-webkit-media-controls-timeline {
+            border-radius: 40px;
+            background-color: lightblue;
+            margin: 10px;
+
+        }
+
+        audio::-webkit-media-controls-volume-slider {
+            background-color: lightblue;
+            border-radius: 50px;
+            padding-left: 30px;
+            padding-right: 10px;
+        }
+
+        audio::-webkit-media-controls-mute-button {
+            background-color: lightblue;
+            border-radius: 50%;
         }
     </style>
     <!-- Script dos next btn -->
@@ -506,105 +604,113 @@
             </div>
             <a class="link" href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=70">Perguntas e Respostas</a>
             <a class="link" href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=751&forceview=1">Cursos</a>
-            <a class="link" href="page1.html">Pagina 1</a>
+            <a class="link" href="template.html">Pagina template</a>
         </div>
     </div>
 
-    <section>
 
-        <button class="left" id="btUp">Aumentar &nbsp;A Fonte</button>
-        <br>
-        <button class="left" id="btDown">&nbsp;Diminuir &nbsp;A Fonte&nbsp;</button>
-        <br>
-        <button class="left" id="btFont">Trocar A Fonte</button>
-        <br>
 
-        <button class="left" id="btBold">&nbsp;Fonte Negrito&nbsp;</button>
-        <br>
 
-    </section>
 
-    <main>
-        <div id="content">
-            <div class="form-box">
+    <div class="grid-container">
+        <div class="menu">
+            <section>
 
+                <button class="left" id="btUp">Aumentar &nbsp;A Fonte</button>
+                
+                <button class="left" id="btDown">&nbsp;Diminuir &nbsp;A Fonte&nbsp;</button>
+                <br>
+                <button class="left" id="btFont">Trocar A Fonte</button>
+                
+
+                <button class="left" id="btBold">&nbsp;Fonte Negrito&nbsp;</button>
+                <br>
+
+            </section>
+        </div>
+        <div class="conteudo">
+
+            <main>
                 <div id="content">
-                    <div class="tab">
+                    <div class="form-box">
 
-                        <div class="tab-content">
-                            <br>
-                            <h1 style="color: rgb(10, 10, 10);">Matrícula</h1>
+                        <div id="content">
+                            <div class="tab">
 
-                            <nav>
-                                <br>
-                                <div id="Retangulo" class="retangulo" style="text-align: center">
+                                <div class="tab-content">
+                                    <br>
+                                    <h1 style=" margin: 0;">Matrícula</h1>
 
-                                    <audio controls autoplay>
-                                        <source src="seu_audio.mp3" type="audio/mpeg">
-                                    </audio>
-                                    <p>Envie uma foto do seu documento:</p>
-                                    <div id="container" style="position: relative;">
-                                        <div id="cameraContainer" style="position: relative;">
-                                            <video id="video" width="400" height="300" autoplay
-                                                style="background-color: black;"></video>
-                                            <div id="overlay"
-                                                style="position: absolute; bottom: 0; width: 100%; background-color: black; text-align: center;">
-                                                <button id="snapBtn"
-                                                    style="font-size: 24px; border: none; color: black; background-color: black;">⚪</button>
+                                    <nav>
+                                        <br>
+                                        <div id="Retangulo" class="retangulo" style="text-align: center">
+
+                                            <audio controls autoplay>
+                                                <source src="seu_audio.mp3" type="audio/mpeg">
+                                            </audio>
+                                            <p>Envie uma foto do seu documento:</p>
+                                            <div id="container" style="position: relative;">
+                                                <div id="cameraContainer" style="position: relative;">
+                                                    <video id="video" width="400" height="300" autoplay
+                                                        style="background-color: black;"></video>
+                                                    <div id="overlay"
+                                                        style="position: absolute; bottom: 0; width: 100%; background-color: black; text-align: center;">
+                                                        <button id="snapBtn"
+                                                            style="font-size: 24px; border: none; color: black; background-color: black;">⚪</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <canvas id="canvas" width="400" height="300" style="display:none;"></canvas>
+                                    </nav>
+                                    <!-- Segundo  -->
+                                    <nav>
+                                        <br>
+                                        <audio controls>
+                                            <source src="seu_audio.mp3" type="audio/mpeg">
+                                        </audio>
+
+                                        <p style="margin-bottom: 20px;" >Selecione o turno desejado:</p>
+                                        <div class="turnoCenter">
+                                            <div>
+                                                <div class="turno-container">
+                                                    <input type="radio" id="manha" name="turno" value="manha">
+                                                    <label for="manha" class="turno-label">De Manhã(Matutino) </label>
+                                                    <img src="images/sun.svg" alt="" class="turno-imagem">
+                                                </div>
+
+                                                <div class="turno-container">
+                                                    <input type="radio" id="tarde" name="turno" value="tarde">
+                                                    <label for="tarde" class="turno-label">De Tarde(Vespertino)</label>
+                                                    <img src="images/sunset.svg" alt="" class="turno-imagem">
+                                                </div>
+
+                                                <div class="turno-container">
+                                                    <input type="radio" id="noite" name="turno" value="noite">
+                                                    <label for="noite" class="turno-label">De Noite(Noturno)</label>
+                                                    <img src="images/moon.svg" class="turno-imagem" >
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <canvas id="canvas" width="400" height="300" style="display:none;"></canvas>
-                            </nav>
-                            <!-- Segundo  -->
-                            <nav>
-                                <br>
-                                <audio controls>
-                                    <source src="seu_audio.mp3" type="audio/mpeg">
-                                </audio>
 
-                                <p>Selecione o turno desejado:</p>
-                                <div class="turnoCenter">
-                                    <div>
-                                        <div class="turno-container">
-                                            <input type="radio" id="manha" name="turno" value="manha">
-                                            <label for="manha" class="turno-label">De Manhã(Matutino) </label>
-                                            <img src="images/manha.png" alt="" class="turno-imagem">
-                                        </div>
-
-                                        <div class="turno-container">
-                                            <input type="radio" id="tarde" name="turno" value="tarde">
-                                            <label for="tarde" class="turno-label">De Tarde(Vespertino)</label>
-                                            <img src="images/tarde.png" alt="" class="turno-imagem">
-                                        </div>
-
-                                        <div class="turno-container">
-                                            <input type="radio" id="noite" name="turno" value="noite">
-                                            <label for="noite" class="turno-label">De Noite(Noturno)</label>
-                                            <img src="images/noite.png" alt="" class="turno-imagem">
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </nav>
-                            <!-- terceiro                         -->
-                            <nav>
-                                <br>
-                                <audio controls>
-                                    <source src="seu_audio.mp3" type="audio/mpeg">
-                                </audio>
-                                <br>
-                                <br><br><br><br><br><br>
-                                <input type="checkbox" id="autorizacao" name="autorizacao">
-                                <!-- Rótulo -->
-                                <label for="autorizacao">Termo de autorização do uso de áudio e imagem</label>
+                                    </nav>
+                                    <!-- terceiro                         -->
+                                    <nav>
+                                        <br>
+                                        <audio controls>
+                                            <source src="seu_audio.mp3" type="audio/mpeg">
+                                        </audio>
+                                        <br>
+                                        <br><br>
+                                        <input type="checkbox" id="autorizacao" name="autorizacao">
+                                        <!-- Rótulo -->
+                                        <label for="autorizacao">Termo de autorização do uso de áudio e imagem</label>
 
 
 
-                                <br><br><br><br><br>
-                                <!-- <input type="submit" value="Enviar"
+                                        <br><br>
+                                        <!-- <input type="submit" value="Enviar"
                                     style="background-color:rgb(72, 160, 236); ; color: white; padding: 10px 20px; border: none; border-radius: 5px;""> -->
-                                <button style=" 
+                                        <button style=" 
                                 background-color:rgb(72, 160, 236);
                                   color: white; 
                                   padding: 10px
@@ -619,42 +725,41 @@
                                     cursor: pointer;
                                     font-weight: bold;">Enviar</button>
 
+                                </div>
+                                </nav>
+                            </div>
+                            <div class="tab-heading">
+                                <center>
+                                    <span class="active">1</span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                </center>
+                            </div>
                         </div>
-                        </nav>
-                    </div>
-                    <div class="tab-heading">
-                        <center>
-                            <span class="active">1</span>
-                            <span>2</span>
-                            <span>3</span>
-                        </center>
+
+
+
+                        <!-- <canvas id="canvas" width="400" height="300" style="display:none;"></canvas> -->
+
+                        <!-- <a href="" class="arrow-img" style="font-size: 20px; text-decoration: none; color: white;">➡️</a> -->
+
                     </div>
                 </div>
 
 
 
-                <!-- <canvas id="canvas" width="400" height="300" style="display:none;"></canvas> -->
-
-                <!-- <a href="" class="arrow-img" style="font-size: 20px; text-decoration: none; color: white;">➡️</a> -->
-
-            </div>
         </div>
-
-
-
-        </div>
-        </div>
+    </div>
 
 
 
     </main>
-
-
+    </div>
+    </div>
 
 
 </body>
-<footer>
-</footer>
+
 <script>
     const video = document.getElementById('video');
     const canvas = document.getElementById('canvas');
