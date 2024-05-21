@@ -54,10 +54,9 @@
             /* border: 2px solid rgba(255, 255, 255, 0.5); */
             border-radius: 20px;
             /* background-color: #9bb1ff; */
-            backdrop-filter: blur(5px);
             position: relative;
             width: 550px;
-            height: 680px;
+            height: 690px;
             display: flex;
             justify-content: center;
             /* align-items: center; */
@@ -341,65 +340,38 @@
             margin-top: 100px;
         }
 
+        /* e para desenhar uma linha em baixo  */
         .tab-heading {
-    padding: 20px;
-    padding-bottom: 100px;
-    text-align: center; /* Centraliza o conteúdo dentro da div */
-    margin-top: -30px;
-}
+            /* border-bottom: 5px solid aqua; */
+            /* padding-bottom: 11px; */
+             padding: 20px; 
+            /* margin: 0px 50px; */
+            /* margin-top: 60px; */
+            padding-bottom: 6px;
+            text-align: right;
+        }
 
-.tab-heading .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px; /* Espaçamento entre os spans, ajuste conforme necessário */
+        .tab {
+            text-align: center;
+            font-family: adobe arabic;
+            margin-top: 0px;
+        }
 
-}
 
-.tab-heading span {
+   
+        .tab-heading span {
     display: inline-block;
     padding: 10px; /* Ajuste o padding conforme necessário */
     font-size: 30px; /* Ajuste o tamanho da fonte conforme necessário */
     line-height: 1; /* Garante que a altura da linha não adicione espaços extras */
-    margin-top: -1000px; /* Ajuste o valor negativo conforme necessário para subir os spans */
+    margin-top: -1000px; /* Ajuste o valor negativo conforme necessário para subir os spans */
 }
 
-            .tab {
-                text-align: center;
-                font-family: adobe arabic;
-                margin-top: 0px;
-                padding-top: 0px;
-            }
-
-
-
-
-        /* Fez a parte de ida e vola */
-        /* span {
-            padding: 10px 2%;
-            border: 1px solid aqua;
-            font-size: 30px;
-            border-radius: 10px 10px 0 0;
-            cursor: pointer;
-            margin: 0px 10px;
-        } */
-        span {
-            padding: 12px 5%;
-            border: 1px solid blue;
-            font-size: 30px;
-            /* border-radius: 10px 10px 0 0; */
-            border-radius: 10px;
-            cursor: pointer;
-            margin: 0px 10px;
-        }
-
         .active {
-            background-color:  blue;
+            background-color: aqua;
         }
 
-        .tab-heading span~span {
-            opacity: 0.3;
-        }
+        
 
         .tab-content {
             /* background-color: red; */
@@ -499,7 +471,7 @@
         .grid-container>div {
             margin-top: 0px;
             margin-left: 0px;
-            height: 90vh;
+            height: 80vh;
             /* background-color: rgba(255, 255, 255, 0.8); */
             /* border: 1px solid rgba(0, 0, 0, 0.8); */
             padding: 12%;
@@ -551,6 +523,146 @@
             background-color: lightblue;
             border-radius: 50%;
         }
+
+        .input-wrapper input {
+  background-color: #eee;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  width: 15em;
+  margin-top: 10px;
+  margin-left: 21px;
+  border-radius: 1rem;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.input-wrapper input:focus {
+  outline-color: rgb(30, 114, 170);
+}
+.form__group {
+  position: relative;
+
+  margin: 8px 0;
+  width: 100%;
+  max-width: 300px;
+  
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 17px;
+  color: #000000;
+  margin-left: 20px;
+  font-size: 20px;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #9b9b9b;
+  pointer-events: none;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #116399, #38caef);
+  border-image-slice: 1;
+}
+
+
+.custom-radio-btn {
+  --size: 25px;
+  min-width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  /* changes from the video   */
+  
+  margin: 0 10px;
+  position: relative;
+  padding-left: var(--size);
+}
+
+.custom-radio-btn input {
+  display: none;
+}
+
+/* handle if you want label on the left of the checkmark instead */
+
+/* label  */
+
+.custom-radio-btn .label {
+  margin-left: 5px;
+}
+
+
+.custom-radio-btn[aria-label]::after {
+  content: attr(aria-label);
+  display: inline-block;
+  margin-left: 5px;
+}
+
+/* checkmark */
+
+.custom-radio-btn .checkmark {
+  --gap: 3px;
+  --border: 2px;
+  --check-color: #ff5722;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: inline-block;
+  transition: opacity 0.3s ease;
+  /* changes from the video  */
+  
+  border: var(--border) solid #444;
+  padding: var(--gap);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+
+.custom-radio-btn input:checked ~ .checkmark {
+  /* changes from the video  */
+
+  /*  content box origin will make sure the bg-image only stays inside content area in between padding  */
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(
+    circle at center, 
+    var(--check-color) 
+     /* the size of the check mark is determined by subtracting from the size of the circle
+     the border(both sides) and the gap(both sides) than dividing it by 2 to get the radius of the circle        */
+       calc((var(--size) - (var(--border) * 2) - (var(--gap) * 2)) / 2), 
+    rgba(255, 255, 255, 0) 0);
+}
     </style>
     <!-- Script dos next btn -->
     <script src="js/jquery.js"></script>
@@ -670,7 +782,7 @@ window.onclick = function(event) {
             </div>
             <a class="link" href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=70">Perguntas e Respostas</a>
             <a class="link" href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=751&forceview=1">Cursos</a>
-            <a class="link" href="template.html">Pagina template</a>
+            
         </div>
     </div>
 
@@ -712,7 +824,7 @@ window.onclick = function(event) {
                                         <div id="Retangulo" class="retangulo" style="text-align: center">
 
                                             <audio controls autoplay>
-                                                <source src="seu_audio.mp3" type="audio/mpeg">
+                                                <source src="audios/audio_documento.mp3" type="audio/mpeg">
                                             </audio>
                                             <p>Envie uma foto do seu documento:</p>
                                             <div id="container" style="position: relative;">
@@ -732,37 +844,37 @@ window.onclick = function(event) {
                                     <nav>
                                         <br>
                                         <audio controls>
-                                            <source src="seu_audio.mp3" type="audio/mpeg">
+                                            <source src="audios/audio_turno.mp3" type="audio/mpeg">
                                         </audio>
 
                                         <p style="margin-bottom: 20px;" >Selecione o turno desejado:</p>
                                         <div class="turnoCenter">
                                             <div>
                                                 <div class="turno-container">
-                                                    <input type="radio" id="manha" name="turno" value="manha">
-                                                    <label for="manha" class="turno-label">Matutino (De manhã) </label>
+                                                    <input type="radio" id="manha" class="custom-radio-btn" name="turno" value="manha">
+                                                    <label for="manha" class="turno-label">Matutino (Pela manhã) </label>
                                                     <img src="images/sunset.svg" alt="" class="turno-imagem">
                                                 </div>
 
                                                 <div class="turno-container">
-                                                    <input type="radio" id="tarde" name="turno" value="tarde">
-                                                    <label for="tarde" class="turno-label">Vespertino (De Tarde)</label>
+                                                    <input type="radio" id="tarde" class="custom-radio-btn" name="turno" value="tarde">
+                                                    <label for="tarde" class="turno-label">Vespertino (A Tarde)</label>
                                                     <img src="images/sun.svg" alt="" class="turno-imagem">
                                                 </div>
 
                                                 <div class="turno-container">
-                                                    <input type="radio" id="noite" name="turno" value="noite">
-                                                    <label for="noite" class="turno-label">Noturno (De Noite)</label>
+                                                    <input type="radio" id="noite" class="custom-radio-btn" name="turno" value="noite">
+                                                    <label for="noite" class="turno-label">Noturno (A Noite)</label>
                                                     <img src="images/moon.svg" class="turno-imagem" >
                                                 </div>
                                             </div>
                                         </div>
 
                                     </nav>
-                                    <nav>
+                                    <nav class="ensino">
                                         <br>
                                         <audio controls>
-                                            <source src="Piano.mp3" type="audio/mpeg">
+                                            <source src="audios/tipodeensino.mp3" type="audio/mpeg">
                                         </audio>
                                     <!-- terceiro                         -->
 
@@ -770,96 +882,131 @@ window.onclick = function(event) {
                                         <div class="ensinoCenter">
                                             <div>
                                                 <div class="ensino-container">
-                                                    <input type="radio" id="fundamental1" name="ensino" value="fundamental1">
-                                                    <label for="fundamental1" class="ensino-label">Fundamental 1 </label>
+                                                    <button style=" 
+                                                      color: rgb(32, 21, 150); 
+                                                      padding: 10px
+                                                        20px; border: none; 
+                                                        border-radius: 5px;
+                                                        font-size: 30px;
+                                                        padding: 10px 20px;
+                                                        margin: 20px;
+                                                        cursor: pointer;
+                                                        font-weight: bold;" href="#SerieFundamental1" id="Butaofundamental1">⚪</button><label for="fundamental1" class="ensino-label">Fundamental 1</label></a>
                                                     <img src="images/Fundamental1.png" alt="" class="ensino-imagem">
                                                 </div>
 
                                                 <div class="ensino-container">
-                                                    <input type="radio" id="fundamental2" name="ensino" value="fundamental2">
+                                                    <button style=" 
+                                                      color: rgb(32, 21, 150); 
+                                                      padding: 10px
+                                                        20px; border: none; 
+                                                        border-radius: 5px;
+                                                        font-size: 30px;
+                                                        padding: 10px 20px;
+                                                        margin: 20px;
+                                                        cursor: pointer;
+                                                        font-weight: bold;" href="#SerieFundamental2" id="Butaofundamental2">⚪</button>
                                                     <label for="fundamental2" class="ensino-label">Fundamental 2</label>
                                                     <img src="images/Fundamental2.png" alt="" class="ensino-imagem">
                                                 </div>
 
                                                 <div class="ensino-container">
-                                                    <input type="radio" id="medio" name="ensino" value="medio">
-                                                    <label for="medio" class="ensino-label">Médio</label>
+                                                    <button style=" 
+                                                      color: rgb(32, 21, 150); 
+                                                      padding: 10px
+                                                        20px; border: none; 
+                                                        border-radius: 5px;
+                                                        font-size: 30px;
+                                                        padding: 10px 20px;
+                                                        margin: 20px;
+                                                        cursor: pointer;
+                                                        font-weight: bold;" href="#SerieMedio" id="Butaomedio">⚪</button>
+                                                   <label for="medio" class="ensino-label">Médio</label></a>
                                                     <img src="images/Medio.png" class="ensino-imagem" >
                                                 </div>
                                             </div>
                                         </div>
 
                                     </nav>
+                                    
                                     <nav>
                                         <br>
                                         <audio controls>
-                                            <source src="seu_audio.mp3" type="audio/mpeg">
+                                            <source src="audios/retornooumatreiculanova.mp3" type="audio/mpeg">
                                         </audio>
-                                    <!-- terceiro                         -->
+                                    <!-- quarto                         -->
 
                                         <p style="margin-bottom: 20px;" >Tipo de ensino:</p>
                                         <div class="ensinoCenter">
                                             <div>
                                                 <div class="ensino-container">
-                                                    <input type="radio" id="fundamental1" name="ensino" value="fundamental1">
-                                                    <label for="fundamental1" class="ensino-label">Matrícula</label>
-                                                    <img src="images/Matrícula.png" alt="" class="ensino-imagem">
+                                                    <input type="radio"  class="custom-radio-btn" id="Matrícula" name="ensino" value="Matrícula">
+                                                    <label for="Matrícula" class="ensino-label">Matrícula</label>
+                                                    <img src="images/Medio.png" alt="" class="ensino-imagem">
                                                 </div>
 
                                                 <div class="ensino-container">
-                                                    <input type="radio" id="fundamental2" name="ensino" value="fundamental2">
-                                                    <label for="fundamental2" class="ensino-label">Retorno</label>
+                                                    <input type="radio" class="custom-radio-btn" id="Retorno" name="ensino" value="Retorno">
+                                                    <label for="Retorno" class="ensino-label">Retorno</label>
                                                     <img src="images/Retorno.png" alt="" class="ensino-imagem">
                                                 </div>
                                             </div>
                                         </div>
 
                                     </nav>
-                                    <nav>
+                                    <nav style="font-size: 18px;">
                                         <br>
                                         <audio controls>
-                                            <source src="seu_audio.mp3" type="audio/mpeg">
+                                            <source src="audios/dificuldade.mp3" type="audio/mpeg">
                                         </audio>
-                                    <!-- terceiro                         -->
+                                    <!-- quinto                         -->
 
                                         <p style="margin-bottom: 20px;" >Tipo de deficiência / Dificuldade:</p>
                                         <div class="deficienciaCenter">
                                             <div>
                                                 <div class="deficiencia-container">
-                                                    <input type="radio" id="cego" name="deficiencia" value="cego">
+                                                    <input type="radio" id="cego" class="custom-radio-btn" name="deficiencia" value="cego">
                                                     <label for="cego" class="deficiencia-label">Visual (Ver)</label>
                                                     <img src="images/Visao.png" alt="" class="deficiencia-imagem">
                                                 </div>
 
                                                 <div class="deficiencia-container">
-                                                    <input type="radio" id="Auditiva" name="deficiencia" value="Auditiva">
+                                                    <input type="radio" id="Auditiva" class="custom-radio-btn" name="deficiencia" value="Auditiva">
                                                     <label for="Auditiva" class="deficiencia-label">Audição (Ouvir)</label>
                                                     <img src="images/Audicao.png" alt="" class="deficiencia-imagem">
                                                 </div>
                                                 <div class="deficiencia-container">
-                                                    <input type="radio" id="Analfabetismo" name="deficiencia" value="Analfabetismo">
+                                                    <input type="radio" id="Analfabetismo" class="custom-radio-btn" name="deficiencia" value="Analfabetismo">
                                                     <label for="Analfabetismo" class="deficiencia-label">Analfabetismo (Ler ou escrever)</label>
                                                     <img src="images/Analfabeto.png" class="deficiencia-imagem" >
                                                 </div>
                                                 <div class="deficiencia-container">
-                                                    <input type="radio" id="mudo" name="deficiencia" value="mudo">
+                                                    <input type="radio" id="mudo" class="custom-radio-btn" name="deficiencia" value="mudo">
                                                     <label for="mudo" class="deficiencia-label">Fala</label>
                                                     <img src="images/FAla.png" class="deficiencia-imagem" >
                                                 </div>
                                                 <div class="deficiencia-container">
-                                                    <input type="radio" id="Analfabetismo" name="deficiencia" value="Analfabetismo">
-                                                    <label for="Analfabetismo" class="deficiencia-label">Outro</label>
-                                                    <input type="text" id="text" x-webkit-speech>
+                                                    <input type="radio" id="Outro" class="custom-radio-btn" name="deficiencia" value="Outro">
+                                                    <label for="Outro" class="deficiencia-label">Outro: </label>
+                                                    <div class="form__group field">
+                                                        <input type="input" class="form__field" placeholder="Informe" required="">
+                                                    </div>
                                                 </div>
+                                                    <div class="deficiencia-container">
+                                                        <input type="radio" id="nada" class="custom-radio-btn" name="deficiencia" value="nada">
+                                                        <label for="Outro" class="deficiencia-label">Não tenho nenhuma dificuldade </label>
+                                            
+                                                    </div>
                                             </div>
                                         </div>
 
                                     </nav>
-                                    <!-- quarto                        -->
+                                    
+                                    <!-- sexto                        -->
                                     <nav>
                                         <br>
                                         <audio controls>
-                                            <source src="seu_audio.mp3" type="audio/mpeg">
+                                            <source src="audios/TERMO DE AUTORIZAÇÃO DE USO DE AUDIO E IMAGEM.mp3" type="audio/mpeg">
                                         </audio>
                                         <br>
                                         <br><br>
@@ -867,8 +1014,10 @@ window.onclick = function(event) {
                                         <!-- Rótulo -->
                                         <label for="autorizacao">Termo de autorização do uso de áudio e imagem</label><br><br>
                                         <div class="deficiencia-container">
-                                            <label for="Analfabetismo" class="deficiencia-label">Telefone</label>
-                                            <input class="Telefoned" type="tel" id="text" x-webkit-speech>
+                                            <label for="Telefone" class="deficiencia-label">Telefone:</label>
+                                            <div class="input-wrapper">
+                                                <input type="text" placeholder="Informe... " name="text" class="input">
+                                              </div>
                                             <img src="images/Telefone.png" class="Telefone" >
                                         </div>
 
@@ -890,22 +1039,164 @@ window.onclick = function(event) {
                                     margin: 20px;
                                     border: none;
                                     cursor: pointer;
-                                    margin-top: -100px;
                                     font-weight: bold;">Enviar</button>
 
                                 </div>
                                 </nav>
-                                <div class="tab-heading">
+                                <nav class="Seriefundamental1" style="display: none; margin-top: -520px; font-size: 20px;">
+                                    <br>
+                                    <audio controls>
+                                        <source src="audios/fundamental1.mp3" type="audio/mpeg">
+                                    </audio>
+                                    <p style="margin-bottom: 10px;">Tipo de ensino:</p> <!-- Reduzi a margem inferior -->
+                                    <div class="ensinoCenter">
+                                        <div>
+                                            <div class="ensino-container" style="margin-bottom: 0;"> <!-- Reduzi a margem inferior -->
+                                                <input type="radio" id="primeiro1" class="custom-radio-btn" name="serie" value="primeiro1">
+                                                <label for="primeiro1" class="ensino-label" style="margin-top: 5px;">1ᵃ Série</label> <!-- Reduzi a margem superior -->
+                                                <img src="images/Fundamental1.png" alt="1ª Série" class="ensino-imagem" style="height: 60px;">
+                                            </div>
+                                            <div class="ensino-container" style="margin-bottom: 0;"> <!-- Reduzi a margem inferior -->
+                                                <input type="radio" id="primeiro2" class="custom-radio-btn" name="serie" value="primeiro2">
+                                                <label for="primeiro2" class="ensino-label" style="margin-top: 5px;">2ᵃ Série</label> <!-- Reduzi a margem superior -->
+                                                <img src="images/Fundamental1.png" alt="2ª Série" class="ensino-imagem " style="height: 60px;">
+                                            </div>
+                                            <div class="ensino-container" style="margin-bottom: 0;"> <!-- Reduzi a margem inferior -->
+                                                <input type="radio" id="primeiro3" class="custom-radio-btn" name="serie" value="primeiro3">
+                                                <label for="primeiro3" class="ensino-label" style="margin-top: 5px;">3ᵃ Série</label> <!-- Reduzi a margem superior -->
+                                                <img src="images/Fundamental1.png" alt="3ª Série" class="ensino-imagem" style="height: 60px;">
+                                            </div>
+                                            <div class="ensino-container" style="margin-bottom: 0;"> <!-- Reduzi a margem inferior -->
+                                                <input type="radio" id="primeiro4" class="custom-radio-btn" name="serie" value="primeiro4">
+                                                <label for="primeiro4" class="ensino-label" style="margin-top: 5px;" >4ᵃ Série</label> <!-- Reduzi a margem superior -->
+                                                <img src="images/Fundamental1.png" alt="4ª Série" class="ensino-imagem" style="height: 60px;">
+                                            </div>
+                                            <div class="ensino-container" style="margin-bottom: 0;"> <!-- Reduzi a margem inferior -->
+                                                <input type="radio" id="primeiro5" class="custom-radio-btn" name="serie" value="primeiro5">
+                                                <label for="primeiro5" class="ensino-label" style="margin-top: 5px;">5ᵃ Série</label> <!-- Reduzi a margem superior -->
+                                                <img src="images/Fundamental1.png" alt="5ª Série" class="ensino-imagem" style="height: 60px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </nav>
+                                
+                                <nav class="Seriefundamental2" style="display: none; margin-top:  -520px;">
+                                    <br>
+                                    <audio controls>
+                                        <source src="audios/fundamental2.mp3" type="audio/mpeg">
+                                    </audio>
+                                    <p style="margin-bottom: 20px;" >Tipo de ensino:</p>
+                                    <div class="ensinoCenter">
+                                        <div>
+                                            
+                                            <div class="ensino-container">
+                                                <input type="radio" id="primeiro" class="custom-radio-btn" name="primeiro" value="primeiro">
+                                                <label for="fundamental2" class="ensino-label">6ᵃ Série</label>
+                                                <img src="images/Fundamental2.png" alt="" class="ensino-imagem" style="height: 60px;">
+                                            </div>
+                                            <div class="ensino-container">
+                                                <input type="radio" id="primeiro" class="custom-radio-btn" name="primeiro" value="primeiro">
+                                                <label for="fundamental2" class="ensino-label">7ᵃ Série</label>
+                                                <img src="images/Fundamental2.png" alt="" class="ensino-imagem" style="height: 60px;">
+                                            </div>
+                                            <div class="ensino-container">
+                                                <input type="radio" id="primeiro" class="custom-radio-btn" name="primeiro" value="primeiro">
+                                                <label for="fundamental2" class="ensino-label">8ᵃ Série</label>
+                                                <img src="images/Fundamental2.png" alt="" class="ensino-imagem" style="height: 60px;">
+                                            </div>
+                                            <div class="ensino-container">
+                                                <input type="radio" id="primeiro" class="custom-radio-btn" name="primeiro" value="primeiro">
+                                                <label for="fundamental2" class="ensino-label">9ᵃ Série</label>
+                                                <img src="images/Fundamental2.png" alt="" class="ensino-imagem" style="height: 60px;">
+                                            </div>
+                                    </div>
+
+                                </nav>
+                                <nav class="Seriemedio" style="display: none; margin-top: -520px;">
+                                    <br>
+                                    <audio controls>
+                                        <source src="audios/ensinomedio.mp3" type="audio/mpeg">
+                                    </audio>
+                                    <p style="margin-bottom: 20px;" >Tipo de ensino:</p>
+                                    <div class="ensinoCenter">
+                                        <div>
+                                            <div class="ensino-container">
+                                                <input type="radio" id="primeiro" class="custom-radio-btn" name="primeiro" value="primeiro">
+                                                <label for="Medio" class="ensino-label" >1º Ano</label>
+                                                <img src="images/Medio.png" alt="" class="ensino-imagem">
+                                            </div>
+                                            <div class="ensino-container">
+                                                <input type="radio" id="primeiro" class="custom-radio-btn" name="primeiro" value="primeiro">
+                                                <label for="Medio" class="ensino-label">2º Ano</label>
+                                                <img src="images/Medio.png" alt="" class="ensino-imagem">
+                                            </div>
+                                            <div class="ensino-container">
+                                                <input type="radio" id="primeiro" class="custom-radio-btn" name="primeiro" value="primeiro">
+                                                <label for="Medio" class="ensino-label">3º Ano</label>
+                                                <img src="images/Medio.png" alt="" class="ensino-imagem">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </nav>
+                            </div>
+                            <div class="tab-heading">
+                                <center id="Center">
                                     <span class="active">1</span>
                                     <span>2</span>
                                     <span>3</span>
                                     <span>4</span>
-                                    <span style="display: inline-block;">5</span>
-                                    <span style="display: inline-block;">6</span>
-                                </div>
-                                
-                            
+                                    <span>5</span>
+                                    <span>6</span>
+                                    <span style="display: none;">7</span>
 
+                                </center>
+                            </div>
+                        </div>
+                        <script>
+                            // Adicione um evento de clique ao botão "Fundamental 1"
+                            document.getElementById("Butaofundamental1").addEventListener("click", function() {
+                                // Oculta a navegação atual
+                                document.querySelector(".ensino").style.display = "none";
+                                // Exibe a nova navegação das séries do Fundamental 1
+                                document.querySelector(".Seriefundamental1").style.display = "block";
+                            });
+                            document.getElementById("Center").addEventListener("click", function() {
+                                // Oculta a navegação atual
+                                document.querySelector(".Seriefundamental1").style.display = "none";
+                                // Exibe a nova navegação das séries do Fundamental 1
+                                document.querySelector("Center").style.display = "block";
+                            });
+                        </script>
+<script>
+    // Adicione um evento de clique ao botão "Fundamental 1"
+    document.getElementById("Butaofundamental2").addEventListener("click", function() {
+        // Oculta a navegação atual
+        document.querySelector(".ensino").style.display = "none";
+        // Exibe a nova navegação das séries do Fundamental 1
+        document.querySelector(".Seriefundamental2").style.display = "block";
+    });
+    document.getElementById("Center").addEventListener("click", function() {
+        // Oculta a navegação atual
+        document.querySelector(".Seriefundamental2").style.display = "none";
+        // Exibe a nova navegação das séries do Fundamental 1
+        document.querySelector("Center").style.display = "block";
+    });
+</script><script>
+    // Adicione um evento de clique ao botão "Fundamental 1"
+    document.getElementById("Butaomedio").addEventListener("click", function() {
+        // Oculta a navegação atual
+        document.querySelector(".ensino").style.display = "none";
+        // Exibe a nova navegação das séries do Fundamental 1
+        document.querySelector(".Seriemedio").style.display = "block";
+    });
+    document.getElementById("Center").addEventListener("click", function() {
+        // Oculta a navegação atual
+        document.querySelector(".Seriemedio").style.display = "none";
+        // Exibe a nova navegação das séries do Fundamental 1
+        document.querySelector("Center").style.display = "block";
+    });
+</script>
 
                         <!-- <canvas id="canvas" width="400" height="300" style="display:none;"></canvas> -->
 
@@ -961,7 +1252,7 @@ window.onclick = function(event) {
         retryBtn.className = 'retryBtn';
         retryBtn.style.position = 'absolute';
         retryBtn.style.top = '0px';
-        retryBtn.style.right = '-185px';
+        retryBtn.style.right = '-190px';
         retryBtn.style.fontSize = '24px';
         retryBtn.style.border = 'none';
         retryBtn.style.color = 'white';
