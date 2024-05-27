@@ -564,6 +564,7 @@
             border-radius: 1rem;
             color: rgb(0, 0, 0);
             cursor: pointer;
+            
         }
 
         .input-wrapper input:focus {
@@ -992,7 +993,8 @@
                                         </div>
 
                                     </nav>
-                                    <nav style="font-size: 16px; ">
+                                    <nav style="font-size: 28px; ">
+                                        <!-- <nav style="font-size: 16px; "> -->
                                         <br>
                                         <audio controls>
                                             <source src="audios/dificuldade.mp3" type="audio/mpeg">
@@ -1000,37 +1002,37 @@
                                         <!-- quinto                         -->
 
                                         <p style="margin-bottom: 0px;">Tipo de deficiência / Dificuldade:</p>
-                                        <div class="deficienciaCenter">
+                                        <div class="deficienciaCenter" style="font-size: 23px; ">
                                             <div>
                                                 <div class="deficiencia-container"  style="margin-bottom: 0px;">
-                                                    <input type="radio" id="cego" class="custom-radio-btn"
+                                                    <input type="checkbox" id="cego" class="custom-radio-btn"
                                                         name="deficiencia" value="cego">
                                                     <label for="cego" class="deficiencia-label">Visual (Ver)</label>
                                                     <img src="images/Visao.png" alt="" class="deficiencia-imagem">
                                                 </div>
 
                                                 <div class="deficiencia-container" style="margin-bottom: 0px;">
-                                                    <input type="radio" id="Auditiva" class="custom-radio-btn"
+                                                    <input type="checkbox" id="Auditiva" class="custom-radio-btn"
                                                         name="deficiencia" value="Auditiva">
                                                     <label for="Auditiva" class="deficiencia-label">Audição
                                                         (Ouvir)</label>
-                                                    <img src="images/Audicao.png" alt="" class="deficiencia-imagem">
+                                                    <img src="images/Audicao.png" alt="" class="deficiencia-imagem" style="max-height: 55px;">
                                                 </div>
                                                 <div class="deficiencia-container" style="margin-bottom: 0px;">
-                                                    <input type="radio" id="Analfabetismo" class="custom-radio-btn"
+                                                    <input type="checkbox" id="Analfabetismo" class="custom-radio-btn"
                                                         name="deficiencia" value="Analfabetismo">
                                                     <label for="Analfabetismo" class="deficiencia-label">Analfabetismo
                                                         (Ler ou escrever)</label>
                                                     <img src="images/Analfabeto.png" class="deficiencia-imagem">
                                                 </div>
                                                 <div class="deficiencia-container"  style="margin-bottom: 0px;">
-                                                    <input type="radio" id="mudo" class="custom-radio-btn"
+                                                    <input type="checkbox" id="mudo" class="custom-radio-btn"
                                                         name="deficiencia" value="mudo">
                                                     <label for="mudo" class="deficiencia-label">Fala</label>
                                                     <img src="images/FAla.png" class="deficiencia-imagem">
                                                 </div>
                                                 <div class="deficiencia-container"  style="margin-bottom: 0px;">
-                                                    <input type="radio" id="Outro" class="custom-radio-btn"
+                                                    <input type="checkbox" id="Outro" class="custom-radio-btn"
                                                         name="deficiencia" value="Outro">
                                                     <label for="Outro" class="deficiencia-label">Outro: </label>
                                                     <div class="form__group field">
@@ -1038,13 +1040,13 @@
                                                             required="">
                                                     </div>
                                                 </div>
-                                                <div class="deficiencia-container" style="margin-bottom: 0px;">
+                                                <!-- <div class="deficiencia-container" style="margin-bottom: 0px;">
                                                     <input type="radio" id="nada" class="custom-radio-btn"
                                                         name="deficiencia" value="nada">
                                                     <label for="Outro" class="deficiencia-label">Não tenho nenhuma
                                                         dificuldade </label>
 
-                                                </div>
+                                                </div> -->
                                             </div>
                                         </div>
 
@@ -1066,7 +1068,7 @@
                                         <div class="deficiencia-container">
                                             <label for="Telefone" class="deficiencia-label">Telefone:</label>
                                             <div class="input-wrapper">
-                                                <input type="text" placeholder="Informe... " name="text" class="input">
+                                                <input type="tel" placeholder="Informe... " name="text" class="input">
                                             </div>
                                             <img src="images/Telefone.png" class="Telefone">
                                         </div>
