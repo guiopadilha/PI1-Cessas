@@ -29,11 +29,24 @@
             /* min-height: 100vh; */
             width: 100%;
         }
-        body, h1, p, button, span, label,a,button.dropbtn {
+
+        body,
+        h1,
+        p,
+        button,
+        span,
+        label,
+        a,
+        button.dropbtn {
             margin: 0;
             padding: 0;
             font-family: "Poetsen One", sans-serif;
             color: #006298;
+        }
+
+        p,label {
+            padding:15px;
+            padding-right:15px;
         }
 
         main {
@@ -101,7 +114,7 @@
             left: 0;
             width: 100%;
             height: 8%;
-            
+
         }
 
 
@@ -115,7 +128,7 @@
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
-            
+
 
         }
 
@@ -246,7 +259,9 @@
             /* Move a imagem para a esquerda */
         }
 
-        .turno-container,.ensino-container,.deficiencia-container{
+        .turno-container,
+        .ensino-container,
+        .deficiencia-container {
             /* background-color: green; */
             width: 570px;
             display: flex;
@@ -258,7 +273,7 @@
             animation-timing-function: ease-in;
             animation-duration: 2s;
         }
-        
+
 
         @keyframes fadeInOpacity {
             0% {
@@ -270,34 +285,39 @@
             }
         }
 
-        .turno-label, .ensino-label{
+        .turno-label,
+        .ensino-label {
             margin-right: 3px;
 
         }
+
         .deficiencia-label {
             margin-right: 4px;
 
         }
 
-        .turno-imagem, .ensino-imagem {
+        .turno-imagem,
+        .ensino-imagem {
             margin-left: auto;
             max-width: 100px;
             /* Ajuste o tamanho máximo da imagem conforme necessário */
             height: auto;
         }
+
         .deficiencia-imagem {
             margin-left: auto;
             max-width: 50px;
             /* Ajuste o tamanho máximo da imagem conforme necessário */
             height: auto;
         }
+
         .Telefone {
             margin-left: 30px;
             max-width: 50px;
             /* Ajuste o tamanho máximo da imagem conforme necessário */
             height: auto;
         }
-        
+
 
         .arrow-img {
             margin-right: 10px;
@@ -344,7 +364,7 @@
         .tab-heading {
             /* border-bottom: 5px solid aqua; */
             /* padding-bottom: 11px; */
-             padding: 20px; 
+            padding: 20px;
             /* margin: 0px 50px; */
             /* margin-top: 60px; */
             padding-bottom: 6px;
@@ -358,20 +378,24 @@
         }
 
 
-   
+
         .tab-heading span {
-    display: inline-block;
-    padding: 10px; /* Ajuste o padding conforme necessário */
-    font-size: 30px; /* Ajuste o tamanho da fonte conforme necessário */
-    line-height: 1; /* Garante que a altura da linha não adicione espaços extras */
-    margin-top: -1000px; /* Ajuste o valor negativo conforme necessário para subir os spans */
-}
+            display: inline-block;
+            padding: 10px;
+            /* Ajuste o padding conforme necessário */
+            font-size: 30px;
+            /* Ajuste o tamanho da fonte conforme necessário */
+            line-height: 1;
+            /* Garante que a altura da linha não adicione espaços extras */
+            margin-top: -1000px;
+            /* Ajuste o valor negativo conforme necessário para subir os spans */
+        }
 
         .active {
             background-color: aqua;
         }
 
-        
+
 
         .tab-content {
             /* background-color: red; */
@@ -386,12 +410,14 @@
 
 
 
-        .turnoCenter, .ensinoCenter {
+        .turnoCenter,
+        .ensinoCenter {
             display: flex;
             justify-content: center;
             align-items: center;
             width: 100%;
         }
+
         /* Adicionar btn  */
         p {
             /* font-size: 20px;
@@ -484,7 +510,8 @@
             width: 400px;
             margin-bottom: 10px;
         }
-        .Telefoned{
+
+        .Telefoned {
             margin-left: 20px;
         }
 
@@ -525,158 +552,158 @@
         }
 
         .input-wrapper input {
-  background-color: #eee;
-  border: none;
-  padding: 1rem;
-  font-size: 1rem;
-  width: 15em;
-  margin-top: 10px;
-  margin-left: 21px;
-  border-radius: 1rem;
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-}
+            background-color: #eee;
+            border: none;
+            padding: 1rem;
+            font-size: 1rem;
+            width: 15em;
+            margin-top: 10px;
+            margin-left: 21px;
+            border-radius: 1rem;
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+        }
 
-.input-wrapper input:focus {
-  outline-color: rgb(30, 114, 170);
-}
-.form__group {
-  position: relative;
+        .input-wrapper input:focus {
+            outline-color: rgb(30, 114, 170);
+        }
 
-  margin: 8px 0;
-  width: 100%;
-  max-width: 300px;
-  
-}
+        .form__group {
+            position: relative;
 
-.form__field {
-  font-family: inherit;
-  width: 100%;
-  border: none;
-  border-bottom: 2px solid #9b9b9b;
-  outline: 0;
-  font-size: 17px;
-  color: #000000;
-  margin-left: 20px;
-  font-size: 20px;
-  background: transparent;
-  transition: border-color 0.2s;
-}
+            margin: 8px 0;
+            width: 100%;
+            max-width: 300px;
 
-.form__field::placeholder {
-  color: transparent;
-}
+        }
 
-.form__field:placeholder-shown ~ .form__label {
-  font-size: 17px;
-  cursor: text;
-  top: 20px;
-}
+        .form__field {
+            font-family: inherit;
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid #9b9b9b;
+            outline: 0;
+            font-size: 17px;
+            color: #000000;
+            margin-left: 20px;
+            font-size: 20px;
+            background: transparent;
+            transition: border-color 0.2s;
+        }
 
-.form__label {
-  position: absolute;
-  top: 0;
-  display: block;
-  transition: 0.2s;
-  font-size: 17px;
-  color: #9b9b9b;
-  pointer-events: none;
-}
+        .form__field::placeholder {
+            color: transparent;
+        }
 
-.form__field:focus {
-  padding-bottom: 6px;
-  font-weight: 700;
-  border-width: 3px;
-  border-image: linear-gradient(to right, #116399, #38caef);
-  border-image-slice: 1;
-}
+        .form__field:placeholder-shown~.form__label {
+            font-size: 17px;
+            cursor: text;
+            top: 20px;
+        }
 
+        .form__label {
+            position: absolute;
+            top: 0;
+            display: block;
+            transition: 0.2s;
+            font-size: 17px;
+            color: #9b9b9b;
+            pointer-events: none;
+        }
 
-.custom-radio-btn {
-  --size: 25px;
-  min-width: var(--size);
-  height: var(--size);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  /* changes from the video   */
-  
-  margin: 0 10px;
-  position: relative;
-  padding-left: var(--size);
-}
-
-.custom-radio-btn input {
-  display: none;
-}
-
-/* handle if you want label on the left of the checkmark instead */
-
-/* label  */
-
-.custom-radio-btn .label {
-  margin-left: 5px;
-}
+        .form__field:focus {
+            padding-bottom: 6px;
+            font-weight: 700;
+            border-width: 3px;
+            border-image: linear-gradient(to right, #116399, #38caef);
+            border-image-slice: 1;
+        }
 
 
-.custom-radio-btn[aria-label]::after {
-  content: attr(aria-label);
-  display: inline-block;
-  margin-left: 5px;
-}
+        .custom-radio-btn {
+            --size: 25px;
+            min-width: var(--size);
+            height: var(--size);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            /* changes from the video   */
 
-/* checkmark */
+            margin: 0 10px;
+            position: relative;
+            padding-left: var(--size);
+        }
 
-.custom-radio-btn .checkmark {
-  --gap: 3px;
-  --border: 2px;
-  --check-color: #ff5722;
-  width: var(--size);
-  height: var(--size);
-  border-radius: 50%;
-  display: inline-block;
-  transition: opacity 0.3s ease;
-  /* changes from the video  */
-  
-  border: var(--border) solid #444;
-  padding: var(--gap);
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+        .custom-radio-btn input {
+            display: none;
+        }
+
+        /* handle if you want label on the left of the checkmark instead */
+
+        /* label  */
+
+        .custom-radio-btn .label {
+            margin-left: 5px;
+        }
 
 
+        .custom-radio-btn[aria-label]::after {
+            content: attr(aria-label);
+            display: inline-block;
+            margin-left: 5px;
+        }
 
-.custom-radio-btn input:checked ~ .checkmark {
-  /* changes from the video  */
+        /* checkmark */
 
-  /*  content box origin will make sure the bg-image only stays inside content area in between padding  */
-  background-origin: content-box;
-  background-repeat: no-repeat;
-  background-image: radial-gradient(
-    circle at center, 
-    var(--check-color) 
-     /* the size of the check mark is determined by subtracting from the size of the circle
+        .custom-radio-btn .checkmark {
+            --gap: 3px;
+            --border: 2px;
+            --check-color: #ff5722;
+            width: var(--size);
+            height: var(--size);
+            border-radius: 50%;
+            display: inline-block;
+            transition: opacity 0.3s ease;
+            /* changes from the video  */
+
+            border: var(--border) solid #444;
+            padding: var(--gap);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+
+
+        .custom-radio-btn input:checked~.checkmark {
+            /* changes from the video  */
+
+            /*  content box origin will make sure the bg-image only stays inside content area in between padding  */
+            background-origin: content-box;
+            background-repeat: no-repeat;
+            background-image: radial-gradient(circle at center,
+                    var(--check-color)
+                    /* the size of the check mark is determined by subtracting from the size of the circle
      the border(both sides) and the gap(both sides) than dividing it by 2 to get the radius of the circle        */
-       calc((var(--size) - (var(--border) * 2) - (var(--gap) * 2)) / 2), 
-    rgba(255, 255, 255, 0) 0);
-}
+                    calc((var(--size) - (var(--border) * 2) - (var(--gap) * 2)) / 2),
+                    rgba(255, 255, 255, 0) 0);
+        }
     </style>
     <!-- Script dos next btn -->
     <script src="js/jquery.js"></script>
     <script>function myFunction2() {
-      document.getElementById("myDropdown2").classList.toggle("show");
-      }
-      window.onclick = function(e) {
-        if (!e.target.matches('.dropbtn2')) {
-        var myDropdown = document.getElementById("myDropdown2");
-          if (myDropdown.classList.contains('show')) {
-            myDropdown.classList.remove('show');
-          }
+            document.getElementById("myDropdown2").classList.toggle("show");
         }
-      }</script>
+        window.onclick = function (e) {
+            if (!e.target.matches('.dropbtn2')) {
+                var myDropdown = document.getElementById("myDropdown2");
+                if (myDropdown.classList.contains('show')) {
+                    myDropdown.classList.remove('show');
+                }
+            }
+        }</script>
     <script>
         $(document).ready(function () {
             $(".tab-heading span").click(function () {
@@ -689,22 +716,22 @@
     </script>
     <script>
         function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
 
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
     </script>
     <!-- Script para btn + - bol trocar font  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -758,16 +785,15 @@ window.onclick = function(event) {
 
     <div class="header">
         <div class="navbar">
-            <a href="https://cesas.se.df.gov.br/ead/"><img style="width: 200px"
-                    src="images/cesas-logo.png"
-                    alt="CESAS" class="cesas-logo"></a>
-                    <div class="dropdown2">
+            <a href="https://cesas.se.df.gov.br/ead/"><img style="width: 200px" src="images/cesas-logo.png" alt="CESAS"
+                    class="cesas-logo"></a>
+            <div class="dropdown2">
                 <button class="dropbtn2" onclick="myFunction2()">Institucional
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content2" id="myDropdown2">
                     <a href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=54">Equipe</a>
- 
+
                 </div>
             </div>
             <div class="dropdown">
@@ -782,7 +808,7 @@ window.onclick = function(event) {
             </div>
             <a class="link" href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=70">Perguntas e Respostas</a>
             <a class="link" href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=751&forceview=1">Cursos</a>
-            
+
         </div>
     </div>
 
@@ -795,11 +821,11 @@ window.onclick = function(event) {
             <section>
 
                 <button class="left" id="btUp">Aumentar &nbsp;A Fonte</button>
-                
+
                 <button class="left" id="btDown">&nbsp;Diminuir &nbsp;A Fonte&nbsp;</button>
                 <br>
                 <button class="left" id="btFont">Trocar A Fonte</button>
-                
+
 
                 <button class="left" id="btBold">&nbsp;Fonte Negrito&nbsp;</button>
                 <br>
@@ -847,25 +873,29 @@ window.onclick = function(event) {
                                             <source src="audios/audio_turno.mp3" type="audio/mpeg">
                                         </audio>
 
-                                        <p style="margin-bottom: 20px;" >Selecione o turno desejado:</p>
+                                        <p style="margin-bottom: 20px;">Selecione o turno desejado:</p>
                                         <div class="turnoCenter">
                                             <div>
                                                 <div class="turno-container">
-                                                    <input type="radio" id="manha" class="custom-radio-btn" name="turno" value="manha">
-                                                    <label for="manha" class="turno-label">Matutino (Pela manhã) </label>
+                                                    <input type="radio" id="manha" class="custom-radio-btn" name="turno"
+                                                        value="manha">
+                                                    <label for="manha" class="turno-label">Matutino (Pela manhã)
+                                                    </label>
                                                     <img src="images/sunset.svg" alt="" class="turno-imagem">
                                                 </div>
 
                                                 <div class="turno-container">
-                                                    <input type="radio" id="tarde" class="custom-radio-btn" name="turno" value="tarde">
+                                                    <input type="radio" id="tarde" class="custom-radio-btn" name="turno"
+                                                        value="tarde">
                                                     <label for="tarde" class="turno-label">Vespertino (A Tarde)</label>
                                                     <img src="images/sun.svg" alt="" class="turno-imagem">
                                                 </div>
 
                                                 <div class="turno-container">
-                                                    <input type="radio" id="noite" class="custom-radio-btn" name="turno" value="noite">
+                                                    <input type="radio" id="noite" class="custom-radio-btn" name="turno"
+                                                        value="noite">
                                                     <label for="noite" class="turno-label">Noturno (A Noite)</label>
-                                                    <img src="images/moon.svg" class="turno-imagem" >
+                                                    <img src="images/moon.svg" class="turno-imagem">
                                                 </div>
                                             </div>
                                         </div>
@@ -876,9 +906,9 @@ window.onclick = function(event) {
                                         <audio controls>
                                             <source src="audios/tipodeensino.mp3" type="audio/mpeg">
                                         </audio>
-                                    <!-- terceiro                         -->
+                                        <!-- terceiro                         -->
 
-                                        <p style="margin-bottom: 20px;" >Tipo de ensino:</p>
+                                        <p style="margin-bottom: 20px;">Tipo de ensino:</p>
                                         <div class="ensinoCenter">
                                             <div>
                                                 <div class="ensino-container">
@@ -891,7 +921,9 @@ window.onclick = function(event) {
                                                         padding: 10px 20px;
                                                         margin: 20px;
                                                         cursor: pointer;
-                                                        font-weight: bold;" href="#SerieFundamental1" id="Butaofundamental1">⚪</button><label for="fundamental1" class="ensino-label">Fundamental 1</label></a>
+                                                        font-weight: bold;" href="#SerieFundamental1"
+                                                        id="Butaofundamental1">⚪</button><label for="fundamental1"
+                                                        class="ensino-label">Fundamental 1</label></a>
                                                     <img src="images/Fundamental1.png" alt="" class="ensino-imagem">
                                                 </div>
 
@@ -905,7 +937,8 @@ window.onclick = function(event) {
                                                         padding: 10px 20px;
                                                         margin: 20px;
                                                         cursor: pointer;
-                                                        font-weight: bold;" href="#SerieFundamental2" id="Butaofundamental2">⚪</button>
+                                                        font-weight: bold;" href="#SerieFundamental2"
+                                                        id="Butaofundamental2">⚪</button>
                                                     <label for="fundamental2" class="ensino-label">Fundamental 2</label>
                                                     <img src="images/Fundamental2.png" alt="" class="ensino-imagem">
                                                 </div>
@@ -920,33 +953,36 @@ window.onclick = function(event) {
                                                         padding: 10px 20px;
                                                         margin: 20px;
                                                         cursor: pointer;
-                                                        font-weight: bold;" href="#SerieMedio" id="Butaomedio">⚪</button>
-                                                   <label for="medio" class="ensino-label">Médio</label></a>
-                                                    <img src="images/Medio.png" class="ensino-imagem" >
+                                                        font-weight: bold;" href="#SerieMedio"
+                                                        id="Butaomedio">⚪</button>
+                                                    <label for="medio" class="ensino-label">Médio</label></a>
+                                                    <img src="images/Medio.png" class="ensino-imagem">
                                                 </div>
                                             </div>
                                         </div>
 
                                     </nav>
-                                    
+
                                     <nav>
                                         <br>
                                         <audio controls>
                                             <source src="audios/retornooumatreiculanova.mp3" type="audio/mpeg">
                                         </audio>
-                                    <!-- quarto                         -->
+                                        <!-- quarto                         -->
 
-                                        <p style="margin-bottom: 20px;" >Tipo de ensino:</p>
+                                        <p style="margin-bottom: 20px;">Tipo de ensino:</p>
                                         <div class="ensinoCenter">
                                             <div>
                                                 <div class="ensino-container">
-                                                    <input type="radio"  class="custom-radio-btn" id="Matrícula" name="ensino" value="Matrícula">
+                                                    <input type="radio" class="custom-radio-btn" id="Matrícula"
+                                                        name="ensino" value="Matrícula">
                                                     <label for="Matrícula" class="ensino-label">Matrícula</label>
                                                     <img src="images/Medio.png" alt="" class="ensino-imagem">
                                                 </div>
 
                                                 <div class="ensino-container">
-                                                    <input type="radio" class="custom-radio-btn" id="Retorno" name="ensino" value="Retorno">
+                                                    <input type="radio" class="custom-radio-btn" id="Retorno"
+                                                        name="ensino" value="Retorno">
                                                     <label for="Retorno" class="ensino-label">Retorno</label>
                                                     <img src="images/Retorno.png" alt="" class="ensino-imagem">
                                                 </div>
@@ -959,66 +995,78 @@ window.onclick = function(event) {
                                         <audio controls>
                                             <source src="audios/dificuldade.mp3" type="audio/mpeg">
                                         </audio>
-                                    <!-- quinto                         -->
+                                        <!-- quinto                         -->
 
-                                        <p style="margin-bottom: 20px;" >Tipo de deficiência / Dificuldade:</p>
+                                        <p style="margin-bottom: 20px;">Tipo de deficiência / Dificuldade:</p>
                                         <div class="deficienciaCenter">
                                             <div>
                                                 <div class="deficiencia-container">
-                                                    <input type="radio" id="cego" class="custom-radio-btn" name="deficiencia" value="cego">
+                                                    <input type="radio" id="cego" class="custom-radio-btn"
+                                                        name="deficiencia" value="cego">
                                                     <label for="cego" class="deficiencia-label">Visual (Ver)</label>
                                                     <img src="images/Visao.png" alt="" class="deficiencia-imagem">
                                                 </div>
 
                                                 <div class="deficiencia-container">
-                                                    <input type="radio" id="Auditiva" class="custom-radio-btn" name="deficiencia" value="Auditiva">
-                                                    <label for="Auditiva" class="deficiencia-label">Audição (Ouvir)</label>
+                                                    <input type="radio" id="Auditiva" class="custom-radio-btn"
+                                                        name="deficiencia" value="Auditiva">
+                                                    <label for="Auditiva" class="deficiencia-label">Audição
+                                                        (Ouvir)</label>
                                                     <img src="images/Audicao.png" alt="" class="deficiencia-imagem">
                                                 </div>
                                                 <div class="deficiencia-container">
-                                                    <input type="radio" id="Analfabetismo" class="custom-radio-btn" name="deficiencia" value="Analfabetismo">
-                                                    <label for="Analfabetismo" class="deficiencia-label">Analfabetismo (Ler ou escrever)</label>
-                                                    <img src="images/Analfabeto.png" class="deficiencia-imagem" >
+                                                    <input type="radio" id="Analfabetismo" class="custom-radio-btn"
+                                                        name="deficiencia" value="Analfabetismo">
+                                                    <label for="Analfabetismo" class="deficiencia-label">Analfabetismo
+                                                        (Ler ou escrever)</label>
+                                                    <img src="images/Analfabeto.png" class="deficiencia-imagem">
                                                 </div>
                                                 <div class="deficiencia-container">
-                                                    <input type="radio" id="mudo" class="custom-radio-btn" name="deficiencia" value="mudo">
+                                                    <input type="radio" id="mudo" class="custom-radio-btn"
+                                                        name="deficiencia" value="mudo">
                                                     <label for="mudo" class="deficiencia-label">Fala</label>
-                                                    <img src="images/FAla.png" class="deficiencia-imagem" >
+                                                    <img src="images/FAla.png" class="deficiencia-imagem">
                                                 </div>
                                                 <div class="deficiencia-container">
-                                                    <input type="radio" id="Outro" class="custom-radio-btn" name="deficiencia" value="Outro">
+                                                    <input type="radio" id="Outro" class="custom-radio-btn"
+                                                        name="deficiencia" value="Outro">
                                                     <label for="Outro" class="deficiencia-label">Outro: </label>
                                                     <div class="form__group field">
-                                                        <input type="input" class="form__field" placeholder="Informe" required="">
+                                                        <input type="input" class="form__field" placeholder="Informe"
+                                                            required="">
                                                     </div>
                                                 </div>
-                                                    <div class="deficiencia-container">
-                                                        <input type="radio" id="nada" class="custom-radio-btn" name="deficiencia" value="nada">
-                                                        <label for="Outro" class="deficiencia-label">Não tenho nenhuma dificuldade </label>
-                                            
-                                                    </div>
+                                                <div class="deficiencia-container">
+                                                    <input type="radio" id="nada" class="custom-radio-btn"
+                                                        name="deficiencia" value="nada">
+                                                    <label for="Outro" class="deficiencia-label">Não tenho nenhuma
+                                                        dificuldade </label>
+
+                                                </div>
                                             </div>
                                         </div>
 
                                     </nav>
-                                    
+
                                     <!-- sexto                        -->
                                     <nav>
                                         <br>
                                         <audio controls>
-                                            <source src="audios/TERMO DE AUTORIZAÇÃO DE USO DE AUDIO E IMAGEM.mp3" type="audio/mpeg">
+                                            <source src="audios/TERMO DE AUTORIZAÇÃO DE USO DE AUDIO E IMAGEM.mp3"
+                                                type="audio/mpeg">
                                         </audio>
                                         <br>
                                         <br><br>
                                         <input type="checkbox" id="autorizacao" name="autorizacao">
                                         <!-- Rótulo -->
-                                        <label for="autorizacao">Termo de autorização do uso de áudio e imagem</label><br><br>
+                                        <label for="autorizacao">Termo de autorização do uso de áudio e
+                                            imagem</label><br><br>
                                         <div class="deficiencia-container">
                                             <label for="Telefone" class="deficiencia-label">Telefone:</label>
                                             <div class="input-wrapper">
                                                 <input type="text" placeholder="Informe... " name="text" class="input">
-                                              </div>
-                                            <img src="images/Telefone.png" class="Telefone" >
+                                            </div>
+                                            <img src="images/Telefone.png" class="Telefone">
                                         </div>
 
 
@@ -1043,73 +1091,103 @@ window.onclick = function(event) {
 
                                 </div>
                                 </nav>
-                                <nav class="Seriefundamental1" style="display: none; margin-top: -520px; font-size: 20px;">
+                                <nav class="Seriefundamental1"
+                                    style="display: none; margin-top: -520px; font-size: 20px;">
                                     <br>
                                     <audio controls>
                                         <source src="audios/fundamental1.mp3" type="audio/mpeg">
                                     </audio>
-                                    <p style="margin-bottom: 10px;">Tipo de ensino:</p> <!-- Reduzi a margem inferior -->
+                                    <p style="margin-bottom: 10px;">Tipo de ensino:</p>
+                                    <!-- Reduzi a margem inferior -->
                                     <div class="ensinoCenter">
                                         <div>
-                                            <div class="ensino-container" style="margin-bottom: 0;"> <!-- Reduzi a margem inferior -->
-                                                <input type="radio" id="primeiro1" class="custom-radio-btn" name="serie" value="primeiro1">
-                                                <label for="primeiro1" class="ensino-label" style="margin-top: 5px;">1ᵃ Série</label> <!-- Reduzi a margem superior -->
-                                                <img src="images/Fundamental1.png" alt="1ª Série" class="ensino-imagem" style="height: 60px;">
+                                            <div class="ensino-container" style="margin-bottom: 0;">
+                                                <!-- Reduzi a margem inferior -->
+                                                <input type="radio" id="primeiro1" class="custom-radio-btn" name="serie"
+                                                    value="primeiro1">
+                                                <label for="primeiro1" class="ensino-label" style="margin-top: 5px;">1ᵃ
+                                                    Série</label> <!-- Reduzi a margem superior -->
+                                                <img src="images/Fundamental1.png" alt="1ª Série" class="ensino-imagem"
+                                                    style="height: 60px;">
                                             </div>
-                                            <div class="ensino-container" style="margin-bottom: 0;"> <!-- Reduzi a margem inferior -->
-                                                <input type="radio" id="primeiro2" class="custom-radio-btn" name="serie" value="primeiro2">
-                                                <label for="primeiro2" class="ensino-label" style="margin-top: 5px;">2ᵃ Série</label> <!-- Reduzi a margem superior -->
-                                                <img src="images/Fundamental1.png" alt="2ª Série" class="ensino-imagem " style="height: 60px;">
+                                            <div class="ensino-container" style="margin-bottom: 0;">
+                                                <!-- Reduzi a margem inferior -->
+                                                <input type="radio" id="primeiro2" class="custom-radio-btn" name="serie"
+                                                    value="primeiro2">
+                                                <label for="primeiro2" class="ensino-label" style="margin-top: 5px;">2ᵃ
+                                                    Série</label> <!-- Reduzi a margem superior -->
+                                                <img src="images/Fundamental1.png" alt="2ª Série" class="ensino-imagem "
+                                                    style="height: 60px;">
                                             </div>
-                                            <div class="ensino-container" style="margin-bottom: 0;"> <!-- Reduzi a margem inferior -->
-                                                <input type="radio" id="primeiro3" class="custom-radio-btn" name="serie" value="primeiro3">
-                                                <label for="primeiro3" class="ensino-label" style="margin-top: 5px;">3ᵃ Série</label> <!-- Reduzi a margem superior -->
-                                                <img src="images/Fundamental1.png" alt="3ª Série" class="ensino-imagem" style="height: 60px;">
+                                            <div class="ensino-container" style="margin-bottom: 0;">
+                                                <!-- Reduzi a margem inferior -->
+                                                <input type="radio" id="primeiro3" class="custom-radio-btn" name="serie"
+                                                    value="primeiro3">
+                                                <label for="primeiro3" class="ensino-label" style="margin-top: 5px;">3ᵃ
+                                                    Série</label> <!-- Reduzi a margem superior -->
+                                                <img src="images/Fundamental1.png" alt="3ª Série" class="ensino-imagem"
+                                                    style="height: 60px;">
                                             </div>
-                                            <div class="ensino-container" style="margin-bottom: 0;"> <!-- Reduzi a margem inferior -->
-                                                <input type="radio" id="primeiro4" class="custom-radio-btn" name="serie" value="primeiro4">
-                                                <label for="primeiro4" class="ensino-label" style="margin-top: 5px;" >4ᵃ Série</label> <!-- Reduzi a margem superior -->
-                                                <img src="images/Fundamental1.png" alt="4ª Série" class="ensino-imagem" style="height: 60px;">
+                                            <div class="ensino-container" style="margin-bottom: 0;">
+                                                <!-- Reduzi a margem inferior -->
+                                                <input type="radio" id="primeiro4" class="custom-radio-btn" name="serie"
+                                                    value="primeiro4">
+                                                <label for="primeiro4" class="ensino-label" style="margin-top: 5px;">4ᵃ
+                                                    Série</label> <!-- Reduzi a margem superior -->
+                                                <img src="images/Fundamental1.png" alt="4ª Série" class="ensino-imagem"
+                                                    style="height: 60px;">
                                             </div>
-                                            <div class="ensino-container" style="margin-bottom: 0;"> <!-- Reduzi a margem inferior -->
-                                                <input type="radio" id="primeiro5" class="custom-radio-btn" name="serie" value="primeiro5">
-                                                <label for="primeiro5" class="ensino-label" style="margin-top: 5px;">5ᵃ Série</label> <!-- Reduzi a margem superior -->
-                                                <img src="images/Fundamental1.png" alt="5ª Série" class="ensino-imagem" style="height: 60px;">
+                                            <div class="ensino-container" style="margin-bottom: 0;">
+                                                <!-- Reduzi a margem inferior -->
+                                                <input type="radio" id="primeiro5" class="custom-radio-btn" name="serie"
+                                                    value="primeiro5">
+                                                <label for="primeiro5" class="ensino-label" style="margin-top: 5px;">5ᵃ
+                                                    Série</label> <!-- Reduzi a margem superior -->
+                                                <img src="images/Fundamental1.png" alt="5ª Série" class="ensino-imagem"
+                                                    style="height: 60px;">
                                             </div>
                                         </div>
                                     </div>
                                 </nav>
-                                
+
                                 <nav class="Seriefundamental2" style="display: none; margin-top:  -520px;">
                                     <br>
                                     <audio controls>
                                         <source src="audios/fundamental2.mp3" type="audio/mpeg">
                                     </audio>
-                                    <p style="margin-bottom: 20px;" >Tipo de ensino:</p>
+                                    <p style="margin-bottom: 20px;">Tipo de ensino:</p>
                                     <div class="ensinoCenter">
                                         <div>
-                                            
+
                                             <div class="ensino-container">
-                                                <input type="radio" id="primeiro" class="custom-radio-btn" name="primeiro" value="primeiro">
+                                                <input type="radio" id="primeiro" class="custom-radio-btn"
+                                                    name="primeiro" value="primeiro">
                                                 <label for="fundamental2" class="ensino-label">6ᵃ Série</label>
-                                                <img src="images/Fundamental2.png" alt="" class="ensino-imagem" style="height: 60px;">
+                                                <img src="images/Fundamental2.png" alt="" class="ensino-imagem"
+                                                    style="height: 60px;">
                                             </div>
                                             <div class="ensino-container">
-                                                <input type="radio" id="primeiro" class="custom-radio-btn" name="primeiro" value="primeiro">
+                                                <input type="radio" id="primeiro" class="custom-radio-btn"
+                                                    name="primeiro" value="primeiro">
                                                 <label for="fundamental2" class="ensino-label">7ᵃ Série</label>
-                                                <img src="images/Fundamental2.png" alt="" class="ensino-imagem" style="height: 60px;">
+                                                <img src="images/Fundamental2.png" alt="" class="ensino-imagem"
+                                                    style="height: 60px;">
                                             </div>
                                             <div class="ensino-container">
-                                                <input type="radio" id="primeiro" class="custom-radio-btn" name="primeiro" value="primeiro">
+                                                <input type="radio" id="primeiro" class="custom-radio-btn"
+                                                    name="primeiro" value="primeiro">
                                                 <label for="fundamental2" class="ensino-label">8ᵃ Série</label>
-                                                <img src="images/Fundamental2.png" alt="" class="ensino-imagem" style="height: 60px;">
+                                                <img src="images/Fundamental2.png" alt="" class="ensino-imagem"
+                                                    style="height: 60px;">
                                             </div>
                                             <div class="ensino-container">
-                                                <input type="radio" id="primeiro" class="custom-radio-btn" name="primeiro" value="primeiro">
+                                                <input type="radio" id="primeiro" class="custom-radio-btn"
+                                                    name="primeiro" value="primeiro">
                                                 <label for="fundamental2" class="ensino-label">9ᵃ Série</label>
-                                                <img src="images/Fundamental2.png" alt="" class="ensino-imagem" style="height: 60px;">
+                                                <img src="images/Fundamental2.png" alt="" class="ensino-imagem"
+                                                    style="height: 60px;">
                                             </div>
-                                    </div>
+                                        </div>
 
                                 </nav>
                                 <nav class="Seriemedio" style="display: none; margin-top: -520px;">
@@ -1117,21 +1195,24 @@ window.onclick = function(event) {
                                     <audio controls>
                                         <source src="audios/ensinomedio.mp3" type="audio/mpeg">
                                     </audio>
-                                    <p style="margin-bottom: 20px;" >Tipo de ensino:</p>
+                                    <p style="margin-bottom: 20px;">Tipo de ensino:</p>
                                     <div class="ensinoCenter">
                                         <div>
                                             <div class="ensino-container">
-                                                <input type="radio" id="primeiro" class="custom-radio-btn" name="primeiro" value="primeiro">
-                                                <label for="Medio" class="ensino-label" >1º Ano</label>
+                                                <input type="radio" id="primeiro" class="custom-radio-btn"
+                                                    name="primeiro" value="primeiro">
+                                                <label for="Medio" class="ensino-label">1º Ano</label>
                                                 <img src="images/Medio.png" alt="" class="ensino-imagem">
                                             </div>
                                             <div class="ensino-container">
-                                                <input type="radio" id="primeiro" class="custom-radio-btn" name="primeiro" value="primeiro">
+                                                <input type="radio" id="primeiro" class="custom-radio-btn"
+                                                    name="primeiro" value="primeiro">
                                                 <label for="Medio" class="ensino-label">2º Ano</label>
                                                 <img src="images/Medio.png" alt="" class="ensino-imagem">
                                             </div>
                                             <div class="ensino-container">
-                                                <input type="radio" id="primeiro" class="custom-radio-btn" name="primeiro" value="primeiro">
+                                                <input type="radio" id="primeiro" class="custom-radio-btn"
+                                                    name="primeiro" value="primeiro">
                                                 <label for="Medio" class="ensino-label">3º Ano</label>
                                                 <img src="images/Medio.png" alt="" class="ensino-imagem">
                                             </div>
@@ -1155,48 +1236,49 @@ window.onclick = function(event) {
                         </div>
                         <script>
                             // Adicione um evento de clique ao botão "Fundamental 1"
-                            document.getElementById("Butaofundamental1").addEventListener("click", function() {
+                            document.getElementById("Butaofundamental1").addEventListener("click", function () {
                                 // Oculta a navegação atual
                                 document.querySelector(".ensino").style.display = "none";
                                 // Exibe a nova navegação das séries do Fundamental 1
                                 document.querySelector(".Seriefundamental1").style.display = "block";
                             });
-                            document.getElementById("Center").addEventListener("click", function() {
+                            document.getElementById("Center").addEventListener("click", function () {
                                 // Oculta a navegação atual
                                 document.querySelector(".Seriefundamental1").style.display = "none";
                                 // Exibe a nova navegação das séries do Fundamental 1
                                 document.querySelector("Center").style.display = "block";
                             });
                         </script>
-<script>
-    // Adicione um evento de clique ao botão "Fundamental 1"
-    document.getElementById("Butaofundamental2").addEventListener("click", function() {
-        // Oculta a navegação atual
-        document.querySelector(".ensino").style.display = "none";
-        // Exibe a nova navegação das séries do Fundamental 1
-        document.querySelector(".Seriefundamental2").style.display = "block";
-    });
-    document.getElementById("Center").addEventListener("click", function() {
-        // Oculta a navegação atual
-        document.querySelector(".Seriefundamental2").style.display = "none";
-        // Exibe a nova navegação das séries do Fundamental 1
-        document.querySelector("Center").style.display = "block";
-    });
-</script><script>
-    // Adicione um evento de clique ao botão "Fundamental 1"
-    document.getElementById("Butaomedio").addEventListener("click", function() {
-        // Oculta a navegação atual
-        document.querySelector(".ensino").style.display = "none";
-        // Exibe a nova navegação das séries do Fundamental 1
-        document.querySelector(".Seriemedio").style.display = "block";
-    });
-    document.getElementById("Center").addEventListener("click", function() {
-        // Oculta a navegação atual
-        document.querySelector(".Seriemedio").style.display = "none";
-        // Exibe a nova navegação das séries do Fundamental 1
-        document.querySelector("Center").style.display = "block";
-    });
-</script>
+                        <script>
+                            // Adicione um evento de clique ao botão "Fundamental 1"
+                            document.getElementById("Butaofundamental2").addEventListener("click", function () {
+                                // Oculta a navegação atual
+                                document.querySelector(".ensino").style.display = "none";
+                                // Exibe a nova navegação das séries do Fundamental 1
+                                document.querySelector(".Seriefundamental2").style.display = "block";
+                            });
+                            document.getElementById("Center").addEventListener("click", function () {
+                                // Oculta a navegação atual
+                                document.querySelector(".Seriefundamental2").style.display = "none";
+                                // Exibe a nova navegação das séries do Fundamental 1
+                                document.querySelector("Center").style.display = "block";
+                            });
+                        </script>
+                        <script>
+                            // Adicione um evento de clique ao botão "Fundamental 1"
+                            document.getElementById("Butaomedio").addEventListener("click", function () {
+                                // Oculta a navegação atual
+                                document.querySelector(".ensino").style.display = "none";
+                                // Exibe a nova navegação das séries do Fundamental 1
+                                document.querySelector(".Seriemedio").style.display = "block";
+                            });
+                            document.getElementById("Center").addEventListener("click", function () {
+                                // Oculta a navegação atual
+                                document.querySelector(".Seriemedio").style.display = "none";
+                                // Exibe a nova navegação das séries do Fundamental 1
+                                document.querySelector("Center").style.display = "block";
+                            });
+                        </script>
 
                         <!-- <canvas id="canvas" width="400" height="300" style="display:none;"></canvas> -->
 
@@ -1289,6 +1371,9 @@ window.onclick = function(event) {
         tag.addEventListener('click', (e) => {
             msg.text = e.target.innerText;
             tag.style.backgroundColor = "yellow";
+            tag.style.borderRadius = "20px";
+            // tag.style.marginLeft = "25px";
+            // tag.style.marginRight = "25px";
             speechSynthesis.speak(msg);
 
 
