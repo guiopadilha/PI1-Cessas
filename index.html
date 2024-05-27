@@ -229,7 +229,7 @@ width: 100%;">
                     border-radius: 100% 100% 0 0;
                     background-color: #68D3EC;
                     margin: 0px auto 0px;">
-                         <h4 id="videoh4" style="margin-top: 60px;">Vídeo de instrução:</h4>
+                         <h4 id="videoh4" style="margin: 60px 30px 0px;">Vídeo de instrução:</h4>
                          <button>
                               <img src="images/youtube.png" alt="link para filme" style="text-align: center;
                          width: 300px; margin-top: 10px;">
@@ -260,7 +260,7 @@ width: 100%;">
             height: 60vh;">
 
                     <h1 id="SeEscrever"
-                         style="text-align: center; margin: 20px; color: #f5f5f5; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+                         style="text-align: center; margin: 20px; color: #f5f5f5; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); padding: 0px 20px;">
                          Bora se Inscrever ?
                     </h1>
 
@@ -292,5 +292,39 @@ width: 100%;">
 
 
 </body>
-
+<script>
+     let msg = new SpeechSynthesisUtterance();
+     let voices = speechSynthesis.getVoices();
+     // Find the voice that corresponds to Portuguese (Portugal)
+     let portugueseVoice = voices.find(voice => voice.lang === 'pt-BR');
+     // Setar a Voz em pt Brasil one if found, otherwise use the default
+     msg.voice = portugueseVoice || voices[0]; //5 kkk //2,3,4 good
+     // Setar a lingua em pt Brasil
+     msg.lang = 'pt-BR';
+ 
+ 
+     let tags = document.querySelectorAll('p,a,h1,h2,h4,label,button,span'); // add more tags for your project
+     tags.forEach((tag) => {
+         tag.addEventListener('click', (e) => {
+             msg.text = e.target.innerText;
+             tag.style.backgroundColor = "yellow";
+             tag.style.borderRadius = "20px";
+             // tag.style.marginLeft = "25px";
+             // tag.style.marginRight = "25px";
+             speechSynthesis.speak(msg);
+ 
+ 
+             let interval = setInterval(() => {
+                 if (!speechSynthesis.speaking) {
+                     tag.style.removeProperty('background-color');
+                     clearInterval(interval);
+                 }
+             }, 100);
+ 
+ 
+         });
+     });
+ 
+ 
+ </script>
 </html>
