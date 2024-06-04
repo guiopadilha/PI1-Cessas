@@ -925,7 +925,7 @@
                                                         margin: 20px;
                                                         cursor: pointer;
                                                         font-weight: bold;" href="#SerieFundamental1"
-                                                        id="Butaofundamental1">⚪</button><label for="fundamental1"
+                                                        id="Butaofundamental1">🔴</button><label for="fundamental1"
                                                         class="ensino-label">Fundamental 1</label></a>
                                                     <img src="images/Fundamental1.png" alt="" class="ensino-imagem">
                                                 </div>
@@ -941,7 +941,7 @@
                                                         margin: 20px;
                                                         cursor: pointer;
                                                         font-weight: bold;" href="#SerieFundamental2"
-                                                        id="Butaofundamental2">⚪</button>
+                                                        id="Butaofundamental2">🔴</button>
                                                     <label for="fundamental2" class="ensino-label">Fundamental 2</label>
                                                     <img src="images/Fundamental2.png" alt="" class="ensino-imagem">
                                                 </div>
@@ -957,7 +957,7 @@
                                                         margin: 20px;
                                                         cursor: pointer;
                                                         font-weight: bold;" href="#SerieMedio"
-                                                        id="Butaomedio">⚪</button>
+                                                        id="Butaomedio">🔴</button>
                                                     <label for="medio" class="ensino-label">Médio</label></a>
                                                     <img src="images/Medio.png" class="ensino-imagem">
                                                 </div>
@@ -1018,13 +1018,6 @@
                                                         (Ouvir)</label>
                                                     <img src="images/Audicao.png" alt="" class="deficiencia-imagem" style="max-height: 55px;">
                                                 </div>
-                                                <div class="deficiencia-container" style="margin-bottom: 0px;">
-                                                    <input type="checkbox" id="Analfabetismo" class="custom-radio-btn"
-                                                        name="deficiencia" value="Analfabetismo">
-                                                    <label for="Analfabetismo" class="deficiencia-label">Analfabetismo
-                                                        (Ler ou escrever)</label>
-                                                    <img src="images/Analfabeto.png" class="deficiencia-imagem">
-                                                </div>
                                                 <div class="deficiencia-container"  style="margin-bottom: 0px;">
                                                     <input type="checkbox" id="mudo" class="custom-radio-btn"
                                                         name="deficiencia" value="mudo">
@@ -1040,13 +1033,13 @@
                                                             required="">
                                                     </div>
                                                 </div>
-                                                <!-- <div class="deficiencia-container" style="margin-bottom: 0px;">
-                                                    <input type="radio" id="nada" class="custom-radio-btn"
+                                                <div class="deficiencia-container" style="margin-bottom: 0px;">
+                                                    <input type="checkbox" id="nada" class="custom-radio-btn"
                                                         name="deficiencia" value="nada">
-                                                    <label for="Outro" class="deficiencia-label">Não tenho nenhuma
-                                                        dificuldade </label>
+                                                    <label for="nada" class="deficiencia-label">Não tenho nenhuma destas
+                                                        dificuldades</label>
 
-                                                </div> -->
+                                                </div> 
                                             </div>
                                         </div>
 
@@ -1068,7 +1061,7 @@
                                         <div class="deficiencia-container">
                                             <label for="Telefone" class="deficiencia-label">Telefone:</label>
                                             <div class="input-wrapper">
-                                                <input type="tel" placeholder="Informe... " name="text" class="input">
+                                                <input type="tel" placeholder="Informe... " name="text" class="input" required>
                                             </div>
                                             <img src="images/Telefone.png" class="Telefone">
                                         </div>
@@ -1078,7 +1071,7 @@
                                         <br><br>
                                         <!-- <input type="submit" value="Enviar"
                                     style="background-color:rgb(72, 160, 236); ; color: white; padding: 10px 20px; border: none; border-radius: 5px;""> -->
-                                        <button style=" 
+                                        <input type="submit" style=" 
                                 background-color:rgb(72, 160, 236);
                                   color: white; 
                                   padding: 10px
@@ -1091,7 +1084,7 @@
                                     margin: 20px;
                                     border: none;
                                     cursor: pointer;
-                                    font-weight: bold;">Enviar</button>
+                                    font-weight: bold;">
 
                                 </div>
                                 </nav>
@@ -1111,7 +1104,7 @@
                                                     value="primeiro1">
                                                 <label for="primeiro1" class="ensino-label" style="margin-top: 5px;">1ᵃ
                                                     Série</label> <!-- Reduzi a margem superior -->
-                                                <img src="images/Fundamental1.png" alt="1ª Série" class="ensino-imagem"
+                                                <img src="images/1ano.png" alt="1ª Série" class="ensino-imagem"
                                                     style="height: 60px;">
                                             </div>
                                             <div class="ensino-container" style="margin-bottom: 0;">
@@ -1120,7 +1113,7 @@
                                                     value="primeiro2">
                                                 <label for="primeiro2" class="ensino-label" style="margin-top: 5px;">2ᵃ
                                                     Série</label> <!-- Reduzi a margem superior -->
-                                                <img src="images/Fundamental1.png" alt="2ª Série" class="ensino-imagem "
+                                                <img src="images/2ano.png" alt="2ª Série" class="ensino-imagem "
                                                     style="height: 60px;">
                                             </div>
                                             <div class="ensino-container" style="margin-bottom: 0;">
@@ -1129,7 +1122,7 @@
                                                     value="primeiro3">
                                                 <label for="primeiro3" class="ensino-label" style="margin-top: 5px;">3ᵃ
                                                     Série</label> <!-- Reduzi a margem superior -->
-                                                <img src="images/Fundamental1.png" alt="3ª Série" class="ensino-imagem"
+                                                <img src="images/3ano.png" alt="3ª Série" class="ensino-imagem"
                                                     style="height: 60px;">
                                             </div>
                                             <div class="ensino-container" style="margin-bottom: 0;">
@@ -1138,7 +1131,7 @@
                                                     value="primeiro4">
                                                 <label for="primeiro4" class="ensino-label" style="margin-top: 5px;">4ᵃ
                                                     Série</label> <!-- Reduzi a margem superior -->
-                                                <img src="images/Fundamental1.png" alt="4ª Série" class="ensino-imagem"
+                                                <img src="images/4ano.png" alt="4ª Série" class="ensino-imagem"
                                                     style="height: 60px;">
                                             </div>
                                             <div class="ensino-container" style="margin-bottom: 0;">
@@ -1147,7 +1140,7 @@
                                                     value="primeiro5">
                                                 <label for="primeiro5" class="ensino-label" style="margin-top: 5px;">5ᵃ
                                                     Série</label> <!-- Reduzi a margem superior -->
-                                                <img src="images/Fundamental1.png" alt="5ª Série" class="ensino-imagem"
+                                                <img src="images/5ano.png" alt="5ª Série" class="ensino-imagem"
                                                     style="height: 60px;">
                                             </div>
                                         </div>
@@ -1164,31 +1157,31 @@
                                         <div>
 
                                             <div class="ensino-container">
-                                                <input type="radio" id="primeiro" class="custom-radio-btn"
-                                                    name="primeiro" value="primeiro">
-                                                <label for="fundamental2" class="ensino-label">6ᵃ Série</label>
-                                                <img src="images/Fundamental2.png" alt="" class="ensino-imagem"
+                                                <input type="radio" id="primeiro6" class="custom-radio-btn"
+                                                    name="serie" value="primeiro6">
+                                                <label for="primeiro6" class="ensino-label">6ᵃ Série</label>
+                                                <img src="images/6ano.png" alt="" class="ensino-imagem"
                                                     style="height: 60px;">
                                             </div>
                                             <div class="ensino-container">
-                                                <input type="radio" id="primeiro" class="custom-radio-btn"
-                                                    name="primeiro" value="primeiro">
-                                                <label for="fundamental2" class="ensino-label">7ᵃ Série</label>
-                                                <img src="images/Fundamental2.png" alt="" class="ensino-imagem"
+                                                <input type="radio" id="primeiro7" class="custom-radio-btn"
+                                                    name="serie" value="primeiro7">
+                                                <label for="primeiro7" class="ensino-label">7ᵃ Série</label>
+                                                <img src="images/7ano.png" alt="" class="ensino-imagem"
                                                     style="height: 60px;">
                                             </div>
                                             <div class="ensino-container">
-                                                <input type="radio" id="primeiro" class="custom-radio-btn"
-                                                    name="primeiro" value="primeiro">
-                                                <label for="fundamental2" class="ensino-label">8ᵃ Série</label>
-                                                <img src="images/Fundamental2.png" alt="" class="ensino-imagem"
+                                                <input type="radio" id="primeiro8" class="custom-radio-btn"
+                                                    name="serie" value="primeiro8">
+                                                <label for="primeiro8" class="ensino-label">8ᵃ Série</label>
+                                                <img src="images/8ano.png" alt="" class="ensino-imagem"
                                                     style="height: 60px;">
                                             </div>
                                             <div class="ensino-container">
-                                                <input type="radio" id="primeiro" class="custom-radio-btn"
-                                                    name="primeiro" value="primeiro">
-                                                <label for="fundamental2" class="ensino-label">9ᵃ Série</label>
-                                                <img src="images/Fundamental2.png" alt="" class="ensino-imagem"
+                                                <input type="radio" id="primeiro9" class="custom-radio-btn"
+                                                    name="serie" value="primeiro9">
+                                                <label for="primeiro9" class="ensino-label">9ᵃ Série</label>
+                                                <img src="images/9ano.png" alt="" class="ensino-imagem"
                                                     style="height: 60px;">
                                             </div>
                                         </div>
@@ -1203,22 +1196,22 @@
                                     <div class="ensinoCenter">
                                         <div>
                                             <div class="ensino-container">
-                                                <input type="radio" id="primeiro" class="custom-radio-btn"
-                                                    name="primeiro" value="primeiro">
-                                                <label for="Medio" class="ensino-label">1º Ano</label>
-                                                <img src="images/Medio.png" alt="" class="ensino-imagem">
+                                                <input type="radio" id="medio1" class="custom-radio-btn"
+                                                    name="serie" value="medio1">
+                                                <label for="medio1" class="ensino-label">1º Ano</label>
+                                                <img src="images/1serie.png" alt="" class="ensino-imagem">
                                             </div>
                                             <div class="ensino-container">
-                                                <input type="radio" id="primeiro" class="custom-radio-btn"
-                                                    name="primeiro" value="primeiro">
-                                                <label for="Medio" class="ensino-label">2º Ano</label>
-                                                <img src="images/Medio.png" alt="" class="ensino-imagem">
+                                                <input type="radio" id="medio2" class="custom-radio-btn"
+                                                    name="serie" value="medio2">
+                                                <label for="medio2" class="ensino-label">2º Ano</label>
+                                                <img src="images/2serie.png" alt="" class="ensino-imagem">
                                             </div>
                                             <div class="ensino-container">
-                                                <input type="radio" id="primeiro" class="custom-radio-btn"
-                                                    name="primeiro" value="primeiro">
-                                                <label for="Medio" class="ensino-label">3º Ano</label>
-                                                <img src="images/Medio.png" alt="" class="ensino-imagem">
+                                                <input type="radio" id="medio3" class="custom-radio-btn"
+                                                    name="serie" value="medio3">
+                                                <label for="medio3" class="ensino-label">3º Ano</label>
+                                                <img src="images/3serie.png" alt="" class="ensino-imagem">
                                             </div>
                                         </div>
                                     </div>
@@ -1234,7 +1227,6 @@
                                     <span>5</span>
                                     <span>6</span>
                                     <span style="display: none;">7</span>
-
                                 </center>
                             </div>
                         </div>
@@ -1304,7 +1296,19 @@
 
 
 </body>
-
+<script>
+$("[type=checkbox]").click(function() {
+    if($(this).is("#nada")) {
+        $("#mudo").prop( 'disabled', $(this).is(':checked'));
+        $("#Auditiva").prop( 'disabled', $(this).is(':checked') );  
+        $( "#cego").prop( 'disabled', $(this).is(':checked') );  
+        $( "#Outro").prop( 'disabled', $(this).is(':checked') );
+    }
+    else if($(this).is("#mudo") || $(this).is("#Auditiva")|| $(this).is("#cego")|| $(this).is("#Outro")){
+        $( "#nada").prop( 'disabled', $(":checkbox:not('#all'):checked").length);
+    }
+});
+</script>
 <script>
     const video = document.getElementById('video');
     const canvas = document.getElementById('canvas');
