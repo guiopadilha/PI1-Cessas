@@ -97,9 +97,9 @@
             flex-wrap: wrap;
             text-align: center;
             /* background-color: red; */
-
         }
 
+        /* Essa é a Navbar */
         .navbar {
             /* position: fixed; */
 
@@ -113,13 +113,9 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 8%;
+            height: auto;
 
         }
-
-
-
-
 
         .navbar a {
             float: left;
@@ -128,8 +124,6 @@
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
-
-
         }
 
         .dropdown,
@@ -137,8 +131,6 @@
             float: left;
             overflow: hidden;
             align-items: center;
-
-
         }
 
         .dropdown .dropbtn,
@@ -247,7 +239,6 @@
             flex-direction: row;
             /* Alterado de 'column' para 'row' */
             justify-content: flex-start;
-
             margin-left: 20px;
             /* Espaçamento à esquerda para separar do retângulo */
         }
@@ -274,7 +265,6 @@
             animation-duration: 2s;
         }
 
-
         @keyframes fadeInOpacity {
             0% {
                 opacity: 0;
@@ -288,12 +278,10 @@
         .turno-label,
         .ensino-label {
             margin-right: 3px;
-
         }
 
         .deficiencia-label {
             margin-right: 4px;
-
         }
 
         .turno-imagem,
@@ -318,7 +306,6 @@
             /* Ajuste o tamanho máximo da imagem conforme necessário */
             height: auto;
         }
-
 
         .arrow-img {
             margin-right: 10px;
@@ -378,8 +365,6 @@
             margin-top: 0px;
         }
 
-
-
         .tab-heading span {
             display: inline-block;
             padding: 10px;
@@ -389,15 +374,13 @@
             line-height: 1;
             /* Garante que a altura da linha não adicione espaços extras */
             margin-top: -1000px;
-            /* Ajuste o valor negativo conforme necessário para subir os spans */
+            /* Ajuste o valor negativo conforme necessário para subir os spans */
         }
 
         .active {
             background-color: aqua;
             border-radius: 20px;
         }
-
-
 
         .tab-content {
             /* background-color: red; */
@@ -409,8 +392,6 @@
             display: none;
 
         }
-
-
 
         .turnoCenter,
         .ensinoCenter {
@@ -484,7 +465,6 @@
         .grid-container {
             display: grid;
             grid-template-areas:
-
                 'menu menu conteudo';
             /* background-color: darkkhaki; */
             padding: 0px;
@@ -564,7 +544,6 @@
             border-radius: 1rem;
             color: rgb(0, 0, 0);
             cursor: pointer;
-            
         }
 
         .input-wrapper input:focus {
@@ -573,11 +552,9 @@
 
         .form__group {
             position: relative;
-
             margin: 8px 0;
             width: 100%;
             max-width: 300px;
-
         }
 
         .form__field {
@@ -633,7 +610,6 @@
             align-items: center;
             cursor: pointer;
             /* changes from the video   */
-
             margin: 0 10px;
             position: relative;
             padding-left: var(--size);
@@ -644,14 +620,16 @@
         }
 
         /* handle if you want label on the left of the checkmark instead */
-
         /* label  */
 
         .custom-radio-btn .label {
             margin-left: 5px;
         }
 
-
+ *{
+    margin: 0px;
+    padding: 0px;
+ }
         .custom-radio-btn[aria-label]::after {
             content: attr(aria-label);
             display: inline-block;
@@ -670,7 +648,6 @@
             display: inline-block;
             transition: opacity 0.3s ease;
             /* changes from the video  */
-
             border: var(--border) solid #444;
             padding: var(--gap);
             position: absolute;
@@ -678,7 +655,46 @@
             left: 0;
         }
 
-
+        @media only screen and (max-device-width: 400px) {
+            .navbar {
+                display: flex;
+                text-align: center;
+                width: 110%;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                "menu menu"
+                "conteudo conteudo";
+                width: 60%;
+                justify-items: center;
+        }
+        .conteudo {
+            grid-area: conteudo;
+            background-color: white;
+            /* border-left: 3px solid #0077b6; */
+            height: auto;
+            height: 100vh;
+        }
+        .menu {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 90%;
+        }
+        .grid-container>div {
+            display: grid;
+            width: 100%;
+    height: 80vh;
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    /* border: 1px solid rgba(0, 0, 0, 0.8); */
+ ;
+    font-size: 30px;
+    text-align: center;
+    align-content: center;
+    justify-content: start;
+}
+        }
 
         .custom-radio-btn input:checked~.checkmark {
             /* changes from the video  */
