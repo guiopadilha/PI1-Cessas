@@ -101,21 +101,19 @@
 
         /* Essa é a Navbar */
         .navbar {
-            /* position: fixed; */
 
-            background-color: #ffffff;
-            border-bottom: 3px solid #0077b6;
-            font-family: Poppins, sans-serif;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: auto;
+background-color: #ffffff;
+font-family: Poppins, sans-serif;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 8%;
+}
 
-        }
 
         .navbar a {
             float: left;
@@ -886,40 +884,39 @@
                                             <canvas id="canvas" width="400" height="300" style="display:none;"></canvas>
                                     </nav>
                                     <!-- Segundo  -->
-                                    <nav>
+                                    <nav id="selectTurno">
                                         <br>
                                         <audio controls>
                                             <source src="audios/audio_turno.mp3" type="audio/mpeg">
                                         </audio>
-
+                                
                                         <p style="margin-bottom: 20px;">Selecione o turno desejado:</p>
                                         <div class="turnoCenter">
-                                            <div>
-                                                <div class="turno-container">
-                                                    <input type="radio" id="manha" class="custom-radio-btn" name="turno"
-                                                        value="manha">
-                                                    <label for="manha" class="turno-label">Matutino (Pela manhã)
-                                                    </label>
-                                                    <img src="images/sunset.svg" alt="" class="turno-imagem">
+                                            <form id="turnoForm" method="POST" action="/submit-turno">
+                                                <div>
+                                                    <div class="turno-container">
+                                                        <input type="radio" id="manha" class="custom-radio-btn" name="turno" value="manha">
+                                                        <label for="manha" class="turno-label">Matutino (Pela manhã)</label>
+                                                        <img src="images/sunset.svg" alt="" class="turno-imagem">
+                                                    </div>
+                                
+                                                    <div class="turno-container">
+                                                        <input type="radio" id="tarde" class="custom-radio-btn" name="turno" value="tarde">
+                                                        <label for="tarde" class="turno-label">Vespertino (A Tarde)</label>
+                                                        <img src="images/sun.svg" alt="" class="turno-imagem">
+                                                    </div>
+                                
+                                                    <div class="turno-container">
+                                                        <input type="radio" id="noite" class="custom-radio-btn" name="turno" value="noite">
+                                                        <label for="noite" class="turno-label">Noturno (A Noite)</label>
+                                                        <img src="images/moon.svg" class="turno-imagem">
+                                                    </div>
                                                 </div>
-
-                                                <div class="turno-container">
-                                                    <input type="radio" id="tarde" class="custom-radio-btn" name="turno"
-                                                        value="tarde">
-                                                    <label for="tarde" class="turno-label">Vespertino (A Tarde)</label>
-                                                    <img src="images/sun.svg" alt="" class="turno-imagem">
-                                                </div>
-
-                                                <div class="turno-container">
-                                                    <input type="radio" id="noite" class="custom-radio-btn" name="turno"
-                                                        value="noite">
-                                                    <label for="noite" class="turno-label">Noturno (A Noite)</label>
-                                                    <img src="images/moon.svg" class="turno-imagem">
-                                                </div>
-                                            </div>
+                                                
+                                            </form>
                                         </div>
-
                                     </nav>
+                                    
                                     <nav class="ensino">
                                         <br>
                                         <audio controls>
@@ -988,26 +985,26 @@
                                             <source src="audios/retornooumatreiculanova.mp3" type="audio/mpeg">
                                         </audio>
                                         <!-- quarto                         -->
-
+                                    
                                         <p style="margin-bottom: 20px;">Matrícula nova ou retorno?</p>
                                         <div class="ensinoCenter">
                                             <div>
                                                 <div class="ensino-container">
-                                                    <input type="radio" class="custom-radio-btn" id="Matrícula"
-                                                        name="ensino" value="Matrícula nova">
+                                                    <input type="radio" class="custom-radio-btn" id="Matrícula" name="ensino" value="Matrícula nova">
                                                     <label for="Matrícula" class="ensino-label">Matrícula</label>
                                                     <img src="images/Medio.png" alt="" class="ensino-imagem">
                                                 </div>
-
+                                    
                                                 <div class="ensino-container">
-                                                    <input type="radio" class="custom-radio-btn" id="Retorno"
-                                                        name="ensino" value="Retorno">
+                                                    <input type="radio" class="custom-radio-btn" id="Retorno" name="ensino" value="Retorno">
                                                     <label for="Retorno" class="ensino-label">Retorno</label>
                                                     <img src="images/Retorno.png" alt="" class="ensino-imagem">
                                                 </div>
                                             </div>
                                         </div>
-
+                                    </nav>
+                                
+                                        
                                     </nav>
                                     <nav style="font-size: 28px; ">
                                         <!-- <nav style="font-size: 16px; "> -->
@@ -1087,7 +1084,7 @@
                                         <br><br>
                                         <!-- <input type="submit" value="Enviar"
                                     style="background-color:rgb(72, 160, 236); ; color: white; padding: 10px 20px; border: none; border-radius: 5px;""> -->
-                                        <input type="submit" style=" 
+                                        <input type="submit" id="submitBtn" style=" 
                                 background-color:rgb(72, 160, 236);
                                   color: white; 
                                   padding: 10px
@@ -1331,16 +1328,31 @@ $("[type=checkbox]").click(function() {
     const snapBtn = document.getElementById('snapBtn');
     const overlay = document.getElementById('overlay');
     const cameraContainer = document.getElementById('cameraContainer');
+    let stream;
 
-    // Acesso à câmera
-    navigator.mediaDevices.getUserMedia({ video: true })
-        .then(function (stream) {
-            video.srcObject = stream;
-            video.play();
-        })
-        .catch(function (err) {
-            console.log("Erro ao acessar a câmera: " + err);
-        });
+    // Função para ligar a câmera
+    function startCamera() {
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function (mediaStream) {
+                stream = mediaStream;
+                video.srcObject = stream;
+                video.play();
+            })
+            .catch(function (err) {
+                console.log("Erro ao acessar a câmera: " + err);
+            });
+    }
+
+    // Função para desligar a câmera
+    function stopCamera() {
+        if (stream) {
+            const tracks = stream.getTracks();
+            tracks.forEach(track => track.stop());
+        }
+    }
+
+    // Inicializa a câmera quando a página carrega
+    startCamera();
 
     // Função para tirar a foto
     snapBtn.addEventListener('click', function () {
@@ -1352,8 +1364,11 @@ $("[type=checkbox]").click(function() {
         overlay.style.display = 'none';
         canvas.style.display = 'block';
 
-        // Adiciona o botão de retry dinamicamente
-        const retryBtn = document.createElement('button');
+        // Desliga a câmera
+        stopCamera();
+
+          // Adiciona o botão de retry dinamicamente
+          const retryBtn = document.createElement('button');
         retryBtn.textContent = '✖';
         retryBtn.className = 'retryBtn';
         retryBtn.style.position = 'absolute';
@@ -1373,6 +1388,9 @@ $("[type=checkbox]").click(function() {
             video.style.display = 'block';
             overlay.style.display = 'block';
             canvas.style.display = 'none';
+
+            // Liga a câmera novamente
+            startCamera();
         });
 
         cameraContainer.appendChild(retryBtn);
@@ -1413,6 +1431,37 @@ $("[type=checkbox]").click(function() {
     });
 
 
+</script>
+<script>
+    const submitBtn = document.getElementById('submitBtn');
+
+    submitBtn.addEventListener('click', function () {
+        // Obter o formulário
+        const form = document.getElementById('turnoForm');
+        
+        // Obter todos os botões de rádio com o nome "turno"
+        const radios = document.getElementsByName('turno');
+        let selectedValue;
+
+        // Iterar sobre os botões de rádio para encontrar o marcado
+        for (let i = 0; i < radios.length; i++) {
+            if (radios[i].checked) {
+                selectedValue = radios[i].value;
+                break;
+            }
+        }
+
+        // Verificar se uma opção foi selecionada
+        if (selectedValue) {
+            // Enviar o formulário
+            form.submit();
+
+            // Redirecionar o usuário de volta para o elemento nav com ID "selectTurno"
+            window.location.href = '#'; // Role para o topo da página
+        } else {
+            alert('Por favor, selecione um turno.');
+        }
+    });
 </script>
 
 </html>
