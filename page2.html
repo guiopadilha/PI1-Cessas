@@ -905,29 +905,29 @@ height: 8%;
                                 <div class="tab-content">
                                     <br>
                                     <h1 style=" margin: 0;">Matrícula</h1>
-
                                     <nav>
-                                        <br>
-                                        <div id="Retangulo" class="retangulo" style="text-align: center">
-
-                                            <audio controls autoplay>
-                                                <source src="audios/audio_documento.mp3" type="audio/mpeg">
-                                            </audio>
-                                            <p>Envie uma foto do seu documento:</p>
-                                            <div id="container" style="position: relative;">
-                                                <div id="cameraContainer" style="position: relative;">
-                                                    <video id="video" width="400" height="300" autoplay
-                                                        style="background-color: black;"></video>
-                                                    <div id="overlay"
-                                                        style="position: absolute; bottom: 0; width: 100%; background-color: black; text-align: center;">
-                                                        <button id="snapBtn"
-                                                            style="font-size: 24px; border: none; color: black; background-color: black;">⚪</button>
+                                        <form id="envioDocumentoForm" method="POST">
+                                            <div id="Retangulo" class="retangulo" style="text-align: center">
+                                                <audio controls autoplay>
+                                                    <source src="audios/audio_documento.mp3" type="audio/mpeg">
+                                                </audio>
+                                                <p>Envie uma foto do seu documento:</p>
+                                                <div id="container" style="position: relative;">
+                                                    <div id="cameraContainer" style="position: relative;">
+                                                        <video id="video" width="400" height="300" autoplay style="background-color: black;"></video>
+                                                        <div id="overlay" style="position: absolute; bottom: 0; width: 100%; background-color: black; text-align: center;">
+                                                            <button id="snapBtn" style="font-size: 24px; border: none; color: black; background-color: black;">⚪</button>
+                                                        </div>
                                                     </div>
                                                 </div>
+                                                <canvas id="canvas" width="400" height="300" style="display:none;"></canvas>
+                                               
+                                               
                                             </div>
-                                            <canvas id="canvas" width="400" height="300" style="display:none;"></canvas>
-                                           
+                                        </form>
                                     </nav>
+                                    
+                                    
                                     <!-- Segundo  -->
                                     <nav id="selectTurno">
                                         <br>
@@ -937,7 +937,7 @@ height: 8%;
                                 
                                         <p style="margin-bottom: 20px;">Selecione o turno desejado:</p>
                                         <div class="turnoCenter">
-                                            <form id="turnoForm" method="POST" action="/submit-turno">
+                                            <form id="turnoForm" method="POST">
                                                 <div>
                                                     <div class="turno-container">
                                                         <input type="radio" id="manha" class="custom-radio-btn" name="turno" value="manha">
@@ -1023,8 +1023,8 @@ height: 8%;
                                         </div>
 
                                     </nav>
-
-                                    <nav>
+                                    
+                                    <nav id="selectEnsino">
                                         <br>
                                         <audio controls>
                                             <source src="audios/retornooumatreiculanova.mp3" type="audio/mpeg">
@@ -1032,106 +1032,104 @@ height: 8%;
                                         <!-- quarto -->
                                         <p style="margin-bottom: 20px;">Matrícula nova ou retorno?</p>
                                         <div class="ensinoCenter">
-                                            <div>
-                                                <div class="ensino-container">
-                                                    <input type="radio" class="custom-radio-btn" id="Matrícula" name="ensino" value="Matrícula nova" required>
-                                                    <label for="Matrícula" class="ensino-label">Matrícula</label>
-                                                    <img src="images/Medio.png" alt="" class="ensino-imagem">
+                                            <form id="ensinoForm" method="POST" >
+                                                <div>
+                                                    <div class="ensino-container">
+                                                        <input type="radio" class="custom-radio-btn" id="Matrícula" name="ensino" value="Matrícula nova" required>
+                                                        <label for="Matrícula" class="ensino-label">Matrícula</label>
+                                                        <img src="images/Medio.png" alt="" class="ensino-imagem">
+                                                    </div>
+                                                    <div class="ensino-container">
+                                                        <input type="radio" class="custom-radio-btn" id="Retorno" name="ensino" value="Retorno" required>
+                                                        <label for="Retorno" class="ensino-label">Retorno</label>
+                                                        <img src="images/Retorno.png" alt="" class="ensino-imagem">
+                                                    </div>
                                                 </div>
-                                                <div class="ensino-container">
-                                                    <input type="radio" class="custom-radio-btn" id="Retorno" name="ensino" value="Retorno" required>
-                                                    <label for="Retorno" class="ensino-label">Retorno</label>
-                                                    <img src="images/Retorno.png" alt="" class="ensino-imagem">
-                                                </div>
-                                            </div>
+                                            </form>
                                         </div>
-                                        
                                     </nav>
+                                    
+                                    
                                     
                                 
                                         
                                     </nav>
+                                    <nav style="font-size: 28px;">
+                                        <form id="selectDeficienciaForm" method="POST">
+                                        
+                                            <!-- <nav style="font-size: 16px; "> -->
+                                            <br>
+                                            <audio controls>
+                                                <source src="audios/dificuldade.mp3" type="audio/mpeg">
+                                            </audio>
+                                            <!-- quinto -->
                                     
-                                    <nav style="font-size: 28px; ">
-                                        <!-- <nav style="font-size: 16px; "> -->
-                                        <br>
-                                        <audio controls>
-                                            <source src="audios/dificuldade.mp3" type="audio/mpeg">
-                                        </audio>
-                                        <!-- quinto                         -->
-
-                                        <p style="margin-bottom: 0px;">Tipo de deficiência / Dificuldade:</p>
-                                        <div class="deficienciaCenter" style="font-size: 23px; ">
-                                            <div>
-                                                <div class="deficiencia-container"  style="margin-bottom: 0px;">
-                                                    <input type="checkbox" id="cego" class="custom-radio-btn"
-                                                        name="deficiencia" value="cego">
-                                                    <label for="cego" class="deficiencia-label">Visual (Ver)</label>
-                                                    <img src="images/Visao.png" alt="" class="deficiencia-imagem">
-                                                </div>
-
-                                                <div class="deficiencia-container" style="margin-bottom: 0px;">
-                                                    <input type="checkbox" id="Auditiva" class="custom-radio-btn"
-                                                        name="deficiencia" value="Auditiva">
-                                                    <label for="Auditiva" class="deficiencia-label">Audição
-                                                        (Ouvir)</label>
-                                                    <img src="images/Audicao.png" alt="" class="deficiencia-imagem" style="max-height: 55px;">
-                                                </div>
-                                                <div class="deficiencia-container"  style="margin-bottom: 0px;">
-                                                    <input type="checkbox" id="mudo" class="custom-radio-btn"
-                                                        name="deficiencia" value="mudo">
-                                                    <label for="mudo" class="deficiencia-label">Fala</label>
-                                                    <img src="images/FAla.png" class="deficiencia-imagem">
-                                                </div>
-                                                <div class="deficiencia-container"  style="margin-bottom: 0px;">
-                                                    <input type="checkbox" id="Outro" class="custom-radio-btn"
-                                                        name="deficiencia" value="Outro">
-                                                    <label for="Outro" class="deficiencia-label">Outro: </label>
-                                                    <div class="form__group field">
-                                                        <input type="input" class="form__field" placeholder="Informe"
-                                                            required="">
+                                            <p style="margin-bottom: 0px;">Tipo de deficiência / Dificuldade:</p>
+                                            <div class="deficienciaCenter" style="font-size: 23px;">
+                                                <div>
+                                                    <div class="deficiencia-container" style="margin-bottom: 0px;">
+                                                        <input type="checkbox" id="cego" class="custom-radio-btn" name="deficiencia" value="cego">
+                                                        <label for="cego" class="deficiencia-label">Visual (Ver)</label>
+                                                        <img src="images/Visao.png" alt="" class="deficiencia-imagem">
+                                                    </div>
+                                    
+                                                    <div class="deficiencia-container" style="margin-bottom: 0px;">
+                                                        <input type="checkbox" id="Auditiva" class="custom-radio-btn" name="deficiencia" value="Auditiva">
+                                                        <label for="Auditiva" class="deficiencia-label">Audição (Ouvir)</label>
+                                                        <img src="images/Audicao.png" alt="" class="deficiencia-imagem" style="max-height: 55px;">
+                                                    </div>
+                                                    <div class="deficiencia-container" style="margin-bottom: 0px;">
+                                                        <input type="checkbox" id="mudo" class="custom-radio-btn" name="deficiencia" value="mudo">
+                                                        <label for="mudo" class="deficiencia-label">Fala</label>
+                                                        <img src="images/FAla.png" class="deficiencia-imagem">
+                                                    </div>
+                                                    <div class="deficiencia-container" style="margin-bottom: 0px;">
+                                                        <input type="checkbox" id="Outro" class="custom-radio-btn" name="deficiencia" value="Outro">
+                                                        <label for="Outro" class="deficiencia-label">Outro: </label>
+                                                        <div class="form__group field">
+                                                            <input type="input" class="form__field" placeholder="Informe" required="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="deficiencia-container" style="margin-bottom: 0px;">
+                                                        <input type="checkbox" id="nada" class="custom-radio-btn" name="deficiencia" value="nada">
+                                                        <label for="nada" class="deficiencia-label">Não tenho nenhuma destas dificuldades</label>
                                                     </div>
                                                 </div>
-                                                <div class="deficiencia-container" style="margin-bottom: 0px;">
-                                                    <input type="checkbox" id="nada" class="custom-radio-btn"
-                                                        name="deficiencia" value="nada">
-                                                    <label for="nada" class="deficiencia-label">Não tenho nenhuma destas
-                                                        dificuldades</label>
-
-                                                </div> 
                                             </div>
-                                        </div>
-
+                                        
+                                        </form>
                                     </nav>
+                                    
 
                                     <!-- sexto                        -->
                                     <nav>
-                                        <br>
-                                        <audio controls>
-                                            <source src="audios/TERMO DE AUTORIZAÇÃO DE USO DE AUDIO E IMAGEM.mp3"
-                                                type="audio/mpeg">
-                                        </audio>
-                                        <br>
-                                        <br><br>
-                                        <input type="checkbox" id="autorizacao" name="autorizacao">
-                                        <!-- Rótulo -->
-                                        <label for="autorizacao">Termo de autorização do uso de áudio e
-                                            imagem</label><br><br>
-                                        <div class="deficiencia-container">
-                                            <label for="Telefone" class="deficiencia-label">Telefone:</label>
-                                            <div class="input-wrapper">
-                                                <input type="tel" placeholder="Informe... " name="text" class="input" required>
+                                        <form id="autorizacaoForm" method="POST">
+                                            <br>
+                                            <audio controls>
+                                                <source src="audios/TERMO DE AUTORIZAÇÃO DE USO DE AUDIO E IMAGEM.mp3" type="audio/mpeg">
+                                            </audio>
+                                            <br>
+                                            <br><br>
+                                            <input type="checkbox" id="autorizacao" name="autorizacao">
+                                            <!-- Rótulo -->
+                                            <label for="autorizacao">Termo de autorização do uso de áudio e imagem</label><br><br>
+                                            <div class="deficiencia-container">
+                                                <label for="Telefone" class="deficiencia-label">Telefone:</label>
+                                                <div class="input-wrapper">
+                                                    <input type="tel" placeholder="Informe... " name="telefone" class="input" required>
+                                                </div>
+                                                <img src="images/Telefone.png" class="Telefone">
                                             </div>
-                                            <img src="images/Telefone.png" class="Telefone">
-                                        </div>
-
+                                        </form>
+                                        
 
 
                                         <br><br>
                                         <!-- <input type="submit" value="Enviar"
                                     style="background-color:rgb(72, 160, 236); ; color: white; padding: 10px 20px; border: none; border-radius: 5px;""> -->
-                                        <input type="submit" id="submitBtn" style=" 
-                                background-color:rgb(72, 160, 236);
+                                    <input type="submit" id="submitBtn" value="Enviar" onclick="validarFormularios()" style=" 
+    
+                                   background-color:rgb(72, 160, 236);
                                   color: white; 
                                   padding: 10px
                                     20px; border: none; 
@@ -1285,7 +1283,7 @@ height: 8%;
                                     <span>4</span>
                                     <span>5</span>
                                     <span>6</span>
-                                    <span style="display: none;">7</span>
+                                    
                                 </center>
                             </div>
                             
@@ -1361,6 +1359,8 @@ height: 8%;
 
 
 </body>
+
+
 <script>
 $("[type=checkbox]").click(function() {
     if($(this).is("#nada")) {
@@ -1374,6 +1374,8 @@ $("[type=checkbox]").click(function() {
     }
 });
 </script>
+
+
 <script>
     const video = document.getElementById('video');
     const canvas = document.getElementById('canvas');
@@ -1407,7 +1409,9 @@ $("[type=checkbox]").click(function() {
     startCamera();
 
     // Função para tirar a foto
-    snapBtn.addEventListener('click', function () {
+    snapBtn.addEventListener('click', function (event) {
+        event.preventDefault(); // Evita que o formulário seja submetido
+
         const context = canvas.getContext('2d');
         context.drawImage(video, 0, 0, 400, 300);
 
@@ -1419,8 +1423,8 @@ $("[type=checkbox]").click(function() {
         // Desliga a câmera
         stopCamera();
 
-          // Adiciona o botão de retry dinamicamente
-          const retryBtn = document.createElement('button');
+        // Adiciona o botão de retry dinamicamente
+        const retryBtn = document.createElement('button');
         retryBtn.textContent = '✖';
         retryBtn.className = 'retryBtn';
         retryBtn.style.position = 'absolute';
@@ -1448,6 +1452,7 @@ $("[type=checkbox]").click(function() {
         cameraContainer.appendChild(retryBtn);
     });
 </script>
+
 <!-- Script para leitura do site  -->
 <script>
     let msg = new SpeechSynthesisUtterance();
@@ -1563,3 +1568,129 @@ $("[type=checkbox]").click(function() {
 });
 
 </script>
+<script>
+       const submitBtn1 = document.getElementById('submitBtn');
+
+submitBtn.addEventListener('click', function () {
+    // Obter o formulário
+    const form = document.getElementById('ensinoForm');
+    
+    // Obter todos os botões de rádio com o nome "turno"
+    const radios = document.getElementsByName('ensino');
+    let selectedValue;
+
+    // Iterar sobre os botões de rádio para encontrar o marcado
+    for (let i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+            selectedValue = radios[i].value;
+            break;
+        }
+    }
+
+    // Verificar se uma opção foi selecionada
+    if (selectedValue) {
+        // Enviar o formulário
+        form.submit();
+
+        // Redirecionar o usuário de volta para o elemento nav com ID "selectTurno"
+        window.location.href = '#'; // Role para o topo da página
+    } else {
+        alert('Por favor, selecione um ensino.');
+    }
+});   
+</script>
+<script>
+    const submitBtn2 = document.getElementById('submitBtn');
+
+submitBtn.addEventListener('click', function () {
+ // Obter o formulário
+ const form = document.getElementById('envioDocumentoForm');
+ 
+ // Obter todos os botões de rádio com o nome "turno"
+ const radios = document.getElementsByName('documento');
+ let selectedValue;
+
+ // Iterar sobre os botões de rádio para encontrar o marcado
+ for (let i = 0; i < radios.length; i++) {
+     if (radios[i].checked) {
+         selectedValue = radios[i].value;
+         break;
+     }
+ }
+
+ // Verificar se uma opção foi selecionada
+ if (selectedValue) {
+     // Enviar o formulário
+     form.submit();
+
+     // Redirecionar o usuário de volta para o elemento nav com ID "selectTurno"
+     window.location.href = '#'; // Role para o topo da página
+ } else {
+     alert('Por favor, tire uma foto.');
+ }
+});   
+</script>
+<script>
+    const submitBtn3 = document.getElementById('submitBtn');
+
+submitBtn.addEventListener('click', function () {
+ // Obter o formulário
+ const form = document.getElementById('selectDeficienciaForm');
+ 
+ // Obter todos os botões de rádio com o nome "turno"
+ const radios = document.getElementsByName('deficiencia');
+ let selectedValue;
+
+ // Iterar sobre os botões de rádio para encontrar o marcado
+ for (let i = 0; i < radios.length; i++) {
+     if (radios[i].checked) {
+         selectedValue = radios[i].value;
+         break;
+     }
+ }
+
+ // Verificar se uma opção foi selecionada
+ if (selectedValue) {
+     // Enviar o formulário
+     form.submit();
+
+     // Redirecionar o usuário de volta para o elemento nav com ID "selectTurno"
+     window.location.href = '#'; // Role para o topo da página
+ } else {
+     alert('Por favor, selecione responda se possui alguma dificuldade.');
+ }
+});   
+</script>
+<script>
+    const submitBtn4 = document.getElementById('submitBtn');
+
+submitBtn.addEventListener('click', function () {
+ // Obter o formulário
+ const form = document.getElementById('autorizacaoForm');
+ 
+ // Obter todos os botões de rádio com o nome "turno"
+ const radios = document.getElementsByName('autorizacao');
+ let selectedValue;
+
+ // Iterar sobre os botões de rádio para encontrar o marcado
+ for (let i = 0; i < radios.length; i++) {
+     if (radios[i].checked) {
+         selectedValue = radios[i].value;
+         break;
+     }
+ }
+
+ // Verificar se uma opção foi selecionada
+ if (selectedValue) {
+     // Enviar o formulário
+     form.submit();
+
+     // Redirecionar o usuário de volta para o elemento nav com ID "selectTurno"
+     window.location.href = '#'; // Role para o topo da página
+ } else {
+     alert('Por favor, autorize o termo /  coloque o seu telefone');
+ }
+});   
+</script>
+
+
