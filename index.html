@@ -129,8 +129,61 @@
                outline: none;
                color: inherit;
           }
+   
 
 
+          @media (max-width: 400px) {
+            body{
+               height: 900px;
+               width: 40%;
+            }
+         nav{
+          width: 122%;
+         }
+            .grid-container {
+               position: relative;
+               bottom: 40px;
+               display: grid;
+               width: 40%;
+          }
+            .grid-container {
+               position: relative;
+               bottom: 40px;
+               display: grid;
+               width: 40%;
+     grid-template-areas:
+          'menu menu'
+          'conteudo conteudo';
+          height: 100%;
+
+            }
+
+            .coteudo {
+               grid-area: conteudo;
+               display: flex;
+               width: 100%;
+            }
+            aside{
+               display: flex;
+               justify-content: center;
+            }
+            .Menu {
+              
+               grid-area: menu;
+               width: 100%;
+            }
+
+            .buttonne {
+               position: relative;
+               bottom: 240px;
+              left: 450px;
+                width: 50px;
+                height: 50px;
+            }
+        }
+      .coteudo{
+          display: flex;
+      }
           span {
                position: absolute;
                right: 0;
@@ -259,7 +312,7 @@ width: 100%;">
 
           </div>
           <div class="conteudo" style="grid-area: conteudo; ">
-               <div style="display: flex;
+               <div class="Inscrito" style="display: flex;
             justify-content: center; /* Center horizontally */
             align-items: center; /* Center vertically */
             height: 60vh;">
