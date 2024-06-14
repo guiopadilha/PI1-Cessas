@@ -21,11 +21,684 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
          crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/page2.css"/>
     <!-- Script dos next btn -->
     <script src="js/jquery.js"></script>
 </head>
+<style>
+         /* Estilo para a imagem com a classe "imagem-25" ocupar 25% da largura do site */
 
+        
+         body {
+        font-family: "Poetsen One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #006298;
+        margin: 0px;
+        background: linear-gradient(to bottom, #00b4d8, #ade8f4);
+        background-image: url("images/pagina2.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        /* Center the background image */
+        /* min-height: 100vh; */
+        width: 100%;
+    }
+
+    body,
+    h1,
+    p,
+    button,
+    span,
+    label,
+    a,
+    button.dropbtn {
+        margin: 0;
+        padding: 0;
+        font-family: "Poetsen One", sans-serif;
+        color: #006298;
+    }
+
+    p,label {
+        padding:15px;
+        padding-right:15px;
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* min-height: 100vh; */
+        width: 100%;
+        /* background: url(../image/background.png);
+ background-position: center;
+ background-size: cover; */
+    }
+
+    .form-box {
+        /* margin-top: 60px; */
+        padding-top: 0;
+        background-color: transparent;
+        /* border: 2px solid rgba(255, 255, 255, 0.5); */
+        border-radius: 20px;
+        /* background-color: #9bb1ff; */
+        position: relative;
+        width: 550px;
+        height: 690px;
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+
+    }
+
+    .retangulo {
+
+        /* position: absolute;
+        top: 55%;
+        left: 55%;
+        height: 550px;
+        width: 450px;
+        transform: translate(-50%, -50%);
+        border: hidden;
+        border-radius: 13px;
+        background: linear-gradient(to top, rgba(231, 226, 255, 0.505), rgb(211, 201, 255)); */
+        padding-top: 0px;
+        margin-top: 0px;
+        padding-top: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+        /* background-color: red; */
+    }
+
+    /* Essa é a Navbar */
+    
+
+
+  
+
+
+    .ultra {
+        display: flex;
+    }
+
+    /* Estilo específico para a imagem "cesas-informacoes" */
+    .cesas-informacoes {
+        width: 100%;
+    }
+
+    .documento {
+        margin-left: 0%;
+    }
+
+    /* Estilo específico para o título "Matrícula" */
+    .retangulo h1 {
+        margin: 0;
+        padding-top: 0px;
+        /* Removendo margem padrão do título */
+        text-align: center;
+    }
+
+    /* Estilo específico para o parágrafo "Envie uma foto do seu documento" */
+    .retangulo p {
+        margin-top: 20px;
+        /* Adicionando margem apenas na parte superior do parágrafo */
+        text-align: left;
+        font-size: 20px;
+    }
+
+    /* Estilo para o botão de upload de arquivo */
+    .upload-btn {
+        display: inline-block;
+        /* Torna o botão de upload de arquivo um bloco em linha */
+        vertical-align: middle;
+        /* Alinha verticalmente ao centro */
+        margin-left: 10px;
+        /* Adiciona um espaço à esquerda do botão */
+        margin-top: -13%;
+    }
+
+    /* Estilo para a seta de avançar */
+    .arrow-img {
+        display: block;
+        /* Torna a imagem um bloco */
+        margin: 20px auto;
+        /* Centraliza a imagem horizontalmente */
+        cursor: pointer;
+        /* Muda o cursor para indicar que é clicável */
+    }
+
+    #cameraContainer {
+        display: flex;
+        flex-direction: row;
+        /* Alterado de 'column' para 'row' */
+        justify-content: flex-start;
+        margin-left: 20px;
+        /* Espaçamento à esquerda para separar do retângulo */
+    }
+
+    #video {
+        transform: scaleX(1);
+        /* Inverte a imagem horizontalmente */
+        margin-right: auto;
+        /* Move a imagem para a esquerda */
+    }
+
+    .turno-container,
+    .ensino-container,
+    .deficiencia-container {
+        /* background-color: green; */
+        width: 570px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        opacity: 1;
+        animation-name: fadeInOpacity;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-duration: 2s;
+    }
+
+    @keyframes fadeInOpacity {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .turno-label,
+    .ensino-label {
+        margin-right: 3px;
+    }
+
+    .deficiencia-label {
+        margin-right: 4px;
+    }
+
+    .turno-imagem,
+    .ensino-imagem {
+        margin-left: auto;
+        max-width: 100px;
+        /* Ajuste o tamanho máximo da imagem conforme necessário */
+        height: auto;
+    }
+
+    .deficiencia-imagem {
+        margin-left: auto;
+        max-width: 50px;
+        /* max-height: 40px; AQUI*/ 
+        /* Ajuste o tamanho máximo da imagem conforme necessário */
+        height: auto;
+    }
+
+    .Telefone {
+        margin-left: 30px;
+        max-width: 50px;
+        /* Ajuste o tamanho máximo da imagem conforme necessário */
+        height: auto;
+    }
+
+    .arrow-img {
+        margin-right: 10px;
+        /* Ajuste conforme necessário */
+
+    }
+
+    #autorizacao {
+        display: none;
+        /* Oculta o checkbox padrão */
+    }
+
+    /* Estilo para o rótulo (label) */
+    #autorizacao+label:before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: green;
+        /* Cor de fundo do checkbox */
+        border-radius: 3px;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+
+    /* Estilo para o rótulo (label) quando o checkbox está marcado */
+    #autorizacao:checked+label:before {
+        content: "\2713";
+        /* Símbolo de marca de seleção */
+        font-size: 16px;
+        color: white;
+        /* Cor do símbolo de marca de seleção */
+        text-align: center;
+        line-height: 20px;
+    }
+
+    .tab {
+        text-align: center;
+        font-family: adobe arabic;
+        margin-top: 100px;
+    }
+
+    /* e para desenhar uma linha em baixo  */
+    .tab-heading {
+        /* border-bottom: 5px solid aqua; */
+        /* padding-bottom: 11px; */
+        padding: 20px;
+        /* margin: 0px 50px; */
+        /* margin-top: 60px; */
+        padding-bottom: 6px;
+        text-align: right;
+    }
+
+    .tab {
+        text-align: center;
+        font-family: adobe arabic;
+        margin-top: 0px;
+    }
+
+    .tab-heading span {
+        display: inline-block;
+        padding: 10px;
+        /* Ajuste o padding conforme necessário */
+        font-size: 30px;
+        /* Ajuste o tamanho da fonte conforme necessário */
+        line-height: 1;
+        /* Garante que a altura da linha não adicione espaços extras */
+        margin-top: -1000px;
+        /* Ajuste o valor negativo conforme necessário para subir os spans */
+    }
+
+    .active {
+        background-color: aqua;
+        border-radius: 20px;
+    }
+
+    .tab-content {
+        /* background-color: red; */
+        height: 611px;
+        width: 550px;
+    }
+
+    .tab-content nav~nav {
+        display: none;
+
+    }
+
+    .turnoCenter,
+    .ensinoCenter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Adicionar btn  */
+    p {
+        /* font-size: 20px;
+        font-family: Arial, sans-serif;
+        font-weight: normal; */
+    }
+
+    p,
+    a,
+    h1,
+    h2,
+    h3 {
+        cursor: pointer;
+    }
+
+    section {
+        /* position: absolute;
+        top: 30%;
+        left: 8%; */
+        /* background-color: pink; */
+    }
+
+    /* estilo da caixa */
+    button.left {
+        font-family: "adobe arabic";
+        font-size: 20px;
+        padding: 8px 10px;
+        width: 200px;
+        margin: 20px;
+        border: none;
+        background-color: #ffb630;
+        cursor: pointer;
+        font-weight: bold;
+        color: #682b2b;
+    }
+
+    button.left {
+        -webkit-transition: all 0.6s;
+        -o-transition: all 0.6s;
+        transition: all 0.6s;
+    }
+
+    button.left:hover {
+        background-color: #fff;
+        border: 1px solid orange;
+        box-shadow: 0 0 1px 5px #ffa5007a, 0 0 1px 15px #ffa50067, 0 0 1px 25px #ffa50033;
+    }
+
+    /* para fazer o lay out do site  */
+    .menu {
+        grid-area: menu;
+    }
+
+    .conteudo {
+        grid-area: conteudo;
+        background-color: white;
+        /* border-left: 3px solid #0077b6; */
+        height: auto;
+        height: 100vh;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            'menu menu conteudo';
+        /* background-color: darkkhaki; */
+        padding: 0px;
+        font-family: "Poetsen One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #006298;
+        height: 100vh;
+
+    }
+
+    .grid-container>div {
+        margin-top: 0px;
+        margin-left: 0px;
+        height: 100%;
+        /* background-color: rgba(255, 255, 255, 0.8); */
+        /* border: 1px solid rgba(0, 0, 0, 0.8); */
+        padding: 12%;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    /* para audio */
+    audio {
+        width: 400px;
+        margin-bottom: 10px;
+    }
+
+    .Telefoned {
+        margin-left: 20px;
+    }
+
+    audio::-webkit-media-controls-panel {
+        background-color: #68D3EC;
+    }
+
+    audio::-webkit-media-controls-play-button {
+        background-color: lightblue;
+        border-radius: 50%;
+    }
+
+    audio::-webkit-media-controls-current-time-display {
+        color: #333;
+    }
+
+    audio::-webkit-media-controls-time-remaining-display {
+        color: #333;
+    }
+
+    audio::-webkit-media-controls-timeline {
+        border-radius: 40px;
+        background-color: lightblue;
+        margin: 10px;
+
+    }
+
+    audio::-webkit-media-controls-volume-slider {
+        background-color: lightblue;
+        border-radius: 50px;
+        padding-left: 30px;
+        padding-right: 10px;
+    }
+
+    audio::-webkit-media-controls-mute-button {
+        background-color: lightblue;
+        border-radius: 50%;
+    }
+
+    .input-wrapper input {
+        background-color: #eee;
+        border: none;
+        padding: 1rem;
+        font-size: 1rem;
+        width: 15em;
+        margin-top: 10px;
+        margin-left: 21px;
+        border-radius: 1rem;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+    }
+
+    .input-wrapper input:focus {
+        outline-color: rgb(30, 114, 170);
+    }
+
+    .form__group {
+        position: relative;
+        margin: 8px 0;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .form__field {
+        font-family: inherit;
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #9b9b9b;
+        outline: 0;
+        font-size: 17px;
+        color: #000000;
+        margin-left: 20px;
+        font-size: 20px;
+        background: transparent;
+        transition: border-color 0.2s;
+    }
+
+    .form__field::placeholder {
+        color: transparent;
+    }
+
+    .form__field:placeholder-shown~.form__label {
+        font-size: 17px;
+        cursor: text;
+        top: 20px;
+    }
+
+    .form__label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 17px;
+        color: #9b9b9b;
+        pointer-events: none;
+    }
+
+    .form__field:focus {
+        padding-bottom: 6px;
+        font-weight: 700;
+        border-width: 3px;
+        border-image: linear-gradient(to right, #116399, #38caef);
+        border-image-slice: 1;
+    }
+
+
+    .custom-radio-btn {
+        --size: 25px;
+        min-width: var(--size);
+        height: var(--size);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        /* changes from the video   */
+        margin: 0 10px;
+        position: relative;
+        padding-left: var(--size);
+    }
+
+    .custom-radio-btn input {
+        display: none;
+    }
+
+    /* handle if you want label on the left of the checkmark instead */
+    /* label  */
+
+    .custom-radio-btn .label {
+        margin-left: 5px;
+    }
+
+*{
+margin: 0px;
+padding: 0px;
+}
+    .custom-radio-btn[aria-label]::after {
+        content: attr(aria-label);
+        display: inline-block;
+        margin-left: 5px;
+    }
+
+    /* checkmark */
+
+    .custom-radio-btn .checkmark {
+        --gap: 3px;
+        --border: 2px;
+        --check-color: #ff5722;
+        width: var(--size);
+        height: var(--size);
+        border-radius: 50%;
+        display: inline-block;
+        transition: opacity 0.3s ease;
+        /* changes from the video  */
+        border: var(--border) solid #444;
+        padding: var(--gap);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    /* Responsividade */
+    @media only screen and (max-device-width: 400px) {
+        body{
+            background-image: none;
+        }
+
+        nav {
+        width: 100%;
+        }
+
+     .grid-container {
+        display: grid;
+        grid-template-areas:
+            "conteudo";
+            width: 10%;
+            justify-items: center;
+     }
+
+        .conteudo {
+        display: flex;
+        background-color: white;
+        border-left: 3px solid #0077b6; 
+     }
+
+        section{
+        display: none;
+     }
+    
+        .menu {
+        display: none;
+        justify-content: flex-end;
+        align-items: center;
+        width: 90%;
+        }
+    
+        .grid-container>div {
+        display: flex;
+        width: 100%;
+         height: 80vh;
+        /* background-color: rgba(255, 255, 255, 0.8); */
+        /* border: 1px solid rgba(0, 0, 0, 0.8); */
+        font-size: 30px;
+        text-align: center;
+        align-content: center;
+        justify-content: start;
+         align-items: baseline;
+        }
+        
+
+    }
+
+    .custom-radio-btn input:checked~.checkmark {
+        /* changes from the video  */
+
+        /*  content box origin will make sure the bg-image only stays inside content area in between padding  */
+        background-origin: content-box;
+        background-repeat: no-repeat;
+        background-image: radial-gradient(circle at center,
+                var(--check-color)
+                /* the size of the check mark is determined by subtracting from the size of the circle
+ the border(both sides) and the gap(both sides) than dividing it by 2 to get the radius of the circle        */
+                calc((var(--size) - (var(--border) * 2) - (var(--gap) * 2)) / 2),
+                rgba(255, 255, 255, 0) 0);
+    }
+    body {
+font-family: Arial, sans-serif;
+padding: 20px;
+}
+
+.tab-heading {
+margin-bottom: 20px;
+}
+
+.tab-heading span {
+display: none;
+margin: 0 5px;
+padding: 5px 10px;
+border: 1px solid #ddd;
+cursor: pointer;
+}
+
+.tab-heading .active {
+display: inline-block;
+background-color: #007BFF;
+color: #fff;
+border-color: #007BFF;
+}
+
+.navigation {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-top: -70px;
+}
+
+
+
+.nav-arrow, .nav-arrow1 {
+text-decoration: none;
+color: #007BFF;
+font-size: 28px;
+cursor: pointer;
+}
+
+.nav-arrow:hover, .nav-arrow1:hover {
+color: #0056b3;
+}
+
+</style>
 <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light" >
             <a href="https://cesas.se.df.gov.br/ead/"><img style="width: auto;height: auto;" src="images/cesas-logo.png"
