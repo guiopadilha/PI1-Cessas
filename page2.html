@@ -899,7 +899,7 @@ color: #0056b3;
                                     <nav id="selectEnsino">
                                         <br>
                                         <audio controls>
-                                            <source src="audios/retornooumatreiculanova.mp3" type="audio/mpeg">
+                                            <source src="audios/matriculaouretorno.mp3" type="audio/mpeg">
                                         </audio>
                                         <!-- quarto -->
                                         <p style="margin-bottom: 20px;">Matrícula nova ou retorno?</p>
@@ -996,12 +996,14 @@ color: #0056b3;
                                         
 
 
-                                        <br><br>
+                                        
                                         <!-- <input type="submit" value="Enviar"
                                     style="background-color:rgb(72, 160, 236); ; color: white; padding: 10px 20px; border: none; border-radius: 5px;""> -->
-                                    <input type="submit" id="submitBtn" value="Enviar" onclick="validarFormularios()" style=" 
-    
-                                   background-color:rgb(72, 160, 236);
+                                    <form id="meuFormulario" action="index.html" method="post">
+                                        <!-- Seus campos de formulário aqui -->
+                                        <!-- O botão de enviar -->
+                                        <input type="submit" id="submitBtn" value="Enviar" onclick="validarFormularios()"  style="
+                                         background-color:rgb(72, 160, 236);
                                   color: white; 
                                   padding: 10px
                                     20px; border: none; 
@@ -1013,139 +1015,114 @@ color: #0056b3;
                                     margin: 20px;
                                     border: none;
                                     cursor: pointer;
-                                    font-weight: bold;">
-
+                                    font-weight: bold;
+                                    margin-top: -260px;"
+                                      </form>
+                                  
                                 </div>
                                 </nav>
-                                <nav class="Seriefundamental1"
-                                    style="display: none; margin-top: -520px; font-size: 20px;">
-                                    <br>
-                                    <audio controls>
-                                        <source src="audios/fundamental1.mp3" type="audio/mpeg">
-                                    </audio>
-                                    <p style="margin-bottom: 10px;">Tipo de ensino:</p>
-                                    <!-- Reduzi a margem inferior -->
-                                    <div class="ensinoCenter">
-                                        <div>
-                                            <div class="ensino-container" style="margin-bottom: 0;">
-                                                <!-- Reduzi a margem inferior -->
-                                                <input type="radio" id="primeiro1" class="custom-radio-btn" name="serie"
-                                                    value="primeiro1">
-                                                <label for="primeiro1" class="ensino-label" style="margin-top: 5px;">1ᵃ
-                                                    Série</label> <!-- Reduzi a margem superior -->
-                                                <img src="images/1ano.png" alt="1ª Série" class="ensino-imagem"
-                                                    style="height: 60px;">
-                                            </div>
-                                            <div class="ensino-container" style="margin-bottom: 0;">
-                                                <!-- Reduzi a margem inferior -->
-                                                <input type="radio" id="primeiro2" class="custom-radio-btn" name="serie"
-                                                    value="primeiro2">
-                                                <label for="primeiro2" class="ensino-label" style="margin-top: 5px;">2ᵃ
-                                                    Série</label> <!-- Reduzi a margem superior -->
-                                                <img src="images/2ano.png" alt="2ª Série" class="ensino-imagem "
-                                                    style="height: 60px;">
-                                            </div>
-                                            <div class="ensino-container" style="margin-bottom: 0;">
-                                                <!-- Reduzi a margem inferior -->
-                                                <input type="radio" id="primeiro3" class="custom-radio-btn" name="serie"
-                                                    value="primeiro3">
-                                                <label for="primeiro3" class="ensino-label" style="margin-top: 5px;">3ᵃ
-                                                    Série</label> <!-- Reduzi a margem superior -->
-                                                <img src="images/3ano.png" alt="3ª Série" class="ensino-imagem"
-                                                    style="height: 60px;">
-                                            </div>
-                                            <div class="ensino-container" style="margin-bottom: 0;">
-                                                <!-- Reduzi a margem inferior -->
-                                                <input type="radio" id="primeiro4" class="custom-radio-btn" name="serie"
-                                                    value="primeiro4">
-                                                <label for="primeiro4" class="ensino-label" style="margin-top: 5px;">4ᵃ
-                                                    Série</label> <!-- Reduzi a margem superior -->
-                                                <img src="images/4ano.png" alt="4ª Série" class="ensino-imagem"
-                                                    style="height: 60px;">
-                                            </div>
-                                            <div class="ensino-container" style="margin-bottom: 0;">
-                                                <!-- Reduzi a margem inferior -->
-                                                <input type="radio" id="primeiro5" class="custom-radio-btn" name="serie"
-                                                    value="primeiro5">
-                                                <label for="primeiro5" class="ensino-label" style="margin-top: 5px;">5ᵃ
-                                                    Série</label> <!-- Reduzi a margem superior -->
-                                                <img src="images/5ano.png" alt="5ª Série" class="ensino-imagem"
-                                                    style="height: 60px;">
+                                <nav class="Seriefundamental1" style="display: none; margin-top: -520px; font-size: 20px;">
+                                    <form id="fundamental1Form" method="POST" >
+                                        <br>
+                                        <audio controls>
+                                            <source src="audios/fundamental1.mp3" type="audio/mpeg">
+                                        </audio>
+                                        <p style="margin-bottom: 10px;">Tipo de ensino:</p>
+                                        <div class="ensinoCenter">
+                                            <div>
+                                                <div class="ensino-container" style="margin-bottom: 0;">
+                                                    <input type="radio" id="primeiro1" class="custom-radio-btn" name="serie" value="primeiro1">
+                                                    <label for="primeiro1" class="ensino-label" style="margin-top: 5px;">1ᵃ Série</label>
+                                                    <img src="images/1ano.png" alt="1ª Série" class="ensino-imagem" style="height: 60px;">
+                                                </div>
+                                                <div class="ensino-container" style="margin-bottom: 0;">
+                                                    <input type="radio" id="primeiro2" class="custom-radio-btn" name="serie" value="primeiro2">
+                                                    <label for="primeiro2" class="ensino-label" style="margin-top: 5px;">2ᵃ Série</label>
+                                                    <img src="images/2ano.png" alt="2ª Série" class="ensino-imagem" style="height: 60px;">
+                                                </div>
+                                                <div class="ensino-container" style="margin-bottom: 0;">
+                                                    <input type="radio" id="primeiro3" class="custom-radio-btn" name="serie" value="primeiro3">
+                                                    <label for="primeiro3" class="ensino-label" style="margin-top: 5px;">3ᵃ Série</label>
+                                                    <img src="images/3ano.png" alt="3ª Série" class="ensino-imagem" style="height: 60px;">
+                                                </div>
+                                                <div class="ensino-container" style="margin-bottom: 0;">
+                                                    <input type="radio" id="primeiro4" class="custom-radio-btn" name="serie" value="primeiro4">
+                                                    <label for="primeiro4" class="ensino-label" style="margin-top: 5px;">4ᵃ Série</label>
+                                                    <img src="images/4ano.png" alt="4ª Série" class="ensino-imagem" style="height: 60px;">
+                                                </div>
+                                                <div class="ensino-container" style="margin-bottom: 0;">
+                                                    <input type="radio" id="primeiro5" class="custom-radio-btn" name="serie" value="primeiro5">
+                                                    <label for="primeiro5" class="ensino-label" style="margin-top: 5px;">5ᵃ Série</label>
+                                                    <img src="images/5ano.png" alt="5ª Série" class="ensino-imagem" style="height: 60px;">
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </nav>
-
-                                <nav class="Seriefundamental2" style="display: none; margin-top:  -520px;">
-                                    <br>
-                                    <audio controls>
-                                        <source src="audios/fundamental2.mp3" type="audio/mpeg">
-                                    </audio>
-                                    <p style="margin-bottom: 20px;">Tipo de ensino:</p>
-                                    <div class="ensinoCenter">
-                                        <div>
-
-                                            <div class="ensino-container">
-                                                <input type="radio" id="primeiro6" class="custom-radio-btn"
-                                                    name="serie" value="primeiro6">
-                                                <label for="primeiro6" class="ensino-label">6ᵃ Série</label>
-                                                <img src="images/6ano.png" alt="" class="ensino-imagem"
-                                                    style="height: 60px;">
-                                            </div>
-                                            <div class="ensino-container">
-                                                <input type="radio" id="primeiro7" class="custom-radio-btn"
-                                                    name="serie" value="primeiro7">
-                                                <label for="primeiro7" class="ensino-label">7ᵃ Série</label>
-                                                <img src="images/7ano.png" alt="" class="ensino-imagem"
-                                                    style="height: 60px;">
-                                            </div>
-                                            <div class="ensino-container">
-                                                <input type="radio" id="primeiro8" class="custom-radio-btn"
-                                                    name="serie" value="primeiro8">
-                                                <label for="primeiro8" class="ensino-label">8ᵃ Série</label>
-                                                <img src="images/8ano.png" alt="" class="ensino-imagem"
-                                                    style="height: 60px;">
-                                            </div>
-                                            <div class="ensino-container">
-                                                <input type="radio" id="primeiro9" class="custom-radio-btn"
-                                                    name="serie" value="primeiro9">
-                                                <label for="primeiro9" class="ensino-label">9ᵃ Série</label>
-                                                <img src="images/9ano.png" alt="" class="ensino-imagem"
-                                                    style="height: 60px;">
+                                
+                                <nav class="Seriefundamental2" style="display: none; margin-top: -520px;">
+                                    <form id="fundamental2Form" method="POST" >
+                                        <br>
+                                        <audio controls>
+                                            <source src="audios/fundamental2.mp3" type="audio/mpeg">
+                                        </audio>
+                                        <p style="margin-bottom: 20px;">Tipo de ensino:</p>
+                                        <div class="ensinoCenter">
+                                            <div>
+                                                <div class="ensino-container">
+                                                    <input type="radio" id="primeiro6" class="custom-radio-btn" name="serie" value="primeiro6">
+                                                    <label for="primeiro6" class="ensino-label">6ᵃ Série</label>
+                                                    <img src="images/6ano.png" alt="" class="ensino-imagem" style="height: 60px;">
+                                                </div>
+                                                <div class="ensino-container">
+                                                    <input type="radio" id="primeiro7" class="custom-radio-btn" name="serie" value="primeiro7">
+                                                    <label for="primeiro7" class="ensino-label">7ᵃ Série</label>
+                                                    <img src="images/7ano.png" alt="" class="ensino-imagem" style="height: 60px;">
+                                                </div>
+                                                <div class="ensino-container">
+                                                    <input type="radio" id="primeiro8" class="custom-radio-btn" name="serie" value="primeiro8">
+                                                    <label for="primeiro8" class="ensino-label">8ᵃ Série</label>
+                                                    <img src="images/8ano.png" alt="" class="ensino-imagem" style="height: 60px;">
+                                                </div>
+                                                <div class="ensino-container">
+                                                    <input type="radio" id="primeiro9" class="custom-radio-btn" name="serie" value="primeiro9">
+                                                    <label for="primeiro9" class="ensino-label">9ᵃ Série</label>
+                                                    <img src="images/9ano.png" alt="" class="ensino-imagem" style="height: 60px;">
+                                                </div>
                                             </div>
                                         </div>
-
+                                    </form>
                                 </nav>
+                                
                                 <nav class="Seriemedio" style="display: none; margin-top: -520px;">
-                                    <br>
-                                    <audio controls>
-                                        <source src="audios/ensinomedio.mp3" type="audio/mpeg">
-                                    </audio>
-                                    <p style="margin-bottom: 20px;">Tipo de ensino:</p>
-                                    <div class="ensinoCenter">
-                                        <div>
-                                            <div class="ensino-container">
-                                                <input type="radio" id="medio1" class="custom-radio-btn"
-                                                    name="serie" value="medio1">
-                                                <label for="medio1" class="ensino-label">1º Ano</label>
-                                                <img src="images/1serie.png" alt="" class="ensino-imagem">
-                                            </div>
-                                            <div class="ensino-container">
-                                                <input type="radio" id="medio2" class="custom-radio-btn"
-                                                    name="serie" value="medio2">
-                                                <label for="medio2" class="ensino-label">2º Ano</label>
-                                                <img src="images/2serie.png" alt="" class="ensino-imagem">
-                                            </div>
-                                            <div class="ensino-container">
-                                                <input type="radio" id="medio3" class="custom-radio-btn"
-                                                    name="serie" value="medio3">
-                                                <label for="medio3" class="ensino-label">3º Ano</label>
-                                                <img src="images/3serie.png" alt="" class="ensino-imagem">
+                                    <form id="medioForm" method="POST" >
+                                        <br>
+                                        <audio controls>
+                                            <source src="audios/ensinomedio.mp3" type="audio/mpeg">
+                                        </audio>
+                                        <p style="margin-bottom: 20px;">Tipo de ensino:</p>
+                                        <div class="ensinoCenter">
+                                            <div>
+                                                <div class="ensino-container">
+                                                    <input type="radio" id="medio1" class="custom-radio-btn" name="serie" value="medio1">
+                                                    <label for="medio1" class="ensino-label">1º Ano</label>
+                                                    <img src="images/1serie.png" alt="" class="ensino-imagem">
+                                                </div>
+                                                <div class="ensino-container">
+                                                    <input type="radio" id="medio2" class="custom-radio-btn" name="serie" value="medio2">
+                                                    <label for="medio2" class="ensino-label">2º Ano</label>
+                                                    <img src="images/2serie.png" alt="" class="ensino-imagem">
+                                                </div>
+                                                <div class="ensino-container">
+                                                    <input type="radio" id="medio3" class="custom-radio-btn" name="serie" value="medio3">
+                                                    <label for="medio3" class="ensino-label">3º Ano</label>
+                                                    <img src="images/3serie.png" alt="" class="ensino-imagem">
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-
+                                    </form>
                                 </nav>
+                                
                             </div>
                             <div class="tab-heading">
                                 <center id="Center">
@@ -1446,37 +1423,7 @@ $("[type=checkbox]").click(function() {
 
 
 </script>
-<script>
-    const submitBtn = document.getElementById('submitBtn');
 
-    submitBtn.addEventListener('click', function () {
-        // Obter o formulário
-        const form = document.getElementById('turnoForm');
-        
-        // Obter todos os botões de rádio com o nome "turno"
-        const radios = document.getElementsByName('turno');
-        let selectedValue;
-
-        // Iterar sobre os botões de rádio para encontrar o marcado
-        for (let i = 0; i < radios.length; i++) {
-            if (radios[i].checked) {
-                selectedValue = radios[i].value;
-                break;
-            }
-        }
-
-        // Verificar se uma opção foi selecionada
-        if (selectedValue) {
-            // Enviar o formulário
-            form.submit();
-
-            // Redirecionar o usuário de volta para o elemento nav com ID "selectTurno"
-            window.location.href = '#'; // Role para o topo da página
-        } else {
-            alert('Por favor, selecione um turno.');
-        }
-    });
-</script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
     const spans = document.querySelectorAll("#Center span");
@@ -1526,128 +1473,10 @@ $("[type=checkbox]").click(function() {
 
 </script>
 <script>
-       const submitBtn1 = document.getElementById('submitBtn');
-
-submitBtn.addEventListener('click', function () {
-    // Obter o formulário
-    const form = document.getElementById('ensinoForm');
-    
-    // Obter todos os botões de rádio com o nome "turno"
-    const radios = document.getElementsByName('ensino');
-    let selectedValue;
-
-    // Iterar sobre os botões de rádio para encontrar o marcado
-    for (let i = 0; i < radios.length; i++) {
-        if (radios[i].checked) {
-            selectedValue = radios[i].value;
-            break;
-        }
-    }
-
-    // Verificar se uma opção foi selecionada
-    if (selectedValue) {
-        // Enviar o formulário
-        form.submit();
-
-        // Redirecionar o usuário de volta para o elemento nav com ID "selectTurno"
-        window.location.href = '#'; // Role para o topo da página
-    } else {
-        alert('Por favor, selecione um ensino.');
-    }
-});   
+function validarFormularios() {
+    // Envia o formulário e redireciona para index.html
+    document.getElementById("meuFormulario").submit();
+    window.location.href = "index.html";
+  }
+  
 </script>
-<script>
-    const submitBtn2 = document.getElementById('submitBtn');
-
-submitBtn.addEventListener('click', function () {
- // Obter o formulário
- const form = document.getElementById('envioDocumentoForm');
- 
- // Obter todos os botões de rádio com o nome "turno"
- const radios = document.getElementsByName('documento');
- let selectedValue;
-
- // Iterar sobre os botões de rádio para encontrar o marcado
- for (let i = 0; i < radios.length; i++) {
-     if (radios[i].checked) {
-         selectedValue = radios[i].value;
-         break;
-     }
- }
-
- // Verificar se uma opção foi selecionada
- if (selectedValue) {
-     // Enviar o formulário
-     form.submit();
-
-     // Redirecionar o usuário de volta para o elemento nav com ID "selectTurno"
-     window.location.href = '#'; // Role para o topo da página
- } else {
-     alert('Por favor, tire uma foto.');
- }
-});   
-</script>
-<script>
-    const submitBtn3 = document.getElementById('submitBtn');
-
-submitBtn.addEventListener('click', function () {
- // Obter o formulário
- const form = document.getElementById('selectDeficienciaForm');
- 
- // Obter todos os botões de rádio com o nome "turno"
- const radios = document.getElementsByName('deficiencia');
- let selectedValue;
-
- // Iterar sobre os botões de rádio para encontrar o marcado
- for (let i = 0; i < radios.length; i++) {
-     if (radios[i].checked) {
-         selectedValue = radios[i].value;
-         break;
-     }
- }
-
- // Verificar se uma opção foi selecionada
- if (selectedValue) {
-     // Enviar o formulário
-     form.submit();
-
-     // Redirecionar o usuário de volta para o elemento nav com ID "selectTurno"
-     window.location.href = '#'; // Role para o topo da página
- } else {
-     alert('Por favor, selecione responda se possui alguma dificuldade.');
- }
-});   
-</script>
-<script>
-    const submitBtn4 = document.getElementById('submitBtn');
-
-submitBtn.addEventListener('click', function () {
- // Obter o formulário
- const form = document.getElementById('autorizacaoForm');
- 
- // Obter todos os botões de rádio com o nome "turno"
- const radios = document.getElementsByName('autorizacao');
- let selectedValue;
-
- // Iterar sobre os botões de rádio para encontrar o marcado
- for (let i = 0; i < radios.length; i++) {
-     if (radios[i].checked) {
-         selectedValue = radios[i].value;
-         break;
-     }
- }
-
- // Verificar se uma opção foi selecionada
- if (selectedValue) {
-     // Enviar o formulário
-     form.submit();
-
-     // Redirecionar o usuário de volta para o elemento nav com ID "selectTurno"
-     window.location.href = '#'; // Role para o topo da página
- } else {
-     alert('Por favor, autorize o termo /  coloque o seu telefone');
- }
-});   
-</script>
-
-
