@@ -23,17 +23,17 @@
           crossorigin="anonymous"></script>
           <script src="js/jquery.js"></script>
           <script>
-               $(document).ready(function () {
-                    $("button").click(function () {
-                         $(".modal").fadeIn();
-                         $("aside").animate({ marginTop: "200px" });
-                    });
-     
-                    $("span").click(function () {
-                         $(".modal").fadeOut();
-                         $("aside").animate({ marginTop: "-250px" });
-                    });
-               });
+                $(document).ready(function () {
+            $("#modal-button").click(function () {
+                $(".modal").fadeIn();
+                $("aside").animate({ marginTop: "200px" });
+            });
+
+            $("#close-modal").click(function () {
+                $(".modal").fadeOut();
+                $("aside").animate({ marginTop: "-250px" });
+            });
+        });
           </script>
 
 
@@ -180,7 +180,12 @@
                 width: 50px;
                 height: 50px;
             }
+        
+        .next{
+          left: 15pc;
+          top: 15pc;
         }
+     }
       .coteudo{
           display: flex;
       }
@@ -288,7 +293,7 @@ width: 100%;">
                     background-color: #68D3EC;
                     margin: 0px auto 0px;">
                          <h4 id="videoh4" style="margin: 60px 30px 0px;">Vídeo de instrução:</h4>
-                         <button>
+                         <button id="modal-button">
                               <img src="images/youtube.png" alt="link para filme" style="text-align: center;
                          width: 300px; margin-top: 10px;">
                          </button>
@@ -337,8 +342,8 @@ width: 100%;">
           </div>
      </div>
      
-     <div class="modal">
-          <span>X</span>
+     <div  class="modal">
+          <span id="close-modal">X</span>
           <aside>
                <iframe width="560" height="315" src="https://www.youtube.com/embed/HI6gMkfRjE0?si=FvDkgCbjWSLHew_B"
                     title="YouTube video player" frameborder="20"
