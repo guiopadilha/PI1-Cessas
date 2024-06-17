@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Cesas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/cesasicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- Script dos next btn -->
+    <script src="js/jquery.js"></script>
+</head>
+<style>
+    /* Estilo para a imagem com a classe "imagem-25" ocupar 25% da largura do site */
+
+
+    body {
+        font-family: "Poetsen One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #006298;
+        margin: 0px;
+        background: linear-gradient(to bottom, #00b4d8, #ade8f4);
+        background-image: url("images/pagina2.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        /* Center the background image */
+        /* min-height: 100vh; */
+        width: 100vh
+    }
+    
+    body,
+    h1,
+    p,
+    button,
+    span,
+    label,
+    a,
+    button.dropbtn {
+        margin: 0;
+        padding: 0;
+        font-family: "Poetsen One", sans-serif;
+        color: #006298;
+    }
+
+    nav {
+        bottom: 20px;
+        right: 30px;
+        width: 104.5%;
+
+    }
+
+    p,
+    label {
+        padding: 15px;
+        padding-right: 15px;
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* min-height: 100vh; */
+        width: 100%;
+        /* background: url(../image/background.png);
+ background-position: center;
+ background-size: cover; */
+    }
+
+    .form-box {
+        /* margin-top: 60px; */
+        padding-top: 0;
+        background-color: transparent;
+        /* border: 2px solid rgba(255, 255, 255, 0.5); */
+        border-radius: 20px;
+        /* background-color: #9bb1ff; */
+        position: relative;
+        width: 550px;
+        height: 690px;
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+
+    }
+
+    .retangulo {
+
+        /* position: absolute;
+        top: 55%;
+        left: 55%;
+        height: 550px;
+        width: 450px;
+        transform: translate(-50%, -50%);
+        border: hidden;
+        border-radius: 13px;
+        background: linear-gradient(to top, rgba(231, 226, 255, 0.505), rgb(211, 201, 255)); */
+        padding-top: 0px;
+        margin-top: 0px;
+        padding-top: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+        /* background-color: red; */
+    }
+
+    /* Essa é a Navbar */
+
+
+
+
+
+
+    .ultra {
+        display: flex;
+    }
+
+    /* Estilo específico para a imagem "cesas-informacoes" */
+    .cesas-informacoes {
+        width: 100%;
+    }
+
+    .documento {
+        margin-left: 0%;
+    }
+
+    /* Estilo específico para o título "Matrícula" */
+    .retangulo h1 {
+        margin: 0;
+        padding-top: 0px;
+        /* Removendo margem padrão do título */
+        text-align: center;
+    }
+
+    /* Estilo específico para o parágrafo "Envie uma foto do seu documento" */
+    .retangulo p {
+        margin-top: 20px;
+        /* Adicionando margem apenas na parte superior do parágrafo */
+        text-align: left;
+        font-size: 20px;
+    }
+
+    /* Estilo para o botão de upload de arquivo */
+    .upload-btn {
+        display: inline-block;
+        /* Torna o botão de upload de arquivo um bloco em linha */
+        vertical-align: middle;
+        /* Alinha verticalmente ao centro */
+        margin-left: 10px;
+        /* Adiciona um espaço à esquerda do botão */
+        margin-top: -13%;
+    }
+
+    /* Estilo para a seta de avançar */
+    .arrow-img {
+        display: block;
+        /* Torna a imagem um bloco */
+        margin: 20px auto;
+        /* Centraliza a imagem horizontalmente */
+        cursor: pointer;
+        /* Muda o cursor para indicar que é clicável */
+    }
+
+    #cameraContainer {
+        display: flex;
+        flex-direction: row;
+        /* Alterado de 'column' para 'row' */
+        justify-content: flex-start;
+        margin-left: 20px;
+        /* Espaçamento à esquerda para separar do retângulo */
+    }
+
+    #video {
+        transform: scaleX(1);
+        /* Inverte a imagem horizontalmente */
+        margin-right: auto;
+        /* Move a imagem para a esquerda */
+    }
+
+    .turno-container,
+    .ensino-container,
+    .deficiencia-container {
+        /* background-color: green; */
+        width: 570px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        opacity: 1;
+        animation-name: fadeInOpacity;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-duration: 2s;
+    }
+
+    @keyframes fadeInOpacity {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .turno-label,
+    .ensino-label {
+        margin-right: 3px;
+    }
+
+    .deficiencia-label {
+        margin-right: 4px;
+    }
+
+    .turno-imagem,
+    .ensino-imagem {
+        margin-left: auto;
+        max-width: 100px;
+        /* Ajuste o tamanho máximo da imagem conforme necessário */
+        height: auto;
+    }
+
+    .deficiencia-imagem {
+        margin-left: auto;
+        max-width: 50px;
+        /* max-height: 40px; AQUI*/
+        /* Ajuste o tamanho máximo da imagem conforme necessário */
+        height: auto;
+    }
+
+    .Telefone {
+        margin-left: 30px;
+        max-width: 50px;
+        /* Ajuste o tamanho máximo da imagem conforme necessário */
+        height: auto;
+    }
+
+    .arrow-img {
+        margin-right: 10px;
+        /* Ajuste conforme necessário */
+
+    }
+
+    #autorizacao {
+        display: none;
+        /* Oculta o checkbox padrão */
+    }
+
+    /* Estilo para o rótulo (label) */
+    #autorizacao+label:before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: green;
+        /* Cor de fundo do checkbox */
+        border-radius: 3px;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+
+    /* Estilo para o rótulo (label) quando o checkbox está marcado */
+    #autorizacao:checked+label:before {
+        content: "\2713";
+        /* Símbolo de marca de seleção */
+        font-size: 16px;
+        color: white;
+        /* Cor do símbolo de marca de seleção */
+        text-align: center;
+        line-height: 20px;
+    }
+
+    .tab {
+        text-align: center;
+        font-family: adobe arabic;
+        margin-top: 100px;
+    }
+
+    /* e para desenhar uma linha em baixo  */
+    .tab-heading {
+        /* border-bottom: 5px solid aqua; */
+        /* padding-bottom: 11px; */
+        padding: 20px;
+        /* margin: 0px 50px; */
+        /* margin-top: 60px; */
+        padding-bottom: 6px;
+        text-align: right;
+    }
+
+    .tab {
+        text-align: center;
+        font-family: adobe arabic;
+        margin-top: 0px;
+    }
+
+    .tab-heading span {
+        display: inline-block;
+        padding: 10px;
+        /* Ajuste o padding conforme necessário */
+        font-size: 40px;
+        /* Ajuste o tamanho da fonte conforme necessário */
+        line-height: 1;
+        /* Garante que a altura da linha não adicione espaços extras */
+        margin-top: -1000px;
+        /* Ajuste o valor negativo conforme necessário para subir os spans */
+    }
+
+    .active {
+        background-color: aqua;
+        border-radius: 20px;
+        
+    }
+
+    .tab-content {
+        /* background-color: red; */
+        height: 611px;
+        width: 550px;
+    }
+
+    .tab-content nav~nav {
+        display: none;
+
+    }
+
+    .turnoCenter,
+    .ensinoCenter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Adicionar btn  */
+    p {
+        /* font-size: 20px;
+        font-family: Arial, sans-serif;
+        font-weight: normal; */
+    }
+
+    p,
+    a,
+    h1,
+    h2,
+    h3 {
+        cursor: pointer;
+    }
+
+
+
+    /* estilo da caixa */
+    button.left {
+        font-family: "adobe arabic";
+        font-size: 20px;
+        padding: 8px 10px;
+        width: 200px;
+        margin: 20px;
+        border: none;
+        background-color: #ffb630;
+        cursor: pointer;
+        font-weight: bold;
+        color: #682b2b;
+    }
+
+    button.left {
+        -webkit-transition: all 0.6s;
+        -o-transition: all 0.6s;
+        transition: all 0.6s;
+    }
+
+    button.left:hover {
+        background-color: #fff;
+        border: 1px solid orange;
+        box-shadow: 0 0 1px 5px #ffa5007a, 0 0 1px 15px #ffa50067, 0 0 1px 25px #ffa50033;
+    }
+
+    /* para fazer o lay out do site  */
+    .menu {
+        grid-area: menu;
+    }
+
+    .conteudo {
+        grid-area: conteudo;
+        background-color: white;
+        /* border-left: 3px solid #0077b6; */
+        height: auto;
+        height: 100vh;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            'menu menu conteudo';
+        /* background-color: darkkhaki; */
+        padding: 0px;
+        font-family: "Poetsen One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #006298;
+        height: 100vh;
+
+    }
+
+    .grid-container>div {
+        margin-top: 0px;
+        margin-left: 0px;
+        height: 100%;
+        /* background-color: rgba(255, 255, 255, 0.8); */
+        /* border: 1px solid rgba(0, 0, 0, 0.8); */
+        /* padding: 12%; */
+        font-size: 30px;
+        text-align: center;
+    }
+
+    /* para audio */
+    audio {
+        width: 400px;
+        margin-bottom: 10px;
+    }
+
+    .Telefoned {
+        margin-left: 20px;
+    }
+
+    audio::-webkit-media-controls-panel {
+        background-color: #68D3EC;
+    }
+
+    audio::-webkit-media-controls-play-button {
+        background-color: lightblue;
+        border-radius: 50%;
+    }
+
+    audio::-webkit-media-controls-current-time-display {
+        color: #333;
+    }
+
+    audio::-webkit-media-controls-time-remaining-display {
+        color: #333;
+    }
+
+    audio::-webkit-media-controls-timeline {
+        border-radius: 40px;
+        background-color: lightblue;
+        margin: 10px;
+
+    }
+
+    audio::-webkit-media-controls-volume-slider {
+        background-color: lightblue;
+        border-radius: 50px;
+        padding-left: 30px;
+        padding-right: 10px;
+    }
+
+    audio::-webkit-media-controls-mute-button {
+        background-color: lightblue;
+        border-radius: 50%;
+    }
+
+    .input-wrapper input {
+        background-color: #eee;
+        border: none;
+        padding: 1rem;
+        font-size: 1rem;
+        width: 15em;
+        margin-top: 10px;
+        margin-left: 21px;
+        border-radius: 1rem;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+    }
+
+    .input-wrapper input:focus {
+        outline-color: rgb(30, 114, 170);
+    }
+
+    .form__group {
+        position: relative;
+        margin: 8px 0;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .form__field {
+        font-family: inherit;
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #9b9b9b;
+        outline: 0;
+        font-size: 17px;
+        color: #000000;
+        margin-left: 20px;
+        font-size: 20px;
+        background: transparent;
+        transition: border-color 0.2s;
+    }
+
+    .form__field::placeholder {
+        color: transparent;
+    }
+
+    .form__field:placeholder-shown~.form__label {
+        font-size: 17px;
+        cursor: text;
+        top: 20px;
+    }
+
+    .form__label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 17px;
+        color: #9b9b9b;
+        pointer-events: none;
+    }
+
+    .form__field:focus {
+        padding-bottom: 6px;
+        font-weight: 700;
+        border-width: 3px;
+        border-image: linear-gradient(to right, #116399, #38caef);
+        border-image-slice: 1;
+    }
+
+
+    .custom-radio-btn {
+        --size: 25px;
+        min-width: var(--size);
+        height: var(--size);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        /* changes from the video   */
+        margin: 0 10px;
+        position: relative;
+        padding-left: var(--size);
+    }
+
+    .custom-radio-btn input {
+        display: none;
+    }
+
+    /* handle if you want label on the left of the checkmark instead */
+    /* label  */
+
+    .custom-radio-btn .label {
+        margin-left: 5px;
+    }
+
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .custom-radio-btn[aria-label]::after {
+        content: attr(aria-label);
+        display: inline-block;
+        margin-left: 5px;
+    }
+
+    /* checkmark */
+
+    .custom-radio-btn .checkmark {
+        --gap: 3px;
+        --border: 2px;
+        --check-color: #ff5722;
+        width: var(--size);
+        height: var(--size);
+        border-radius: 50%;
+        display: inline-block;
+        transition: opacity 0.3s ease;
+        /* changes from the video  */
+        border: var(--border) solid #444;
+        padding: var(--gap);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    /* Responsive adjustments for screens 900px wide or less */
+@media (max-width: 900px) {
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    html{
+        width: 100vh;
+    }
+    body{
+        background: none;
+        width: 100vh;
+    }
+    /* Adjust the grid container to use flexbox and center content */
+    .grid-container {
+        display: flex;
+        flex-direction: column;  /* Stacks children vertically */
+        align-items: center;     /* Centers children horizontally */
+        justify-content: center; /* Centers children vertically */
+        height: 100vh;           /* Full viewport height */
+        padding: 0;              /* Remove any default padding */
+        margin: 0;               /* Remove any default margin */
+    }
+
+    /* Ensure the .conteudo class is properly centered and styled */
+    .conteudo {
+        background-color: white; /* Sets a white background */
+        width: 100%;             /* Takes full width of the container */
+        height: auto;            /* Auto height based on content */
+        display: flex;           /* Enables flexbox */
+        justify-content: center; /* Horizontally centers content */
+        align-items: center;     /* Vertically centers content */
+    }
+
+    /* Increases the navbar's height by adjusting padding */
+    .navbar {
+        width: 100%;
+        position: inherit;
+        padding: 15px 10px;         /* Increase vertical padding */
+        margin-bottom: 50px;
+    }
+    
+
+    /* Optionally, increase the size of the navbar logo */
+    .navbar .logo img {
+        padding: 10px 0 0 20px;
+        width: 100px;            /* Set width for the logo */
+        height: auto;            /* Maintain aspect ratio */
+    }
+    
+    
+
+    /* Increase font size in the navbar for better readability on small screens */
+    .navbar-nav .nav-link {
+        font-size: 18px;         /* Larger font size for navigation links */
+    }
+    .tab-content {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center;     /* Center vertically */
+        flex-direction: column;  /* Stack child elements vertically */
+        height: 100%;            /* Take full height of its container */
+        width: 100%;             /* Take full width of its container */
+    }
+    .menu{
+        display: none;
+    }
+    .navigation{
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        
+    }
+    i{
+        font-size: 60px;
+    }
+  
+}
+
+</style>
+<!-- Script dos next btn -->
+<script src="js/jquery.js"></script>
+<script>function myFunction2() {
+        document.getElementById("myDropdown2").classList.toggle("show");
+    }
+    window.onclick = function (e) {
+        if (!e.target.matches('.dropbtn2')) {
+            var myDropdown = document.getElementById("myDropdown2");
+            if (myDropdown.classList.contains('show')) {
+                myDropdown.classList.remove('show');
+            }
+        }
+    }</script>
+<script>
+    $(document).ready(function () {
+        $(".tab-heading span").click(function () {
+            $(this).addClass("active").css({ opacity: 1 }).siblings().removeClass("active").css({ opacity: 0.3 })
+            var index = $(this).index();
+            $(".tab-content nav").slideUp().eq(index).slideDown()
+
+        })
+    })
+</script>
+<script>
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+
+<body>
+    
+        <nav  class="navbar navbar-expand-lg navbar-light bg-light addSpace" style="width: 100vh; margin-right: 0; pos">
+            <a class="logo" href="https://cesas.se.df.gov.br/ead/"><img style="width: auto;height: auto;"
+                    src="images/cesas-logo.png" alt="CESAS" class="cesas-logo"></a>
+            <button class="navbar-toggler  addSpace" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="margin-top: 20px;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-family: Poppins, sans-serif;">
+                <ul class="navbar-nav mr-auto font-weight-bold">
+                    <li class="nav-link dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" style="color: #1177d1; margin-left: 23px;" aria-haspopup="true" aria-expanded="false">
+                            Institucional
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item"
+                                href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=54" style="margin-left: 23px;">Equipe</a>
+                        </div>
+                    </li>
+    
+                    <li class="nav-link dropdown">
+                        <a  class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" style="color: #1177d1; margin-left: 23px;" aria-haspopup="true" aria-expanded="false">
+                            Área do Aluno
+                        </a>
+                        <div style="margin-left: 23px;" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a style="margin-left: 23px;" class="dropdown-item" href="https://cesas.se.df.gov.br/ead/login/index.php">Meu
+                                Perfil</a>
+                            <div class="dropdown-divider"></div>
+                            <a style="margin-left: 23px;" class="dropdown-item"
+                                href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=749&forceview=1">Calendário</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://cesas.se.df.gov.br/ead/login/index.php" style="margin-left: 23px;">Plantão das
+                                Disciplinas</a>
+                        </div>
+                    </li>
+                    <li class="nav-link" style="margin-left: 23px;"><a style="color: #1177d1;" class="nav-link "
+                            href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=70">Perguntas e Respostas</a>
+                    </li>
+                    <li class="nav-link" style="margin-left: 23px;"><a style="color: #1177d1; " class="nav-link "
+                            href="https://cesas.se.df.gov.br/ead/mod/page/view.php?id=751&forceview=1" >Cursos</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+    
+
+
+
+
+
+    <div class="grid-container">
+        <div class="menu">
+            <section>
+
+                <button class="left" id="btUp">Aumentar &nbsp;A Fonte</button>
+
+                <button class="left" id="btDown">&nbsp;Diminuir &nbsp;A Fonte&nbsp;</button>
+                <br>
+                <button class="left" id="btFont">Trocar A Fonte</button>
+
+
+                <button class="left" id="btBold">&nbsp;Fonte Negrito&nbsp;</button>
+                <br>
+
+            </section>
+        </div>
+        <div class="conteudo" style="width: 100vh;">
+
+            <main>
+                <div id="content">
+                    <div class="form-box">
+
+                        <div id="content">
+                            <div class="tab">
+
+                                <div class="tab-content">
+                                    <br>
+                                    <h1 style=" margin: 0;">Matrícula</h1>
+                                    <nav>
+                                        <form id="envioDocumentoForm" method="POST">
+                                            <div id="Retangulo" class="retangulo" style="text-align: center">
+                                                <!-- <audio controls autoplay> -->
+                                                <audio controls>
+                                                    <source src="audios/audio_documento.mp3" type="audio/mpeg">
+                                                </audio>
+                                                <p>Envie uma foto do seu documento:</p>
+                                                <div id="container" style="position: relative;">
+                                                    <div id="cameraContainer" style="position: relative;">
+                                                        <video id="video" width="400" height="300" autoplay
+                                                            style="background-color: black;"></video>
+                                                        <div id="overlay"
+                                                            style="position: absolute; bottom: 0; width: 100%; background-color: black; text-align: center;">
+                                                            <button id="snapBtn"
+                                                                style="font-size: 24px; border: none; color: black; background-color: black;">⚪</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <canvas id="canvas" width="400" height="300"
+                                                    style="display:none;"></canvas>
+
+
+                                            </div>
+                                        </form>
+                                    </nav>
+
+
+                                    <!-- Segundo  -->
+                                    <nav id="selectTurno">
+                                        <br>
+                                        <audio controls>
+                                            <source src="audios/audio_turno.mp3" type="audio/mpeg">
+                                        </audio>
+
+                                        <p style="margin-bottom: 20px;">Selecione o turno desejado:</p>
+                                        <div class="turnoCenter">
+                                            <form id="turnoForm" method="POST">
+                                                <div>
+                                                    <div class="turno-container">
+                                                        <input type="radio" id="manha" class="custom-radio-btn"
+                                                            name="turno" value="manha">
+                                                        <label for="manha" class="turno-label">Matutino (Pela
+                                                            manhã)</label>
+                                                        <img src="images/sunset.svg" alt="" class="turno-imagem">
+                                                    </div>
+
+                                                    <div class="turno-container">
+                                                        <input type="radio" id="tarde" class="custom-radio-btn"
+                                                            name="turno" value="tarde">
+                                                        <label for="tarde" class="turno-label">Vespertino (A
+                                                            Tarde)</label>
+                                                        <img src="images/sun.svg" alt="" class="turno-imagem">
+                                                    </div>
+
+                                                    <div class="turno-container">
+                                                        <input type="radio" id="noite" class="custom-radio-btn"
+                                                            name="turno" value="noite">
+                                                        <label for="noite" class="turno-label">Noturno (A Noite)</label>
+                                                        <img src="images/moon.svg" class="turno-imagem">
+                                                    </div>
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                    </nav>
+
+                                    <nav class="ensino">
+                                        <br>
+                                        <audio controls>
+                                            <source src="audios/tipodeensino.mp3" type="audio/mpeg">
+                                        </audio>
+                                        <!-- terceiro                         -->
+
+                                        <p style="margin-bottom: 20px;">Tipo de ensino:</p>
+                                        <div class="ensinoCenter">
+                                            <div>
+                                                <div class="ensino-container">
+                                                    <button style=" 
+                                                      color: rgb(32, 21, 150); 
+                                                      padding: 10px
+                                                        20px; border: none; 
+                                                        border-radius: 5px;
+                                                        font-size: 30px;
+                                                        padding: 10px 20px;
+                                                        margin: 20px;
+                                                        cursor: pointer;
+                                                        font-weight: bold;" href="#SerieFundamental1"
+                                                        id="Butaofundamental1">🔴</button><label for="fundamental1"
+                                                        class="ensino-label">Fundamental 1</label></a>
+                                                    <img src="images/Fundamental1.png" alt="" class="ensino-imagem">
+                                                </div>
+
+                                                <div class="ensino-container">
+                                                    <button style=" 
+                                                      color: rgb(32, 21, 150); 
+                                                      padding: 10px
+                                                        20px; border: none; 
+                                                        border-radius: 5px;
+                                                        font-size: 30px;
+                                                        padding: 10px 20px;
+                                                        margin: 20px;
+                                                        cursor: pointer;
+                                                        font-weight: bold;" href="#SerieFundamental2"
+                                                        id="Butaofundamental2">🔴</button>
+                                                    <label for="fundamental2" class="ensino-label">Fundamental 2</label>
+                                                    <img src="images/Fundamental2.png" alt="" class="ensino-imagem">
+                                                </div>
+
+                                                <div class="ensino-container">
+                                                    <button style=" 
+                                                      color: rgb(32, 21, 150); 
+                                                      padding: 10px
+                                                        20px; border: none; 
+                                                        border-radius: 5px;
+                                                        font-size: 30px;
+                                                        padding: 10px 20px;
+                                                        margin: 20px;
+                                                        cursor: pointer;
+                                                        font-weight: bold;" href="#SerieMedio"
+                                                        id="Butaomedio">🔴</button>
+                                                    <label for="medio" class="ensino-label">Médio</label></a>
+                                                    <img src="images/Medio.png" class="ensino-imagem">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </nav>
+
+                                    <nav id="selectEnsino">
+                                        <br>
+                                        <audio controls>
+                                            <source src="audios/matriculaouretorno.mp3" type="audio/mpeg">
+                                        </audio>
+                                        <!-- quarto -->
+                                        <p style="margin-bottom: 20px;">Matrícula nova ou retorno?</p>
+                                        <div class="ensinoCenter">
+                                            <form id="ensinoForm" method="POST">
+                                                <div>
+                                                    <div class="ensino-container">
+                                                        <input type="radio" class="custom-radio-btn" id="Matrícula"
+                                                            name="ensino" value="Matrícula nova" required>
+                                                        <label for="Matrícula" class="ensino-label">Matrícula</label>
+                                                        <img src="images/Medio.png" alt="" class="ensino-imagem">
+                                                    </div>
+                                                    <div class="ensino-container">
+                                                        <input type="radio" class="custom-radio-btn" id="Retorno"
+                                                            name="ensino" value="Retorno" required>
+                                                        <label for="Retorno" class="ensino-label">Retorno</label>
+                                                        <img src="images/Retorno.png" alt="" class="ensino-imagem">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </nav>
+
+
+
+
+
+                                    </nav>
+                                    <nav style="font-size: 28px;">
+                                        <form id="selectDeficienciaForm" method="POST">
+
+                                            <!-- <nav style="font-size: 16px; "> -->
+                                            <br>
+                                            <audio controls>
+                                                <source src="audios/dificuldade.mp3" type="audio/mpeg">
+                                            </audio>
+                                            <!-- quinto -->
+
+                                            <p style="margin-bottom: 0px;">Tipo de deficiência / Dificuldade:</p>
+                                            <div class="deficienciaCenter" style="font-size: 23px;">
+                                                <div>
+                                                    <div class="deficiencia-container" style="margin-bottom: 0px;">
+                                                        <input type="checkbox" id="cego" class="custom-radio-btn"
+                                                            name="deficiencia" value="cego">
+                                                        <label for="cego" class="deficiencia-label">Visual (Ver)</label>
+                                                        <img src="images/Visao.png" alt="" class="deficiencia-imagem">
+                                                    </div>
+
+                                                    <div class="deficiencia-container" style="margin-bottom: 0px;">
+                                                        <input type="checkbox" id="Auditiva" class="custom-radio-btn"
+                                                            name="deficiencia" value="Auditiva">
+                                                        <label for="Auditiva" class="deficiencia-label">Audição
+                                                            (Ouvir)</label>
+                                                        <img src="images/Audicao.png" alt="" class="deficiencia-imagem"
+                                                            style="max-height: 55px;">
+                                                    </div>
+                                                    <div class="deficiencia-container" style="margin-bottom: 0px;">
+                                                        <input type="checkbox" id="mudo" class="custom-radio-btn"
+                                                            name="deficiencia" value="mudo">
+                                                        <label for="mudo" class="deficiencia-label">Fala</label>
+                                                        <img src="images/FAla.png" class="deficiencia-imagem">
+                                                    </div>
+                                                    <div class="deficiencia-container" style="margin-bottom: 0px;">
+                                                        <input type="checkbox" id="Outro" class="custom-radio-btn"
+                                                            name="deficiencia" value="Outro">
+                                                        <label for="Outro" class="deficiencia-label">Outro: </label>
+                                                        <div class="form__group field">
+                                                            <input type="input" class="form__field"
+                                                                placeholder="Informe" required="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="deficiencia-container" style="margin-bottom: 0px;">
+                                                        <input type="checkbox" id="nada" class="custom-radio-btn"
+                                                            name="deficiencia" value="nada">
+                                                        <label for="nada" class="deficiencia-label">Não tenho nenhuma
+                                                            destas dificuldades</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </form>
+                                    </nav>
+
+
+                                    <!-- sexto                        -->
+                                    <nav>
+                                        <form id="autorizacaoForm" method="POST">
+                                            <br>
+                                            <audio controls>
+                                                <source src="audios/TERMO DE AUTORIZAÇÃO DE USO DE AUDIO E IMAGEM.mp3"
+                                                    type="audio/mpeg">
+                                            </audio>
+                                            <br>
+                                            <br><br>
+                                            <input type="checkbox" id="autorizacao" name="autorizacao">
+                                            <!-- Rótulo -->
+                                            <label for="autorizacao">Termo de autorização do uso de áudio e
+                                                imagem</label><br><br>
+                                            <div class="deficiencia-container">
+                                                <label for="Telefone" class="deficiencia-label">Telefone:</label>
+                                                <div class="input-wrapper">
+                                                    <input type="tel" placeholder="Informe... " name="telefone"
+                                                        class="input" required>
+                                                </div>
+                                                <img src="images/Telefone.png" class="Telefone">
+                                            </div>
+                                        </form>
+
+
+
+
+                                        <!-- <input type="submit" value="Enviar"
+                                    style="background-color:rgb(72, 160, 236); ; color: white; padding: 10px 20px; border: none; border-radius: 5px;""> -->
+                                        <form id="meuFormulario" action="index.html" method="post">
+                                            <!-- Seus campos de formulário aqui -->
+                                            <!-- O botão de enviar -->
+                                            <input type="submit" id="submitBtn" value="Enviar"
+                                                onclick="validarFormularios()" style="
+                                         background-color:rgb(72, 160, 236);
+                                  color: white; 
+                                  padding: 10px
+                                    20px; border: none; 
+                                    border-radius: 5px;
+                                    
+                                    font-size: 30px;
+                                    padding: 10px 20px;
+                                    width: 200px;
+                                    margin: 20px;
+                                    border: none;
+                                    cursor: pointer;
+                                    font-weight: bold;
+                                    margin-top: -260px;" </form>
+
+                                </div>
+                                </nav>
+                                <nav class="Seriefundamental1"
+                                    style="display: none; margin-top: -520px; font-size: 20px;">
+                                    <form id="fundamental1Form" method="POST">
+                                        <br>
+                                        <audio controls>
+                                            <source src="audios/fundamental1.mp3" type="audio/mpeg">
+                                        </audio>
+                                        <p style="margin-bottom: 10px;">Tipo de ensino:</p>
+                                        <div class="ensinoCenter">
+                                            <div>
+                                                <div class="ensino-container" style="margin-bottom: 0;">
+                                                    <input type="radio" id="primeiro1" class="custom-radio-btn"
+                                                        name="serie" value="primeiro1">
+                                                    <label for="primeiro1" class="ensino-label"
+                                                        style="margin-top: 5px;">1ᵃ Série</label>
+                                                    <img src="images/1ano.png" alt="1ª Série" class="ensino-imagem"
+                                                        style="height: 60px;">
+                                                </div>
+                                                <div class="ensino-container" style="margin-bottom: 0;">
+                                                    <input type="radio" id="primeiro2" class="custom-radio-btn"
+                                                        name="serie" value="primeiro2">
+                                                    <label for="primeiro2" class="ensino-label"
+                                                        style="margin-top: 5px;">2ᵃ Série</label>
+                                                    <img src="images/2ano.png" alt="2ª Série" class="ensino-imagem"
+                                                        style="height: 60px;">
+                                                </div>
+                                                <div class="ensino-container" style="margin-bottom: 0;">
+                                                    <input type="radio" id="primeiro3" class="custom-radio-btn"
+                                                        name="serie" value="primeiro3">
+                                                    <label for="primeiro3" class="ensino-label"
+                                                        style="margin-top: 5px;">3ᵃ Série</label>
+                                                    <img src="images/3ano.png" alt="3ª Série" class="ensino-imagem"
+                                                        style="height: 60px;">
+                                                </div>
+                                                <div class="ensino-container" style="margin-bottom: 0;">
+                                                    <input type="radio" id="primeiro4" class="custom-radio-btn"
+                                                        name="serie" value="primeiro4">
+                                                    <label for="primeiro4" class="ensino-label"
+                                                        style="margin-top: 5px;">4ᵃ Série</label>
+                                                    <img src="images/4ano.png" alt="4ª Série" class="ensino-imagem"
+                                                        style="height: 60px;">
+                                                </div>
+                                                <div class="ensino-container" style="margin-bottom: 0;">
+                                                    <input type="radio" id="primeiro5" class="custom-radio-btn"
+                                                        name="serie" value="primeiro5">
+                                                    <label for="primeiro5" class="ensino-label"
+                                                        style="margin-top: 5px;">5ᵃ Série</label>
+                                                    <img src="images/5ano.png" alt="5ª Série" class="ensino-imagem"
+                                                        style="height: 60px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </nav>
+
+                                <nav class="Seriefundamental2" style="display: none; margin-top: -520px;">
+                                    <form id="fundamental2Form" method="POST">
+                                        <br>
+                                        <audio controls>
+                                            <source src="audios/fundamental2.mp3" type="audio/mpeg">
+                                        </audio>
+                                        <p style="margin-bottom: 20px;">Tipo de ensino:</p>
+                                        <div class="ensinoCenter">
+                                            <div>
+                                                <div class="ensino-container">
+                                                    <input type="radio" id="primeiro6" class="custom-radio-btn"
+                                                        name="serie" value="primeiro6">
+                                                    <label for="primeiro6" class="ensino-label">6ᵃ Série</label>
+                                                    <img src="images/6ano.png" alt="" class="ensino-imagem"
+                                                        style="height: 60px;">
+                                                </div>
+                                                <div class="ensino-container">
+                                                    <input type="radio" id="primeiro7" class="custom-radio-btn"
+                                                        name="serie" value="primeiro7">
+                                                    <label for="primeiro7" class="ensino-label">7ᵃ Série</label>
+                                                    <img src="images/7ano.png" alt="" class="ensino-imagem"
+                                                        style="height: 60px;">
+                                                </div>
+                                                <div class="ensino-container">
+                                                    <input type="radio" id="primeiro8" class="custom-radio-btn"
+                                                        name="serie" value="primeiro8">
+                                                    <label for="primeiro8" class="ensino-label">8ᵃ Série</label>
+                                                    <img src="images/8ano.png" alt="" class="ensino-imagem"
+                                                        style="height: 60px;">
+                                                </div>
+                                                <div class="ensino-container">
+                                                    <input type="radio" id="primeiro9" class="custom-radio-btn"
+                                                        name="serie" value="primeiro9">
+                                                    <label for="primeiro9" class="ensino-label">9ᵃ Série</label>
+                                                    <img src="images/9ano.png" alt="" class="ensino-imagem"
+                                                        style="height: 60px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </nav>
+
+                                <nav class="Seriemedio" style="display: none; margin-top: -520px;">
+                                    <form id="medioForm" method="POST">
+                                        <br>
+                                        <audio controls>
+                                            <source src="audios/ensinomedio.mp3" type="audio/mpeg">
+                                        </audio>
+                                        <p style="margin-bottom: 20px;">Tipo de ensino:</p>
+                                        <div class="ensinoCenter">
+                                            <div>
+                                                <div class="ensino-container">
+                                                    <input type="radio" id="medio1" class="custom-radio-btn"
+                                                        name="serie" value="medio1">
+                                                    <label for="medio1" class="ensino-label">1º Ano</label>
+                                                    <img src="images/1serie.png" alt="" class="ensino-imagem">
+                                                </div>
+                                                <div class="ensino-container">
+                                                    <input type="radio" id="medio2" class="custom-radio-btn"
+                                                        name="serie" value="medio2">
+                                                    <label for="medio2" class="ensino-label">2º Ano</label>
+                                                    <img src="images/2serie.png" alt="" class="ensino-imagem">
+                                                </div>
+                                                <div class="ensino-container">
+                                                    <input type="radio" id="medio3" class="custom-radio-btn"
+                                                        name="serie" value="medio3">
+                                                    <label for="medio3" class="ensino-label">3º Ano</label>
+                                                    <img src="images/3serie.png" alt="" class="ensino-imagem">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </nav>
+
+                            </div>
+                            
+
+                            <nav class="navigation">
+                                <span class="nav-arrow" id="prev-arrow"> <i class="bi bi-arrow-left-circle-fill"></i></span>
+                                <nav>
+                                    <div class="tab-heading">
+                                        <center id="Center">
+                                            <span class="active">1</span>
+                                            <span>2</span>
+                                            <span>3</span>
+                                            <span>4</span>
+                                            <span>5</span>
+                                            <span>6</span>
+        
+                                        </center>
+                                    </div>
+                                </nav>
+                                <span class="nav-arrow1" id="next-arrow"><i class="bi bi-arrow-right-circle-fill"></i> </span>
+                            </nav>
+                            <script src="script.js"></script>
+                        </div>
+
+
+                        <!-- <canvas id="canvas" width="400" height="300" style="display:none;"></canvas> -->
+
+                        <!-- <a href="" class="arrow-img" style="font-size: 20px; text-decoration: none; color: white;">➡️</a> -->
+
+                    </div>
+                </div>
+
+
+
+        </div>
+    </div>
+
+
+
+    </main>
+    </div>
+    </div>
+    <!-- Script para btn + - bol trocar font  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btUp").click(function () {
+                var currentFontSize = parseInt($("p").css("font-size"));
+                if (currentFontSize < 25) {
+                    $("p, h1, label").animate({
+                        fontSize: '+=5px'
+                    });
+                }
+            });
+
+
+            $("#btDown").click(function () {
+                var currentFontSize = parseInt($("p").css("font-size"));
+                if (currentFontSize > 10) {
+                    $("p, h1, label").animate({
+                        fontSize: '-=5px'
+                    });
+                }
+            });
+
+
+            $("#btFont").click(function () {
+                var fonts = ['Arial, sans-serif', 'Times New Roman, serif', 'Verdana, sans-serif'];
+                var currentFont = $("p, h1, label").css("font-family");
+                var currentIndex = fonts.indexOf(currentFont);
+                var nextIndex = (currentIndex + 1) % fonts.length;
+                $("p, h1, label").css("font-family", fonts[nextIndex]);
+            });
+
+
+            $("#btBold").click(function () {
+                var currentWeight = $("p").css("font-weight");
+                if (currentWeight === '400' || currentWeight === 'normal') {
+                    $("p, h1, label").css("font-weight", "bold");
+                } else {
+                    $("p, h1, label").css("font-weight", "normal");
+                }
+            });
+
+
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+</body>
+<script>
+    // Adicione um evento de clique ao botão "Fundamental 1"
+    document.getElementById("Butaofundamental1").addEventListener("click", function () {
+        // Oculta a navegação atual
+        document.querySelector(".ensino").style.display = "none";
+        // Exibe a nova navegação das séries do Fundamental 1
+        document.querySelector(".Seriefundamental1").style.display = "block";
+    });
+    document.getElementById("Center").addEventListener("click", function () {
+        // Oculta a navegação atual
+        document.querySelector(".Seriefundamental1").style.display = "none";
+        // Exibe a nova navegação das séries do Fundamental 1
+        document.querySelector("Center").style.display = "block";
+    });
+</script>
+<script>
+    // Adicione um evento de clique ao botão "Fundamental 1"
+    document.getElementById("Butaofundamental2").addEventListener("click", function () {
+        // Oculta a navegação atual
+        document.querySelector(".ensino").style.display = "none";
+        // Exibe a nova navegação das séries do Fundamental 1
+        document.querySelector(".Seriefundamental2").style.display = "block";
+    });
+    document.getElementById("Center").addEventListener("click", function () {
+        // Oculta a navegação atual
+        document.querySelector(".Seriefundamental2").style.display = "none";
+        // Exibe a nova navegação das séries do Fundamental 1
+        document.querySelector("Center").style.display = "block";
+    });
+</script>
+<script>
+    // Adicione um evento de clique ao botão "Fundamental 1"
+    document.getElementById("Butaomedio").addEventListener("click", function () {
+        // Oculta a navegação atual
+        document.querySelector(".ensino").style.display = "none";
+        // Exibe a nova navegação das séries do Fundamental 1
+        document.querySelector(".Seriemedio").style.display = "block";
+    });
+    document.getElementById("Center").addEventListener("click", function () {
+        // Oculta a navegação atual
+        document.querySelector(".Seriemedio").style.display = "none";
+        // Exibe a nova navegação das séries do Fundamental 1
+        document.querySelector("Center").style.display = "block";
+    });
+</script>
+
+<script>
+    $("[type=checkbox]").click(function () {
+        if ($(this).is("#nada")) {
+            $("#mudo").prop('disabled', $(this).is(':checked'));
+            $("#Auditiva").prop('disabled', $(this).is(':checked'));
+            $("#cego").prop('disabled', $(this).is(':checked'));
+            $("#Outro").prop('disabled', $(this).is(':checked'));
+        }
+        else if ($(this).is("#mudo") || $(this).is("#Auditiva") || $(this).is("#cego") || $(this).is("#Outro")) {
+            $("#nada").prop('disabled', $(":checkbox:not('#all'):checked").length);
+        }
+    });
+</script>
+
+<script>
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+    const snapBtn = document.getElementById('snapBtn');
+    const overlay = document.getElementById('overlay');
+    const cameraContainer = document.getElementById('cameraContainer');
+    let stream;
+
+    // Função para ligar a câmera
+    function startCamera() {
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function (mediaStream) {
+                stream = mediaStream;
+                video.srcObject = stream;
+                video.play();
+            })
+            .catch(function (err) {
+                console.log("Erro ao acessar a câmera: " + err);
+            });
+    }
+
+    // Função para desligar a câmera
+    function stopCamera() {
+        if (stream) {
+            const tracks = stream.getTracks();
+            tracks.forEach(track => track.stop());
+        }
+    }
+
+    // Inicializa a câmera quando a página carrega
+    startCamera();
+
+    // Função para tirar a foto
+    snapBtn.addEventListener('click', function (event) {
+        event.preventDefault(); // Evita que o formulário seja submetido
+
+        const context = canvas.getContext('2d');
+        context.drawImage(video, 0, 0, 400, 300);
+
+        // Esconde o vídeo e o botão de captura, e mostra o canvas
+        video.style.display = 'none';
+        overlay.style.display = 'none';
+        canvas.style.display = 'block';
+
+        // Desliga a câmera
+        stopCamera();
+
+        // Adiciona o botão de retry dinamicamente
+        const retryBtn = document.createElement('button');
+        retryBtn.textContent = '✖';
+        retryBtn.className = 'retryBtn';
+        retryBtn.style.position = 'absolute';
+        retryBtn.style.top = '0px';
+        retryBtn.style.right = '-190px';
+        retryBtn.style.fontSize = '24px';
+        retryBtn.style.border = 'none';
+        retryBtn.style.color = 'white';
+        retryBtn.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+        retryBtn.style.cursor = 'pointer';
+
+        retryBtn.addEventListener('click', function () {
+            // Remove o botão de retry
+            retryBtn.remove();
+
+            // Mostra o vídeo e o botão de captura, e esconde o canvas
+            video.style.display = 'block';
+            overlay.style.display = 'block';
+            canvas.style.display = 'none';
+
+            // Liga a câmera novamente
+            startCamera();
+        });
+
+        cameraContainer.appendChild(retryBtn);
+    });
+</script>
+
+<!-- Script para leitura do site  -->
+<script>
+    let msg = new SpeechSynthesisUtterance();
+    let voices = speechSynthesis.getVoices();
+    // Find the voice that corresponds to Portuguese (Portugal)
+    let portugueseVoice = voices.find(voice => voice.lang === 'pt-BR');
+    // Setar a Voz em pt Brasil one if found, otherwise use the default
+    msg.voice = portugueseVoice || voices[0]; //5 kkk //2,3,4 good
+    // Setar a lingua em pt Brasil
+    msg.lang = 'pt-BR';
+
+
+    let tags = document.querySelectorAll('p,a,h1,h2,label,button,span'); // add more tags for your project
+    tags.forEach((tag) => {
+        tag.addEventListener('click', (e) => {
+            msg.text = e.target.innerText;
+            tag.style.backgroundColor = "yellow";
+            tag.style.borderRadius = "20px";
+            // tag.style.marginLeft = "25px";
+            // tag.style.marginRight = "25px";
+            speechSynthesis.speak(msg);
+
+
+            let interval = setInterval(() => {
+                if (!speechSynthesis.speaking) {
+                    tag.style.removeProperty('background-color');
+                    clearInterval(interval);
+                }
+            }, 100);
+
+
+        });
+    });
+
+
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const spans = document.querySelectorAll("#Center span");
+        const prevArrow = document.getElementById("prev-arrow");
+        const nextArrow = document.getElementById("next-arrow");
+
+        let currentIndex = 0;
+
+        function updateDisplay() {
+            spans.forEach((span, index) => {
+                span.classList.remove("active");
+                span.style.display = 'none';
+            });
+            spans[currentIndex].classList.add("active");
+            spans[currentIndex].style.display = 'inline-block';
+        }
+
+        function clickActiveSpan() {
+            spans[currentIndex].click();
+        }
+
+        updateDisplay(); // Inicializa a exibição correta
+
+        prevArrow.addEventListener("click", function () {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateDisplay();
+                clickActiveSpan();
+            }
+        });
+
+        nextArrow.addEventListener("click", function () {
+            if (currentIndex < spans.length - 1) {
+                currentIndex++;
+                updateDisplay();
+                clickActiveSpan();
+            }
+        });
+
+        spans.forEach((span, index) => {
+            span.addEventListener("click", function () {
+                currentIndex = index;
+                updateDisplay();
+            });
+        });
+    });
+
+</script>
+<script>
+    function validarFormularios() {
+        // Envia o formulário e redireciona para index.html
+        document.getElementById("meuFormulario").submit();
+        window.location.href = "index.html";
+    }
+
+</script>
